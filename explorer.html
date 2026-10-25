@@ -681,7 +681,7 @@ function applyFilters() {
 
 map.on("load",async()=>{
   try {
-    const response=await fetch("./data/ap_city_facilities.geojson?ts=" + Date.now());
+    const response=await fetch("./ap_city_facilities.geojson?ts=" + Date.now());
     if(!response.ok) throw new Error("HTTP "+response.status);
     const geojson=await response.json();
     facilities=geojson.features.map(f=>{
