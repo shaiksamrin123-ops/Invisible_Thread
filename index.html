@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INVISIBLE THREAD | Infrastructure Resilience</title>
+<meta name="description" content="Explore how disruptions can ripple across essential urban services with INVISIBLE THREAD.">
+<style>
+:root {
+  --bg: #080909;
+  --panel: #111311;
+  --gold: #d9b66d;
+  --text: #f4f1e9;
+  --muted: #a6aaa4;
+  --line: rgba(217,182,109,.24);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+a { color: inherit; text-decoration: none; }
+.nav {
+  min-height: 76px; padding: 0 7%;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 22px; border-bottom: 1px solid rgba(255,255,255,.08);
+  background: rgba(8,9,9,.94);
+}
+.brand { font-size: 15px; font-weight: 800; letter-spacing: 3px; }
+.brand span { color: var(--gold); }
+.navlinks { display: flex; flex-wrap: wrap; gap: 24px; font-size: 12px; color: #c2c4bf; }
+.navlinks a:hover { color: var(--gold); }
+.hero {
+  background:
+    linear-gradient(90deg,
+      rgba(8,9,9,0.98) 0%,
+      rgba(8,9,9,0.88) 38%,
+      rgba(8,9,9,0.38) 72%,
+      rgba(8,9,9,0.20) 100%),
+    url('assets/hero-network.jpeg') center right / cover no-repeat;
+
+  position: relative; overflow: hidden;
+  min-height: 570px; padding: 100px 8% 80px;
+  display: flex; align-items: center;
+  
+}
+.hero:after {
+  content: ""; position: absolute; width: 450px; height: 450px;
+  right: 4%; top: 60px; border-radius: 50%;
+  border: 1px solid rgba(217,182,109,.16);
+  box-shadow: 0 0 0 48px rgba(217,182,109,.025),
+              0 0 0 96px rgba(217,182,109,.02);
+  pointer-events: none;
+}
+.hero-content { max-width: 760px; position: relative; z-index: 1; }
+.eyebrow {
+  color: var(--gold); font-size: 11px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+}
+h1 {
+  font-size: clamp(42px, 7.5vw, 86px); line-height: .99;
+  letter-spacing: -3px; margin: 24px 0;
+}
+h1 span { color: var(--gold); }
+.hero h2 {
+  max-width: 620px; font-size: clamp(21px, 3vw, 32px);
+  line-height: 1.3; font-weight: 500; margin: 0 0 18px;
+}
+.hero p { max-width: 610px; color: var(--muted); line-height: 1.8; font-size: 15px; }
+.actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 30px; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 14px 20px; border-radius: 3px; font-size: 12px;
+  font-weight: 750; letter-spacing: .5px; transition: .2s;
+}
+.btn-primary { background: var(--gold); color: #15120b; }
+.btn-primary:hover { background: #f0d18c; transform: translateY(-2px); }
+.btn-outline { border: 1px solid #55574f; color: var(--text); }
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+.metrics {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  padding: 24px 8%; gap: 20px; background: #0b0d0c;
+}
+.metric strong { display: block; color: var(--gold); font-size: 12px; letter-spacing: 1px; }
+.metric span { display: block; margin-top: 8px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.section { padding: 78px 8%; }
+.section-head { max-width: 720px; margin-bottom: 32px; }
+.section-head h2 { font-size: clamp(27px, 4vw, 40px); margin: 14px 0; letter-spacing: -1px; }
+.section-head p { color: var(--muted); line-height: 1.8; font-size: 14px; }
+.steps {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+}
+.step, .sector {
+  border: 1px solid var(--line); background: linear-gradient(145deg, #121512, #0c0e0d);
+  padding: 24px; border-radius: 5px; min-width: 0;
+}
+.number { color: var(--gold); font-size: 11px; letter-spacing: 2px; }
+.step h3, .sector h3 { font-size: 17px; margin: 18px 0 10px; }
+.step p, .sector p { color: var(--muted); font-size: 13px; line-height: 1.7; margin-bottom: 0; }
+.sectors { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.sector { min-height: 235px; }
+.status {
+  display: inline-block; padding: 6px 8px; border: 1px solid var(--line);
+  color: var(--gold); font-size: 9px; font-weight: 800; letter-spacing: 1.2px;
+}
+.sector a { display: inline-block; margin-top: 20px; color: var(--gold); font-size: 12px; }
+.sector a:hover { text-decoration: underline; }
+.scope-note {
+  margin-top: 22px; padding: 17px 19px; border-left: 2px solid var(--gold);
+  background: #10120f; color: #b8bbb3; font-size: 12px; line-height: 1.8;
+}
+.cta {
+  margin: 0 8% 75px; padding: 35px;
+  border: 1px solid var(--line);
+  background: radial-gradient(ellipse at right, rgba(217,182,109,.1), transparent 60%), #10120f;
+}
+.cta h2 { margin: 0 0 12px; font-size: clamp(23px, 3vw, 34px); }
+.cta p { color: var(--muted); line-height: 1.8; font-size: 14px; }
+footer {
+  padding: 25px 8%; border-top: 1px solid rgba(255,255,255,.08);
+  color: #888d85; font-size: 11px; line-height: 1.8;
+  display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+}
+@media (max-width: 850px) {
+  .steps { grid-template-columns: repeat(2, 1fr); }
+  .sectors { grid-template-columns: 1fr; }
+  .hero { min-height: auto; padding-top: 80px; padding-bottom: 80px; }
+  .hero:after { right: -250px; }
+}
+@media (max-width: 560px) {
+  .nav { padding: 20px 5%; align-items: flex-start; flex-direction: column; }
+  .navlinks { gap: 14px; }
+  .hero, .section { padding-left: 6%; padding-right: 6%; }
+  h1 { letter-spacing: -2px; }
+  .metrics { padding: 20px 6%; grid-template-columns: 1fr; gap: 18px; }
+  .steps { grid-template-columns: 1fr; }
+  .cta { margin-left: 6%; margin-right: 6%; padding: 24px; }
+  footer { padding-left: 6%; padding-right: 6%; }
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="index.html">INVISIBLE <span>THREAD</span></a>
+  <div class="navlinks">
+    <a href="#mission">Mission</a>
+    <a href="#method">How It Works</a>
+    <a href="#sectors">Sectors</a>
+    <a href="explorer.html">Network Explorer ↗</a>
+  </div>
+  <a href="about.html">About</a>
+</nav>
+
+<main>
+<section class="hero" id="mission">
+  <div class="hero-content">
+    <div class="eyebrow">Infrastructure Intelligence · Network Resilience</div>
+    <h1>INVISIBLE<br><span>THREAD</span></h1>
+    <h2>See the connections. Understand the ripple effects.</h2>
+    <p>
+      Cities depend on networks we rarely see. When one part is disrupted,
+      the effects can spread across essential services. INVISIBLE THREAD
+      explores these connections to help people understand risk before
+      a disruption becomes a wider problem.
+    </p>
+    <div class="actions">
+      <a class="btn btn-primary" href="explorer.html">EXPLORE THE NETWORK ↗</a>
+      <a class="btn btn-outline" href="#method">DISCOVER THE METHOD</a>
+    </div>
+  </div>
+</section>
+
+<section class="metrics">
+  <div class="metric"><strong>MAP</strong><span>Represent facilities and candidate connections</span></div>
+  <div class="metric"><strong>TRACE</strong><span>Explore how a disruption could affect a network</span></div>
+  <div class="metric"><strong>PREPARE</strong><span>Support clearer, evidence-aware resilience planning</span></div>
+</section>
+
+<section class="section" id="method">
+  <div class="section-head">
+    <div class="eyebrow">The approach</div>
+    <h2>From a single disruption to a wider picture.</h2>
+    <p>
+      A network-first approach helps reveal which services may be connected,
+      where further investigation is needed, and how a local disruption
+      could create wider operational concerns.
+    </p>
+  </div>
+  <div class="steps">
+    <article class="step">
+      <div class="number">01 / MAP</div>
+      <h3>Identify the network</h3>
+      <p>Organise mapped infrastructure locations into a structured view of the system.</p>
+    </article>
+    <article class="step">
+      <div class="number">02 / CONNECT</div>
+      <h3>Explore relationships</h3>
+      <p>Use proximity-based candidate links as starting points for investigation, not confirmed dependencies.</p>
+    </article>
+    <article class="step">
+      <div class="number">03 / SIMULATE</div>
+      <h3>Examine disruptions</h3>
+      <p>Use the prototype's available exploration and simulation features to investigate possible scenarios.</p>
+    </article>
+    <article class="step">
+      <div class="number">04 / INFORM</div>
+      <h3>Support preparedness</h3>
+      <p>Turn network context into clearer questions for planners and service operators.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="sectors">
+  <div class="section-head">
+    <div class="eyebrow">One idea · Multiple essential systems</div>
+    <h2>Built for interconnected cities.</h2>
+    <p>
+      The vision spans multiple sectors. Each sector is labelled by its
+      current development status so the demonstrator is distinct from future plans.
+    </p>
+  </div>
+  <div class="sectors">
+    <article class="sector">
+      <span class="status">CURRENT DEMONSTRATOR</span>
+      <h3>Healthcare Networks</h3>
+      <p>Explore mapped hospitals and pharmacies in selected Andhra Pradesh urban areas, with proximity-based candidate connections.</p>
+      <a href="explorer.html">Open Network Explorer ↗</a>
+    </article>
+    <article class="sector">
+      <span class="status">PLANNED EXPANSION</span>
+      <h3>Healthcare Coverage & Access</h3>
+      <p>Expand facility mapping to additional urban areas and explore potential gaps in access to hospitals and pharmacies.</p>
+    </article>
+    <article class="sector">
+      <span class="status">FUTURE SCOPE</span>
+      <h3>Healthcare Scenario Expansion</h3>
+      <p>Extend this single healthcare infrastructure scenario to more urban areas and explore how hypothetical disruptions may affect access to hospitals and pharmacies.</p>
+    </article>
+  </div>
+  <div class="scope-note">
+    <strong>Prototype scope:</strong> The current data-backed demonstrator uses OpenStreetMap
+    facility records from selected urban areas. Proximity links are candidates only;
+    they do not establish verified supply-chain or operational dependencies.
+    Coverage is not a complete census of Andhra Pradesh.
+  </div>
+</section>
+
+<section class="cta">
+  <div class="eyebrow">Explore the demonstrator</div>
+  <h2>Every visible disruption has a wider context.</h2>
+  <p>Start with the healthcare network currently represented in the prototype.</p>
+  <a class="btn btn-primary" href="explorer.html">LAUNCH NETWORK EXPLORER ↗</a>
+</section>
+</main>
+
+<footer>
+  <span>INVISIBLE THREAD · Infrastructure Resilience Prototype</span>
+  <span>Evidence-aware mapping · Network exploration · Scenario thinking</span>
+</footer>
+</body>
+</html>

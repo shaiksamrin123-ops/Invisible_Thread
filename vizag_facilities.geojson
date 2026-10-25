@@ -1,0 +1,7043 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "node_1474046817",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3094001,
+          17.7224616
+        ]
+      },
+      "properties": {
+        "facility_id": "node_1474046817",
+        "name": "Visakha Homeo Clinic",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_1474440233",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3145614,
+          17.7426752
+        ]
+      },
+      "properties": {
+        "facility_id": "node_1474440233",
+        "name": "Nikitha Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_1824367505",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3351151,
+          17.743378
+        ]
+      },
+      "properties": {
+        "facility_id": "node_1824367505",
+        "name": "Appolo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_2332948921",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3146125,
+          17.7436298
+        ]
+      },
+      "properties": {
+        "facility_id": "node_2332948921",
+        "name": "Padmaja Hospital - Seethammadhara",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_3265317980",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3229595,
+          17.739081
+        ]
+      },
+      "properties": {
+        "facility_id": "node_3265317980",
+        "name": "Jyothi Nursing Home",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_3684858436",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1534411,
+          17.6823237
+        ]
+      },
+      "properties": {
+        "facility_id": "node_3684858436",
+        "name": "Unnamed pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_4267548789",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2713316,
+          17.7362275
+        ]
+      },
+      "properties": {
+        "facility_id": "node_4267548789",
+        "name": "Durga Nursing Home",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_4541095944",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3071191,
+          17.7375272
+        ]
+      },
+      "properties": {
+        "facility_id": "node_4541095944",
+        "name": "Rama Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_4568276771",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2706719,
+          17.7824442
+        ]
+      },
+      "properties": {
+        "facility_id": "node_4568276771",
+        "name": "kalavathi hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_4568465189",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3309144,
+          17.7568569
+        ]
+      },
+      "properties": {
+        "facility_id": "node_4568465189",
+        "name": "LV Prasad Eye Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_4635870145",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3080536,
+          17.7404353
+        ]
+      },
+      "properties": {
+        "facility_id": "node_4635870145",
+        "name": "KIMS (formerly Queens NRI Hospital)",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_4799206480",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.307414,
+          17.7147802
+        ]
+      },
+      "properties": {
+        "facility_id": "node_4799206480",
+        "name": "Sri Venkateshwara Nursing Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_4801326526",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3086985,
+          17.7154685
+        ]
+      },
+      "properties": {
+        "facility_id": "node_4801326526",
+        "name": "Amulya Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_4896583363",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3056846,
+          17.7288521
+        ]
+      },
+      "properties": {
+        "facility_id": "node_4896583363",
+        "name": "Kala Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_4965290721",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2419105,
+          17.6890131
+        ]
+      },
+      "properties": {
+        "facility_id": "node_4965290721",
+        "name": "Sri Venkateshwara Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_5080788437",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2381269,
+          17.6898203
+        ]
+      },
+      "properties": {
+        "facility_id": "node_5080788437",
+        "name": "Unnamed hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_5080788438",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2381055,
+          17.6894856
+        ]
+      },
+      "properties": {
+        "facility_id": "node_5080788438",
+        "name": "Unnamed hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_5080788439",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2377058,
+          17.6895392
+        ]
+      },
+      "properties": {
+        "facility_id": "node_5080788439",
+        "name": "Unnamed hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_5080788440",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2369816,
+          17.6894958
+        ]
+      },
+      "properties": {
+        "facility_id": "node_5080788440",
+        "name": "Unnamed hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_5080788441",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2363406,
+          17.689023
+        ]
+      },
+      "properties": {
+        "facility_id": "node_5080788441",
+        "name": "Unnamed hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_5080788450",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.236405,
+          17.6896287
+        ]
+      },
+      "properties": {
+        "facility_id": "node_5080788450",
+        "name": "Unnamed hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_5080788451",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2364184,
+          17.689667
+        ]
+      },
+      "properties": {
+        "facility_id": "node_5080788451",
+        "name": "Unnamed pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_5080788500",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2406428,
+          17.6830586
+        ]
+      },
+      "properties": {
+        "facility_id": "node_5080788500",
+        "name": "Unnamed pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_5080788501",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2357961,
+          17.6897053
+        ]
+      },
+      "properties": {
+        "facility_id": "node_5080788501",
+        "name": "Unnamed pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_5080788502",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2369977,
+          17.689621
+        ]
+      },
+      "properties": {
+        "facility_id": "node_5080788502",
+        "name": "Unnamed pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_5080788503",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2428235,
+          17.6889336
+        ]
+      },
+      "properties": {
+        "facility_id": "node_5080788503",
+        "name": "Unnamed pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_5080788504",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2367751,
+          17.689874
+        ]
+      },
+      "properties": {
+        "facility_id": "node_5080788504",
+        "name": "Unnamed pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_5080788505",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2363191,
+          17.68992
+        ]
+      },
+      "properties": {
+        "facility_id": "node_5080788505",
+        "name": "Unnamed pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_5080788506",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2380947,
+          17.6897436
+        ]
+      },
+      "properties": {
+        "facility_id": "node_5080788506",
+        "name": "Unnamed pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_5080788507",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2389718,
+          17.6896542
+        ]
+      },
+      "properties": {
+        "facility_id": "node_5080788507",
+        "name": "Unnamed pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_5798458939",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2984784,
+          17.7236037
+        ]
+      },
+      "properties": {
+        "facility_id": "node_5798458939",
+        "name": "Dr. VJs Cosmetic Surgery& Hair Transplantation Centre",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6628808944",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3120581,
+          17.7113427
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6628808944",
+        "name": "St. Joseph's Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6628820476",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3118425,
+          17.710893
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6628820476",
+        "name": "shantiniketan mental health centre",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6628861067",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3146963,
+          17.7120173
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6628861067",
+        "name": "Mycure hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6628946789",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3143316,
+          17.7141226
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6628946789",
+        "name": "Surya skin care",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6629033364",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3109627,
+          17.7100754
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6629033364",
+        "name": "Krishna Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6629035082",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3128724,
+          17.7149198
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6629035082",
+        "name": "Aaradhya fertility centre",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6629036947",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3109667,
+          17.7086688
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6629036947",
+        "name": "Sagar Durga Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6629071967",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3111357,
+          17.7090399
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6629071967",
+        "name": "Shri Venkataramana Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6629428979",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3090178,
+          17.7070739
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6629428979",
+        "name": "ABC hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6629457613",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3089749,
+          17.7075645
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6629457613",
+        "name": "Apex hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6629460182",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3087882,
+          17.7078558
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6629460182",
+        "name": "Usa hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6635493113",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3104939,
+          17.7082343
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6635493113",
+        "name": "Simhadri Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6635506599",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3099146,
+          17.7082036
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6635506599",
+        "name": "Apollow pharmacy",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6635515144",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3111377,
+          17.7076415
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6635515144",
+        "name": "Nature cure hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6635545548",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.308198,
+          17.7076108
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6635545548",
+        "name": "Life  medical centre",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6635549621",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3093781,
+          17.7079072
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6635549621",
+        "name": "Doctors care medical centre",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6635561459",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3094103,
+          17.7081218
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6635561459",
+        "name": "Sriddha hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6711993032",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3078726,
+          17.7624241
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6711993032",
+        "name": "Q1 Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6712009588",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3116458,
+          17.7620819
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6712009588",
+        "name": "GIMS",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6755526826",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3090204,
+          17.7067706
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6755526826",
+        "name": "Apex Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6758443699",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3354643,
+          17.7440297
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6758443699",
+        "name": "Dj Clinic",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6758665270",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.295486,
+          17.7277139
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6758665270",
+        "name": "Vision Care Centre (Super Speciality Eye Hospital)",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6758677177",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3075653,
+          17.7300554
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6758677177",
+        "name": "Apoorva Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6758686628",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3047865,
+          17.7273371
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6758686628",
+        "name": "Anapoorna Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6758705097",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.304584,
+          17.7269219
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6758705097",
+        "name": "Maxivision Super Speciality Eye Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6758710664",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.307247,
+          17.7363435
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6758710664",
+        "name": "Care Dental Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6758717165",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3309823,
+          17.7325361
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6758717165",
+        "name": "M.G.R. Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6758735188",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3041777,
+          17.7092414
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6758735188",
+        "name": "Rhea Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6758743207",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3117884,
+          17.7109406
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6758743207",
+        "name": "Adarsha Orthopaedic Center",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6758772439",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3041039,
+          17.7162921
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6758772439",
+        "name": "Prabha Clinic and Nursing Home",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6758784627",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3089118,
+          17.7071258
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6758784627",
+        "name": "Mythri Nursing Home",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6758813629",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2063977,
+          17.6825514
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6758813629",
+        "name": "Gowtami Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6761009918",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2187018,
+          17.7499948
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6761009918",
+        "name": "Satyam Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6761017583",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3031356,
+          17.7278327
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6761017583",
+        "name": "Venkatarama Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6761020424",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2173438,
+          17.752968
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6761020424",
+        "name": "SR Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6761040532",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3055443,
+          17.7379611
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6761040532",
+        "name": "Good Health New Central Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6761060209",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2790163,
+          17.7332163
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6761060209",
+        "name": "Dr Rama Rao Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6761079196",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3030283,
+          17.7106199
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6761079196",
+        "name": "Vijetha Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6768028772",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.277593,
+          17.7350755
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6768028772",
+        "name": "Sun Multi Speciality Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6768332127",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3092725,
+          17.7061715
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6768332127",
+        "name": "Abc Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6768383856",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2642758,
+          17.7463633
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6768383856",
+        "name": "Suma Maternity Home",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6768386211",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3083713,
+          17.7443962
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6768386211",
+        "name": "Lion Dist 324 C, Cancer Treatment and Research Center",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6768387728",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3146349,
+          17.7382076
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6768387728",
+        "name": "Amg Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6768451188",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3026153,
+          17.7108601
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6768451188",
+        "name": "Indus Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6768577352",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3107545,
+          17.7264096
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6768577352",
+        "name": "Visakha Ent Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6768715568",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.208107,
+          17.6853215
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6768715568",
+        "name": "Susruta Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6768741999",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1970797,
+          17.6824479
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6768741999",
+        "name": "R K Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6768783710",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3036815,
+          17.7382447
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6768783710",
+        "name": "Padmasri Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6770856512",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3041066,
+          17.739964
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6770856512",
+        "name": "Raghavendra Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6770857209",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1985898,
+          17.6840514
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6770857209",
+        "name": "Sujatha Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6770861724",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3044016,
+          17.7364998
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6770861724",
+        "name": "Centre For Sight",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6773497407",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.293823,
+          17.7288061
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6773497407",
+        "name": "Krishna Maternity And Nursing Home",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6773519885",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2960858,
+          17.69981
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6773519885",
+        "name": "Amrutha Nursing Home Private Limited",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6773613228",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.203619,
+          17.6867743
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6773613228",
+        "name": "Padmaja Hospital - Gajuwaka",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6773652312",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3054544,
+          17.7097505
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6773652312",
+        "name": "Care Hospital - Maharanipet",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6778457455",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3037458,
+          17.7103989
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6778457455",
+        "name": "Samudra Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6778878343",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3115497,
+          17.7362763
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6778878343",
+        "name": "Sunita Nursing Home",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6778891203",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.333627,
+          17.7320085
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6778891203",
+        "name": "Waltair Multicare Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6778921290",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3038954,
+          17.7118451
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6778921290",
+        "name": "Siddharth Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6782119569",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3125274,
+          17.7108448
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6782119569",
+        "name": "Visakha Children Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6787301791",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3086663,
+          17.7083599
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6787301791",
+        "name": "Sraddha Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6787401750",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3352873,
+          17.7440143
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6787401750",
+        "name": "Tirumala Vijaya Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6789523012",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.309819,
+          17.7224323
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6789523012",
+        "name": "Aarif Nursing Home",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6789535761",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3107518,
+          17.7099032
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6789535761",
+        "name": "Vijaya Medical Centre",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6789549353",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3116168,
+          17.7186287
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6789549353",
+        "name": "OMNI RK Super Specialty Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6789680553",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3087254,
+          17.7168287
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6789680553",
+        "name": "Vasan Eye Care Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6789720253",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3083036,
+          17.7171512
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6789720253",
+        "name": "Lazarus Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6789830343",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3147241,
+          17.7685126
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6789830343",
+        "name": "Sai Satya Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6791809450",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3085356,
+          17.7108505
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6791809450",
+        "name": "Bharathi Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6791968309",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.302677,
+          17.7124353
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6791968309",
+        "name": "Lawrance and Mayo Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6798143867",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3090506,
+          17.7066084
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6798143867",
+        "name": "City Care Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6801191501",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.250969,
+          17.7404309
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6801191501",
+        "name": "Kamala Nursing Home",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6804727620",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2990453,
+          17.7265297
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6804727620",
+        "name": "Kalavathi Surgical Hospital and Laparoscopic Centre",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6804768866",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3123571,
+          17.728124
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6804768866",
+        "name": "Subham Prema Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6804932700",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3127339,
+          17.7203686
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6804932700",
+        "name": "Care Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6843473422",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3023683,
+          17.7109237
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6843473422",
+        "name": "MyCure Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_6868865811",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2064905,
+          17.8231089
+        ]
+      },
+      "properties": {
+        "facility_id": "node_6868865811",
+        "name": "Unnamed hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7114008055",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3172347,
+          17.7686588
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7114008055",
+        "name": "GVMC hospital,FRU Arilova",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7786891185",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1863316,
+          17.8951943
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7786891185",
+        "name": "Sri Venkata Sai Multi Specialty Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7786891201",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1856362,
+          17.8999331
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7786891201",
+        "name": "Niharika Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7786891223",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1862515,
+          17.8976322
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7786891223",
+        "name": "Dr. B Ramarao Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057180",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.347569,
+          17.8027947
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057180",
+        "name": "Bethany Christian Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057184",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.298429,
+          17.7341833
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057184",
+        "name": "Master Homeo Vaidyalayam",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057185",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3251813,
+          17.8830152
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057185",
+        "name": "Dr. Hedgewar School Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057191",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.310741,
+          17.7289618
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057191",
+        "name": "Day & Night Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057196",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.328678,
+          17.743927
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057196",
+        "name": "Sanjivi Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057199",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.296865,
+          17.735493
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057199",
+        "name": "Government Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057201",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3043823,
+          17.7274681
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057201",
+        "name": "Sai Spoorthy Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057202",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3307524,
+          17.7468553
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057202",
+        "name": "Amma Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057203",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3169337,
+          17.7322507
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057203",
+        "name": "Sandhya Eye Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057207",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3381086,
+          17.7398696
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057207",
+        "name": "Sri Krishna Hospital And Mrudula Kidney Centre",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057208",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2989253,
+          17.7347439
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057208",
+        "name": "Ramkumar Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057209",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3099357,
+          17.7295515
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057209",
+        "name": "Reddy Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057210",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2912686,
+          17.7301424
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057210",
+        "name": "Kalavathy Maternity Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057211",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2982102,
+          17.7315298
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057211",
+        "name": "S.V Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057214",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2988976,
+          17.7360864
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057214",
+        "name": "Lakshmi Gayathri Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057217",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.300686,
+          17.733482
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057217",
+        "name": "Saroja Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057218",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3397326,
+          17.8059869
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057218",
+        "name": "Surya Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057220",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2994272,
+          17.739424
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057220",
+        "name": "A1 Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057223",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.294103,
+          17.7275716
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057223",
+        "name": "CARE Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057226",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.340338,
+          17.7427806
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057226",
+        "name": "Sri Surya Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057228",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3003628,
+          17.7346615
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057228",
+        "name": "Sri Krishna Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057234",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2936785,
+          17.7289528
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057234",
+        "name": "Dr. Kamalamma Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057235",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3116732,
+          17.7364007
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057235",
+        "name": "National Orthopaedic Centre",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057240",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2982472,
+          17.7318218
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057240",
+        "name": "Vivekanandha Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057241",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3141989,
+          17.745865
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057241",
+        "name": "Government ENT Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057242",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3075918,
+          17.7414689
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057242",
+        "name": "Padmavathi Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057249",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2947484,
+          17.7301583
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057249",
+        "name": "Krishnaveni Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057256",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3034712,
+          17.7380243
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057256",
+        "name": "Morpheus Padmasri International IVF Centre",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057260",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.293632,
+          17.7289115
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057260",
+        "name": "Krishna Children Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057261",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3077406,
+          17.7274279
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057261",
+        "name": "Master Homoeo Home",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057262",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2918881,
+          17.7322439
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057262",
+        "name": "Sri Sai Ram Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057268",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.297657,
+          17.7442418
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057268",
+        "name": "Soham ENT Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057270",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3467145,
+          17.8040379
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057270",
+        "name": "Keerthana Nursing Home",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787057272",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3331524,
+          17.7244631
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787057272",
+        "name": "Sri Gayatri Nursing Home & Kasturi Maternity Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647583",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.312939,
+          17.7101086
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647583",
+        "name": "Kanakadurga Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647584",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2662977,
+          17.7409007
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647584",
+        "name": "Sunrise Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647585",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2053903,
+          17.687897
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647585",
+        "name": "Sunrise Childern Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647586",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.193854,
+          17.6843101
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647586",
+        "name": "Sri Krishna Orthopaedic Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647588",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3197589,
+          17.7129243
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647588",
+        "name": "A N Beach Hospital - Multi Speciality Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647591",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3045397,
+          17.7100946
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647591",
+        "name": "Dr. Mangamma Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647592",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1975029,
+          17.6829789
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647592",
+        "name": "Sri Lakhmi ENT Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647593",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.199526,
+          17.702135
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647593",
+        "name": "BHEL Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647594",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2016314,
+          17.6846529
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647594",
+        "name": "Visakha Child Care Centre",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647599",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2133794,
+          17.6871805
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647599",
+        "name": "Piles Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647600",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.304361,
+          17.710144
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647600",
+        "name": "Visakha Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647602",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2060963,
+          17.8231815
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647602",
+        "name": "Sreenivasa Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647603",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2127666,
+          17.6863477
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647603",
+        "name": "Simhagiri Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647604",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2053196,
+          17.6852466
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647604",
+        "name": "City Hospital Ortho & Specialities",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647605",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.313972,
+          17.712323
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647605",
+        "name": "Medicover Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647609",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.243601,
+          17.688339
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647609",
+        "name": "Life Spring Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647612",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2078579,
+          17.6854195
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647612",
+        "name": "Sri Lakshmi Children Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647614",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1989654,
+          17.6827868
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647614",
+        "name": "Ankitha Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647618",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2192385,
+          17.7480338
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647618",
+        "name": "Hymavathi Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647619",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2100702,
+          17.6844753
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647619",
+        "name": "Pujitha Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647620",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2265444,
+          17.7445712
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647620",
+        "name": "Sarojini Children's Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647621",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2261912,
+          17.7452036
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647621",
+        "name": "SMS Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647623",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2049981,
+          17.6872165
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647623",
+        "name": "Navaratnam - Kesava Rao Charitable Health Centre",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647624",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2042804,
+          17.8148001
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647624",
+        "name": "Visakha Gynaec & Obst Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647626",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2186331,
+          17.7508459
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647626",
+        "name": "Suryanarayana Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647627",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2256151,
+          17.7656255
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647627",
+        "name": "Simhadri Women & Child Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647629",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.312442,
+          17.7104
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647629",
+        "name": "Vizag Ortho & Spine Centre",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647630",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.302862,
+          17.710327
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647630",
+        "name": "Sri Amrutha Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647632",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2079845,
+          17.6869092
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647632",
+        "name": "Mamata Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647633",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3103498,
+          17.709779
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647633",
+        "name": "Sri Surya Dental Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647634",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.309857,
+          17.708149
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647634",
+        "name": "Sri Surya Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647638",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.205361,
+          17.6877091
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647638",
+        "name": "Lata Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647639",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2073838,
+          17.6865547
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647639",
+        "name": "Janani Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647640",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2145015,
+          17.6860522
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647640",
+        "name": "Geetha Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647641",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3105799,
+          17.7104023
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647641",
+        "name": "Shree Krishna Health Centre",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647642",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.269641,
+          17.745985
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647642",
+        "name": "Aditya Obstetrics & Gynecology Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647647",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2092812,
+          17.6849028
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647647",
+        "name": "Sri Surya Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647648",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2101897,
+          17.6863384
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647648",
+        "name": "Harshitha Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647649",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.12163,
+          17.790161
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647649",
+        "name": "Mother and Child Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647650",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2070778,
+          17.8094151
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647650",
+        "name": "Pendurthi Govt Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647652",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.269671,
+          17.746278
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647652",
+        "name": "Sri Sai Aditya Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647654",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.312125,
+          17.710382
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647654",
+        "name": "Gothis Doctor Chambers",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647655",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2055093,
+          17.6795765
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647655",
+        "name": "Harini Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647657",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2120798,
+          17.7671455
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647657",
+        "name": "Heritage Kerala Ayurveda Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647661",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.304302,
+          17.710544
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647661",
+        "name": "Ramya Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647664",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.213061,
+          17.805851
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647664",
+        "name": "Sri Sapthagiri Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647666",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2161371,
+          17.7524734
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647666",
+        "name": "Government Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647667",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2199593,
+          17.7476896
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647667",
+        "name": "Raghavendra Eye Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647671",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2046951,
+          17.6852715
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647671",
+        "name": "Muddu Krishna Children Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647673",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3090277,
+          17.7166466
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647673",
+        "name": "Sarojini Devi Skin Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647675",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3143316,
+          17.7102508
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647675",
+        "name": "Ramsaranya Child Care Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647676",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.308867,
+          17.708177
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647676",
+        "name": "Baba Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647677",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2064302,
+          17.8177533
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647677",
+        "name": "Triveni Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7787647680",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3046802,
+          17.7100474
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7787647680",
+        "name": "Aditya Multi Care Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7916820571",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3106082,
+          17.763448
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7916820571",
+        "name": "M.B. Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7917282168",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3091374,
+          17.7171444
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7917282168",
+        "name": "ApolloHospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7930495900",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3057236,
+          17.7638753
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7930495900",
+        "name": "HCG Cancer Centre",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7931043211",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3078391,
+          17.7632652
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7931043211",
+        "name": "Star Pinnacle Heart Centre",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7934165413",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1144238,
+          17.6898831
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7934165413",
+        "name": "Homi Bhabha Cancer Hospital & Research Centre",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7951547049",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3106734,
+          17.7097535
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7951547049",
+        "name": "Ramsaranya Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7951595809",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3130073,
+          17.7202856
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7951595809",
+        "name": "Visakha Hospitals And Diagnostics",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7969038055",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3094245,
+          17.7173631
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7969038055",
+        "name": "SevenHills Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_7999688946",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2377236,
+          17.6843531
+        ]
+      },
+      "properties": {
+        "facility_id": "node_7999688946",
+        "name": "St Anns Jubilee Memorial Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_8767763195",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2555653,
+          17.7396152
+        ]
+      },
+      "properties": {
+        "facility_id": "node_8767763195",
+        "name": "Suraksha Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_8767818502",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3113995,
+          17.7640286
+        ]
+      },
+      "properties": {
+        "facility_id": "node_8767818502",
+        "name": "Varma Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_8767908843",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.309347,
+          17.7295406
+        ]
+      },
+      "properties": {
+        "facility_id": "node_8767908843",
+        "name": "Sai Spoorthy Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_8767992101",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3113942,
+          17.7304744
+        ]
+      },
+      "properties": {
+        "facility_id": "node_8767992101",
+        "name": "Government Regional Eye Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_8768007090",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3045894,
+          17.710174
+        ]
+      },
+      "properties": {
+        "facility_id": "node_8768007090",
+        "name": "LG Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_8768034019",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3124349,
+          17.763791
+        ]
+      },
+      "properties": {
+        "facility_id": "node_8768034019",
+        "name": "Omega Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_8768039075",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3121251,
+          17.7638179
+        ]
+      },
+      "properties": {
+        "facility_id": "node_8768039075",
+        "name": "Medicover Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_8768045905",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3109067,
+          17.7100054
+        ]
+      },
+      "properties": {
+        "facility_id": "node_8768045905",
+        "name": "Ramsaranya Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_8768062261",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3324401,
+          17.7336653
+        ]
+      },
+      "properties": {
+        "facility_id": "node_8768062261",
+        "name": "GJ Hospitals And Trauma Centre",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_8768067733",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2159491,
+          17.6812931
+        ]
+      },
+      "properties": {
+        "facility_id": "node_8768067733",
+        "name": "Sankar Foundation Eye Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_9768626364",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2560947,
+          17.7496301
+        ]
+      },
+      "properties": {
+        "facility_id": "node_9768626364",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_9772561605",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2191542,
+          17.7493798
+        ]
+      },
+      "properties": {
+        "facility_id": "node_9772561605",
+        "name": "Chest Hospital and Medical Store",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_10892780888",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2082462,
+          17.809861
+        ]
+      },
+      "properties": {
+        "facility_id": "node_10892780888",
+        "name": "Eye Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11568843829",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1896323,
+          17.8765797
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11568843829",
+        "name": "JMJ Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11568858428",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2108041,
+          17.7992566
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11568858428",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11568884068",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2716634,
+          17.7350341
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11568884068",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11568906527",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2449377,
+          17.7405178
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11568906527",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11608970090",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1881178,
+          17.8995927
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11608970090",
+        "name": "MedPlus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11609359616",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2161174,
+          17.7765459
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11609359616",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11609359621",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2057411,
+          17.8204103
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11609359621",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11609442998",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2174317,
+          17.7530051
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11609442998",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11609626426",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3147147,
+          17.7251141
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11609626426",
+        "name": "Dr.Mohan's Diabetes Specialities Centre",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11609638774",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3184059,
+          17.723878
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11609638774",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11610187355",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2674111,
+          17.7359818
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11610187355",
+        "name": "MedPlus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11610187366",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2780965,
+          17.7325041
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11610187366",
+        "name": "Unnamed pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11610201185",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2333242,
+          17.743595
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11610201185",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11610201199",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2182237,
+          17.7511088
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11610201199",
+        "name": "Pavani Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11633147656",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1857344,
+          17.8971006
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11633147656",
+        "name": "Sri Vanaja Medical Stores",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11647277518",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3066805,
+          17.7317172
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11647277518",
+        "name": "Vijaya",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11647435225",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1338381,
+          17.6880696
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11647435225",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11688050192",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.30576,
+          17.7394679
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11688050192",
+        "name": "MedPlus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11690446185",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3042503,
+          17.7350256
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11690446185",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11690446188",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3118352,
+          17.7414668
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11690446188",
+        "name": "AMG Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11690446194",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3130805,
+          17.7384154
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11690446194",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11690449432",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2997388,
+          17.736649
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11690449432",
+        "name": "MedPlus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11703280577",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2731535,
+          17.7341905
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11703280577",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11711398033",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1881834,
+          17.899753
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11711398033",
+        "name": "Children Multi Speciality Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11740567974",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3318795,
+          17.7478206
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11740567974",
+        "name": "Medicover Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11741089428",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2392991,
+          17.7715402
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11741089428",
+        "name": "MedPlus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11793760583",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2304987,
+          17.7435093
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11793760583",
+        "name": "MedPlus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11793760643",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2289186,
+          17.7437014
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11793760643",
+        "name": "Sai Ramkrishna Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11793760680",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2225925,
+          17.7457212
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11793760680",
+        "name": "MedPlus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11818010546",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3345037,
+          17.7361267
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11818010546",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11830210790",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2188998,
+          17.7495767
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11830210790",
+        "name": "Vaishnavi Medical",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11830210807",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2194218,
+          17.7487309
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11830210807",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11830210858",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2196592,
+          17.7485165
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11830210858",
+        "name": "Sri Dhavala Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11851269070",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2539492,
+          17.7400186
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11851269070",
+        "name": "Sri Lalitha Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11851269086",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.253535,
+          17.7401011
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11851269086",
+        "name": "MedPlus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11851269088",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2536185,
+          17.7400803
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11851269088",
+        "name": "Sri Manikanta Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11851269089",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2535864,
+          17.7401303
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11851269089",
+        "name": "Suneetha Hospital Dr V Anand Rao",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11851269126",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2526881,
+          17.7401985
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11851269126",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_11874849173",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3219765,
+          17.7372058
+        ]
+      },
+      "properties": {
+        "facility_id": "node_11874849173",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12104314162",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3306692,
+          17.7636954
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12104314162",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12203565563",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2057726,
+          17.8203015
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12203565563",
+        "name": "Medplus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12206419212",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1845525,
+          17.8960104
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12206419212",
+        "name": "Generic medical store",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12206427600",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1845146,
+          17.8964614
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12206427600",
+        "name": "Ramakrishna Medical Stores",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12206469995",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.184693,
+          17.8966707
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12206469995",
+        "name": "Vasavi Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12213464252",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2092213,
+          17.8051502
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12213464252",
+        "name": "Santhi Medical Stores",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12213464286",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2093877,
+          17.8046265
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12213464286",
+        "name": "Sai Clinic",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12213464390",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2105594,
+          17.8009047
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12213464390",
+        "name": "Saadhana Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12213464396",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2104259,
+          17.8006523
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12213464396",
+        "name": "Generic Medical Store",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12213910872",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2100269,
+          17.8006055
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12213910872",
+        "name": "VJ Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12213911037",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2092659,
+          17.8032146
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12213911037",
+        "name": "Surabhi Clinics",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12213911040",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2093038,
+          17.8032889
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12213911040",
+        "name": "Ramachandra",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12213911077",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2094537,
+          17.8024276
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12213911077",
+        "name": "Sarat Chandras Speciality Clinic",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12213911101",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2087962,
+          17.8048719
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12213911101",
+        "name": "Generic Medical Store",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12213911116",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2088076,
+          17.8051319
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12213911116",
+        "name": "MedPlus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12213911123",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2087722,
+          17.8052804
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12213911123",
+        "name": "Lavanya Medical",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12252527618",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.185985,
+          17.8972279
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12252527618",
+        "name": "Sunflower childrens clinic",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12441119219",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3168907,
+          17.7321305
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12441119219",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12450634420",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2161731,
+          17.7766478
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12450634420",
+        "name": "Sri Sai Ram Medical",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12470766214",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2719764,
+          17.7350078
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12470766214",
+        "name": "Dr BV Adinarayana Childrens Specialist",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12470766220",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2721253,
+          17.7348232
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12470766220",
+        "name": "Sri Hyndhavi Medical and General Stores",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12470766390",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2705009,
+          17.7348973
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12470766390",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12531593373",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3294672,
+          17.729599
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12531593373",
+        "name": "Ayushman arogya mandir",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12704727058",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.186857,
+          17.8982067
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12704727058",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12713272570",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3280126,
+          17.7447284
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12713272570",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12713272985",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3077576,
+          17.7080946
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12713272985",
+        "name": "Central Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12713272987",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3051908,
+          17.7098373
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12713272987",
+        "name": "Sukhibhava Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12836726840",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1235012,
+          17.7906317
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12836726840",
+        "name": "Arogya Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12864714671",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1602748,
+          17.6982716
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12864714671",
+        "name": "MedPlus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12895248666",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2376498,
+          17.7715174
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12895248666",
+        "name": "Unnamed pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12895248667",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2377239,
+          17.7715267
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12895248667",
+        "name": "Vaidyah Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12895248669",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2378589,
+          17.7716315
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12895248669",
+        "name": "Generic Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12895248674",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.23695,
+          17.7713699
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12895248674",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12951725942",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1854992,
+          17.8966477
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12951725942",
+        "name": "Venkateswara Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12954591864",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.329314,
+          17.7471388
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12954591864",
+        "name": "Life Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12954596412",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.330873,
+          17.7475773
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12954596412",
+        "name": "Lakshya Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12959379000",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2079558,
+          17.8103757
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12959379000",
+        "name": "Sri Aditya Medical",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12959403112",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2080662,
+          17.8096092
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12959403112",
+        "name": "Generic Medical Store",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12959403115",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2081298,
+          17.8094772
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12959403115",
+        "name": "Murali Medical",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12959438352",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2105125,
+          17.8004314
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12959438352",
+        "name": "Sri Lakshmi Medicals & General Stores",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12959438371",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2108277,
+          17.7993582
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12959438371",
+        "name": "Ramu Medical",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12959438375",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2108501,
+          17.7991986
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12959438375",
+        "name": "Drugmart Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12986990375",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3314955,
+          17.7440648
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12986990375",
+        "name": "MedPlus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12992712245",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3334101,
+          17.7356552
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12992712245",
+        "name": "MedPlus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12992712255",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3343828,
+          17.7365275
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12992712255",
+        "name": "Venkatalaxmi Medical",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12992712257",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3353795,
+          17.7373995
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12992712257",
+        "name": "KIMS Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12992712271",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3320262,
+          17.7464492
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12992712271",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12993878510",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2975669,
+          17.7044393
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12993878510",
+        "name": "Varshini Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12993878511",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2975412,
+          17.704318
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12993878511",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_12993878523",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2962077,
+          17.7020158
+        ]
+      },
+      "properties": {
+        "facility_id": "node_12993878523",
+        "name": "Rama Krishna  Medical Stores",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13065369479",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3456144,
+          17.8040652
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13065369479",
+        "name": "Balaji Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13065369481",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3436124,
+          17.8043659
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13065369481",
+        "name": "MedPlus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13065369483",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3430187,
+          17.8045113
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13065369483",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13085046761",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3018415,
+          17.7207941
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13085046761",
+        "name": "Karunakar Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13086305480",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3281477,
+          17.7289909
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13086305480",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13086305483",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3280596,
+          17.7289105
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13086305483",
+        "name": "Swamy Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13086308345",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.333213,
+          17.7320363
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13086308345",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13096015215",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3150806,
+          17.7436237
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13096015215",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13096493295",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3062174,
+          17.7277486
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13096493295",
+        "name": "Sri Padmavathi Medical Stores",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13096498936",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3064227,
+          17.7298086
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13096498936",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13096498953",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3066934,
+          17.7315069
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13096498953",
+        "name": "Sri Sai Varun Medical & General Stores",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13096498958",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3069769,
+          17.731582
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13096498958",
+        "name": "Sri Kumaran Medical Stores",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13096498966",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3067265,
+          17.7321161
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13096498966",
+        "name": "Kusuma Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13096498975",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3072382,
+          17.7334262
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13096498975",
+        "name": "Sri Kanaka Sai Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13096498979",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3072822,
+          17.7338416
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13096498979",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13108171657",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3075353,
+          17.7625271
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13108171657",
+        "name": "Indus Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13108171659",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3119581,
+          17.7621246
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13108171659",
+        "name": "Narayana Medicity",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13179825649",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2464417,
+          17.7403603
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13179825649",
+        "name": "Sanjivani Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13316385323",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2958279,
+          17.7351633
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13316385323",
+        "name": "Unnamed pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13316385336",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3005017,
+          17.7317649
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13316385336",
+        "name": "Life Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13316385338",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3004868,
+          17.7315647
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13316385338",
+        "name": "Dhanvita Medical Stores",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13316385340",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3006959,
+          17.7298565
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13316385340",
+        "name": "Sree Siva Narayana Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13316889150",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2988194,
+          17.7255949
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13316889150",
+        "name": "Vinayaka Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13316889151",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2988235,
+          17.7256461
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13316889151",
+        "name": "AP Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13316889156",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2989878,
+          17.7262102
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13316889156",
+        "name": "Sree Venkata Rama Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13316889171",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2993676,
+          17.7269852
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13316889171",
+        "name": "AP Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13316889174",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.299679,
+          17.7269497
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13316889174",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13316889193",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3000096,
+          17.7272838
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13316889193",
+        "name": "MedPlus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13316889196",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2996641,
+          17.727295
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13316889196",
+        "name": "Generic Medical Shop",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13316892833",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2991417,
+          17.729861
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13316892833",
+        "name": "MedPlus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13316892846",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.299492,
+          17.7307223
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13316892846",
+        "name": "Generics",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13316892873",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2992304,
+          17.7321345
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13316892873",
+        "name": "Generic Medical Store",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13316892877",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2992479,
+          17.7323019
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13316892877",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13316892890",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2998045,
+          17.7342244
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13316892890",
+        "name": "Sri Vijaya Duga Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13319044884",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2464525,
+          17.750585
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13319044884",
+        "name": "Rajeswari Medical & General Store",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13319047213",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2485847,
+          17.7504386
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13319047213",
+        "name": "Healthcare Plus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13319047214",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2485662,
+          17.7501467
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13319047214",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13319047230",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2507051,
+          17.750277
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13319047230",
+        "name": "MedPlus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13319047283",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2556278,
+          17.7497285
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13319047283",
+        "name": "Life Generic Medical Store",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13388162267",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3046816,
+          17.7170756
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13388162267",
+        "name": "Unnamed pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13388162282",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3045103,
+          17.7166884
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13388162282",
+        "name": "MedPlus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13429829528",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3002595,
+          17.7145879
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13429829528",
+        "name": "Sri Durga Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13429886353",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2988667,
+          17.714561
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13429886353",
+        "name": "Zenin Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13543685705",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.204506,
+          17.8217848
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13543685705",
+        "name": "MedPlus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13543686105",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1218868,
+          17.7888462
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13543686105",
+        "name": "MedPlus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13543686108",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1239679,
+          17.7905663
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13543686108",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13543686114",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.129018,
+          17.7919246
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13543686114",
+        "name": "Unnamed pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13703071976",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3072753,
+          17.7161878
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13703071976",
+        "name": "Unnamed hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13703099839",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3116403,
+          17.715186
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13703099839",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13703099843",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3123328,
+          17.7148898
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13703099843",
+        "name": "MedPlus",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13703652241",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2053275,
+          17.6859677
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13703652241",
+        "name": "Sri Satya Medical",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13703652259",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2022417,
+          17.6846933
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13703652259",
+        "name": "Rise Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13798733359",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2418116,
+          17.7719493
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13798733359",
+        "name": "MM Khan Speciality Clinics",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13798739751",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2445881,
+          17.77308
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13798739751",
+        "name": "Life Medical & Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13798739754",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2441993,
+          17.7729583
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13798739754",
+        "name": "Simhadri Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13800470076",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3003703,
+          17.7276078
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13800470076",
+        "name": "Deekshita Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13800470090",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3007641,
+          17.7291423
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13800470090",
+        "name": "Urban Primary Health Center Dondaparthy",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13800472504",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3016139,
+          17.7273678
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13800472504",
+        "name": "Safeway Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13800472520",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3033021,
+          17.7306661
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13800472520",
+        "name": "Parvati Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13822217589",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.31267,
+          17.7353377
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13822217589",
+        "name": "Ravi Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13822235610",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.313045,
+          17.7369418
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13822235610",
+        "name": "Unnamed pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13822235670",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3132733,
+          17.7397107
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13822235670",
+        "name": "United Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13822235777",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3147388,
+          17.7433231
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13822235777",
+        "name": "Unnamed pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_13822235793",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3154201,
+          17.7436174
+        ]
+      },
+      "properties": {
+        "facility_id": "node_13822235793",
+        "name": "Ratnam Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_14045508816",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1965623,
+          17.7161033
+        ]
+      },
+      "properties": {
+        "facility_id": "node_14045508816",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_14045508821",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1964481,
+          17.7156585
+        ]
+      },
+      "properties": {
+        "facility_id": "node_14045508821",
+        "name": "Unnamed pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_14045508827",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.196404,
+          17.715519
+        ]
+      },
+      "properties": {
+        "facility_id": "node_14045508827",
+        "name": "Life Cure Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_14045508951",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.197592,
+          17.7201062
+        ]
+      },
+      "properties": {
+        "facility_id": "node_14045508951",
+        "name": "Unnamed pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_14045508961",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.196293,
+          17.720676
+        ]
+      },
+      "properties": {
+        "facility_id": "node_14045508961",
+        "name": "Annapurna Medical & General Store",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_14063161195",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3264554,
+          17.746342
+        ]
+      },
+      "properties": {
+        "facility_id": "node_14063161195",
+        "name": "Vijetha Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_14066767595",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2181722,
+          17.7513359
+        ]
+      },
+      "properties": {
+        "facility_id": "node_14066767595",
+        "name": "Sairam Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_14066767597",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2180786,
+          17.7518789
+        ]
+      },
+      "properties": {
+        "facility_id": "node_14066767597",
+        "name": "Generic Medical Store",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_14066851501",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.217315,
+          17.7679763
+        ]
+      },
+      "properties": {
+        "facility_id": "node_14066851501",
+        "name": "Sagar Durga Medicals",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_14310075762",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2091838,
+          17.8029546
+        ]
+      },
+      "properties": {
+        "facility_id": "node_14310075762",
+        "name": "Lakshmi Samanvitha Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_14310075763",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2095934,
+          17.8044139
+        ]
+      },
+      "properties": {
+        "facility_id": "node_14310075763",
+        "name": "Sai Sapthagiri Mother & Child Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_14310235361",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3111496,
+          17.7692043
+        ]
+      },
+      "properties": {
+        "facility_id": "node_14310235361",
+        "name": "Ayyappa Medical & General Stores",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_14310359454",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1028302,
+          17.6896675
+        ]
+      },
+      "properties": {
+        "facility_id": "node_14310359454",
+        "name": "Q9 Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_171402341",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.335149,
+          17.7440662
+        ]
+      },
+      "properties": {
+        "facility_id": "way_171402341",
+        "name": "Vijaya Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_224474117",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3051897,
+          17.7082562
+        ]
+      },
+      "properties": {
+        "facility_id": "way_224474117",
+        "name": "King George Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_386675746",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3351812,
+          17.7421472
+        ]
+      },
+      "properties": {
+        "facility_id": "way_386675746",
+        "name": "M.V.P. Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_389137565",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3095717,
+          17.7172639
+        ]
+      },
+      "properties": {
+        "facility_id": "way_389137565",
+        "name": "Sevenhills Hospital Ltd.",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_389325723",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3091862,
+          17.7171049
+        ]
+      },
+      "properties": {
+        "facility_id": "way_389325723",
+        "name": "Apollo Heart Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_402585050",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3310329,
+          17.7233764
+        ]
+      },
+      "properties": {
+        "facility_id": "way_402585050",
+        "name": "Government Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_402612183",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3324234,
+          17.7320776
+        ]
+      },
+      "properties": {
+        "facility_id": "way_402612183",
+        "name": "visakha Eye hospital Old",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_520578421",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3207993,
+          17.7273056
+        ]
+      },
+      "properties": {
+        "facility_id": "way_520578421",
+        "name": "AU North Campus Dispensary",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_521013578",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1441416,
+          17.6631126
+        ]
+      },
+      "properties": {
+        "facility_id": "way_521013578",
+        "name": "Visakhapatnam Steel General Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_545177115",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2376722,
+          17.6843217
+        ]
+      },
+      "properties": {
+        "facility_id": "way_545177115",
+        "name": "St.Ann's Jubilee Memorial Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_635547721",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3322893,
+          17.747774
+        ]
+      },
+      "properties": {
+        "facility_id": "way_635547721",
+        "name": "Pradhama",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_1213264469",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3177182,
+          17.7612049
+        ]
+      },
+      "properties": {
+        "facility_id": "way_1213264469",
+        "name": "Apollo Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_1260765202",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3479684,
+          17.7536946
+        ]
+      },
+      "properties": {
+        "facility_id": "way_1260765202",
+        "name": "Amrutha Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_1318810226",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.212304,
+          17.7917913
+        ]
+      },
+      "properties": {
+        "facility_id": "way_1318810226",
+        "name": "UPHC Purushothapuram",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_1319192479",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2168325,
+          17.7552187
+        ]
+      },
+      "properties": {
+        "facility_id": "way_1319192479",
+        "name": "Behara Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_1319803604",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2092014,
+          17.8053143
+        ]
+      },
+      "properties": {
+        "facility_id": "way_1319803604",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_1322638160",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2205156,
+          17.7662147
+        ]
+      },
+      "properties": {
+        "facility_id": "way_1322638160",
+        "name": "Sankar Foundation Eye Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_1338621571",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3274197,
+          17.7600454
+        ]
+      },
+      "properties": {
+        "facility_id": "way_1338621571",
+        "name": "Visakha Institute of Medical Sciences",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_1346919256",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3154832,
+          17.7618727
+        ]
+      },
+      "properties": {
+        "facility_id": "way_1346919256",
+        "name": "Care Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_1356624261",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2931109,
+          17.7397392
+        ]
+      },
+      "properties": {
+        "facility_id": "way_1356624261",
+        "name": "Homi Baba Cancer Hospital & Research Centre",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_1392925955",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3367582,
+          17.728908
+        ]
+      },
+      "properties": {
+        "facility_id": "way_1392925955",
+        "name": "Rani Chandramathi Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_1421751170",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3417822,
+          17.804838
+        ]
+      },
+      "properties": {
+        "facility_id": "way_1421751170",
+        "name": "Urban Primary Health Center",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_1543997021",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1961618,
+          17.7139846
+        ]
+      },
+      "properties": {
+        "facility_id": "way_1543997021",
+        "name": "KIMS ICON Hospitals",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_1544074449",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.2982472,
+          17.6984266
+        ]
+      },
+      "properties": {
+        "facility_id": "way_1544074449",
+        "name": "Queen Victoria Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_1552271294",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3015148,
+          17.7244079
+        ]
+      },
+      "properties": {
+        "facility_id": "way_1552271294",
+        "name": "Railway Hospital",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way_1570894850",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3079921,
+          17.7636344
+        ]
+      },
+      "properties": {
+        "facility_id": "way_1570894850",
+        "name": "Pinnacle",
+        "amenity": "hospital",
+        "source": "OpenStreetMap"
+      }
+    }
+  ]
+}

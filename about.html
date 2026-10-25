@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | INVISIBLE THREAD</title>
+<style>
+:root {
+  --bg:#08090b; --panel:#111216; --line:#302719;
+  --gold:#d9ad59; --gold2:#f2d69b;
+  --text:#f5f1e8; --muted:#aaa49a;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.7;
+}
+a{color:inherit;text-decoration:none}
+nav{
+  display:flex;justify-content:space-between;align-items:center;
+  gap:18px;padding:19px 6%;border-bottom:1px solid var(--line);
+  flex-wrap:wrap;background:#0b0b0d;
+}
+.brand{font-size:17px;font-weight:800;letter-spacing:2px}
+.brand span{color:var(--gold)}
+.links{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.links a:hover,.links .active{color:var(--gold2)}
+main{max-width:1100px;margin:auto;padding:55px 6% 75px}
+.eyebrow{color:var(--gold);letter-spacing:3px;font-size:11px;font-weight:800}
+h1{font-size:clamp(38px,7vw,68px);line-height:1.08;
+margin:13px 0 20px;letter-spacing:-1.8px}
+h1 span{color:var(--gold)}
+.lead{max-width:760px;color:#c5c0b7;font-size:17px}
+.hero{
+  padding:35px 0 42px;border-bottom:1px solid var(--line);
+}
+.section{padding:37px 0 5px}
+h2{font-size:25px;margin:0 0 12px}
+p{color:var(--muted);margin-top:8px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+gap:16px;margin-top:22px}
+.card{
+  background:linear-gradient(145deg,#151519,#0e0e11);
+  border:1px solid var(--line);border-radius:14px;padding:22px;
+}
+.card .num{font-size:12px;letter-spacing:2px;color:var(--gold)}
+.card h3{margin:8px 0;font-size:17px}
+.card p{font-size:14px;margin-bottom:0}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+gap:12px;margin-top:22px}
+.stat{border:1px solid var(--line);padding:20px;border-radius:12px;background:#101013}
+.stat strong{display:block;color:var(--gold2);font-size:clamp(22px,4vw,32px)}
+.stat span{font-size:12px;color:var(--muted)}
+.tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}
+.tag{border:1px solid #514127;border-radius:30px;padding:6px 12px;
+font-size:12px;color:#e7d4ad;background:#17140f}
+.notice{border-left:3px solid var(--gold);padding:17px 20px;
+background:#15120d;border-radius:0 10px 10px 0;margin-top:18px}
+.notice p{margin:5px 0 0;font-size:14px}
+footer{border-top:1px solid var(--line);padding:24px 6%;
+color:var(--muted);font-size:12px;display:flex;
+justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer span{color:var(--gold)}
+@media(max-width:650px){
+ main{padding-top:35px}.grid{grid-template-columns:1fr}
+ .stats{grid-template-columns:1fr}
+ nav{align-items:flex-start}.links{gap:12px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a class="brand" href="index.html">INVISIBLE <span>THREAD</span></a>
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="explorer.html">Explorer</a>
+    <a href="simulator.html">Simulator</a>
+    <a href="insights.html">Insights</a>
+    <a class="active" href="about.html">About</a>
+  </div>
+</nav>
+
+<main>
+  <section class="hero">
+    <div class="eyebrow">THE PROJECT BEHIND THE CONNECTIONS</div>
+    <h1>Understand the<br><span>Invisible Thread.</span></h1>
+    <p class="lead">
+      Hospitals and pharmacies are part of a larger healthcare ecosystem.
+      INVISIBLE THREAD explores how geographic relationships between
+      healthcare facilities can help us investigate potential disruptions
+      and understand possible impacts across Andhra Pradesh.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="eyebrow">01 / OUR PURPOSE</div>
+    <h2>Why INVISIBLE THREAD?</h2>
+    <p>
+      A healthcare facility does not operate in isolation. When access to a
+      facility is disrupted, nearby services and communities may also face
+      challenges. This project provides an interactive way to explore mapped
+      healthcare locations, examine proximity-based connections, and compare
+      hypothetical disruption scenarios.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="eyebrow">02 / EXPLORE THE PLATFORM</div>
+    <h2>From locations to scenarios</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="num">01 — EXPLORE</div>
+        <h3>Healthcare Explorer</h3>
+        <p>Explore mapped hospitals and pharmacies across the selected cities
+        using their geographic locations and available facility information.</p>
+      </article>
+      <article class="card">
+        <div class="num">02 — SIMULATE</div>
+        <h3>Disruption Simulator</h3>
+        <p>Select a facility and examine potential nearby connections that
+        could be relevant to a hypothetical disruption scenario.</p>
+      </article>
+      <article class="card">
+        <div class="num">03 — ANALYSE</div>
+        <h3>Insights Dashboard</h3>
+        <p>Review scenario comparisons and summarised results to understand
+        how different assumptions change the analysis.</p>
+      </article>
+      <article class="card">
+        <div class="num">04 — UNDERSTAND</div>
+        <h3>Evidence with context</h3>
+        <p>Interpret the outputs alongside their assumptions, data coverage,
+        and limitations instead of treating estimates as confirmed facts.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="eyebrow">03 / DATA AT A GLANCE</div>
+    <h2>The current project dataset</h2>
+    <div class="stats">
+      <div class="stat"><strong>2,978</strong><span>Mapped healthcare facilities</span></div>
+      <div class="stat"><strong>5,028</strong><span>Proximity-based candidate links</span></div>
+      <div class="stat"><strong>3</strong><span>Overall simulation scenarios</span></div>
+    </div>
+    <p>Dataset counts reflect the current project files and may change as the
+    data pipeline is updated.</p>
+  </section>
+
+  <section class="section">
+    <div class="eyebrow">04 / TECHNOLOGY</div>
+    <h2>Built with data and mapping</h2>
+    <p>The project combines geospatial data, interactive web interfaces,
+    structured datasets, and scenario-based analysis.</p>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">Pandas</span>
+      <span class="tag">GeoJSON</span>
+      <span class="tag">HTML & CSS</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">Geospatial Mapping</span>
+      <span class="tag">Scenario Analysis</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="eyebrow">05 / TRANSPARENCY</div>
+    <h2>What the results do — and don't — mean</h2>
+    <div class="notice">
+      <strong style="color:var(--gold2)">Candidate links are not verified dependencies.</strong>
+      <p>
+        The current links are generated using geographic proximity. They do
+        not establish confirmed supply routes, patient flows, referrals,
+        shared resources, or operational relationships. Scenario outputs
+        are exploratory and should not be used alone for real-world healthcare
+        decisions.
+      </p>
+    </div>
+    <p>
+      Data completeness, geographic coverage, assumptions, and the absence
+      of verified operational relationship data may affect the results.
+      Further validation with reliable real-world evidence is needed.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="eyebrow">THE BIGGER PICTURE</div>
+    <h2>Making hidden relationships easier to explore.</h2>
+    <p>
+      INVISIBLE THREAD is an exploratory data project designed to make
+      healthcare location patterns and hypothetical disruption scenarios
+      easier to understand through an accessible visual interface.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <div>INVISIBLE <span>THREAD</span> · Healthcare Network Exploration</div>
+  <div>Explore responsibly. Interpret with evidence.</div>
+</footer>
+</body>
+</html>

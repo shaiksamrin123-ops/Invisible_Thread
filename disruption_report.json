@@ -1,0 +1,24 @@
+{
+  "scenario": "Single candidate pharmacy unavailable",
+  "city": "Vijayawada",
+  "hospital_id": "node_10895507025",
+  "hospital_name": "Unnamed hospital",
+  "disrupted_pharmacy_id": "node_13021153049",
+  "disrupted_pharmacy_name": "Unnamed pharmacy",
+  "candidate_options_before": 3,
+  "candidate_options_after": 2,
+  "candidate_options_lost": 1,
+  "remaining_candidates": [
+    {
+      "pharmacy_id": "node_12992450730",
+      "pharmacy_name": "Grace Pharmacy",
+      "distance_km": 2.697
+    },
+    {
+      "pharmacy_id": "node_12875629420",
+      "pharmacy_name": "Darwin Pharmacy",
+      "distance_km": 2.739
+    }
+  ],
+  "important_limitation": "Links represent geographic proximity candidates, not verified supply-chain dependencies or confirmed service availability."
+}

@@ -1,0 +1,46 @@
+city,scenario,hospitals_evaluated,total_candidate_options_before,candidate_options_removed,candidate_options_remaining,hospitals_with_zero_candidates
+Anakapalli,Baseline,28,84,0,84,0
+Anakapalli,One candidate unavailable,28,84,28,56,0
+Anakapalli,Two candidates unavailable,28,84,56,28,0
+Bhimavaram,Baseline,59,177,0,177,0
+Bhimavaram,One candidate unavailable,59,177,59,118,0
+Bhimavaram,Two candidates unavailable,59,177,118,59,0
+Chittoor,Baseline,31,31,0,31,0
+Chittoor,One candidate unavailable,31,31,31,0,31
+Chittoor,Two candidates unavailable,31,31,31,0,31
+Guntur,Baseline,186,550,0,550,0
+Guntur,One candidate unavailable,186,550,186,364,4
+Guntur,Two candidates unavailable,186,550,368,182,4
+Kakinada,Baseline,27,53,0,53,0
+Kakinada,One candidate unavailable,27,53,27,26,1
+Kakinada,Two candidates unavailable,27,53,53,0,27
+Kurnool,Baseline,109,322,0,322,0
+Kurnool,One candidate unavailable,109,322,109,213,2
+Kurnool,Two candidates unavailable,109,322,216,106,3
+Machilipatnam,Baseline,38,114,0,114,0
+Machilipatnam,One candidate unavailable,38,114,38,76,0
+Machilipatnam,Two candidates unavailable,38,114,76,38,0
+Ongole,Baseline,114,338,0,338,0
+Ongole,One candidate unavailable,114,338,114,224,2
+Ongole,Two candidates unavailable,114,338,226,112,2
+Rajahmundry,Baseline,239,711,0,711,0
+Rajahmundry,One candidate unavailable,239,711,239,472,1
+Rajahmundry,Two candidates unavailable,239,711,477,234,5
+Srikakulam,Baseline,58,174,0,174,0
+Srikakulam,One candidate unavailable,58,174,58,116,0
+Srikakulam,Two candidates unavailable,58,174,116,58,0
+Tenali,Baseline,29,29,0,29,0
+Tenali,One candidate unavailable,29,29,29,0,29
+Tenali,Two candidates unavailable,29,29,29,0,29
+Tirupati,Baseline,165,427,0,427,0
+Tirupati,One candidate unavailable,165,427,165,262,34
+Tirupati,Two candidates unavailable,165,427,296,131,34
+Vijayawada,Baseline,384,1150,0,1150,0
+Vijayawada,One candidate unavailable,384,1150,384,766,1
+Vijayawada,Two candidates unavailable,384,1150,767,383,1
+Visakhapatnam,Baseline,254,723,0,723,0
+Visakhapatnam,One candidate unavailable,254,723,254,469,17
+Visakhapatnam,Two candidates unavailable,254,723,491,232,22
+Vizianagaram,Baseline,50,148,0,148,0
+Vizianagaram,One candidate unavailable,50,148,50,98,1
+Vizianagaram,Two candidates unavailable,50,148,99,49,1

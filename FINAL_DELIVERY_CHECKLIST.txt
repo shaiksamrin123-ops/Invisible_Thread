@@ -1,0 +1,34 @@
+INVISIBLE THREAD — FINAL DELIVERY CHECKLIST
+
+1. EXPLORER
+[ ] Map loads and facilities appear.
+[ ] Selecting a facility shows its details.
+[ ] Run Simulator button opens simulator.html.
+[ ] Selected facility is preserved when navigating back.
+
+2. SIMULATOR
+[ ] Selected disrupted facility is shown correctly.
+[ ] 5 km radius circle is visible around selected facility.
+[ ] If fewer than 3 alternatives exist, search expands to 25 km.
+[ ] Top 3 alternatives are ranked by road distance when routing works.
+[ ] Clicking an alternative shows the route from the selected facility.
+[ ] GPS is optional; manual map selection works.
+[ ] Scenario panel and disruption controls still work.
+
+3. DATA AND RELIABILITY
+[ ] GeoJSON loads without browser console errors.
+[ ] Missing or invalid coordinates are handled.
+[ ] Routing failure shows a useful message.
+[ ] Map remains usable if GPS permission is denied.
+
+4. FINAL DEMO
+[ ] Start the local HTTP server.
+[ ] Open Explorer and select a facility.
+[ ] Click Run Simulator.
+[ ] Show the radius, alternatives, and route.
+[ ] Return to Explorer and verify the selection remains.
+[ ] Take screenshots for the presentation.
+
+Important:
+Code patches being added does not mean every feature has passed testing.
+Mark a checkbox only after verifying it in the browser.

@@ -1,0 +1,3 @@
+city,hospital_id,hospital_name,pharmacy_id,pharmacy_name,distance_km,relationship,verified_dependency,scenario_status
+Vijayawada,node_10895507025,Unnamed hospital,node_12992450730,Grace Pharmacy,2.697,proximity_candidate,False,remaining_after_simulation
+Vijayawada,node_10895507025,Unnamed hospital,node_12875629420,Darwin Pharmacy,2.739,proximity_candidate,False,remaining_after_simulation

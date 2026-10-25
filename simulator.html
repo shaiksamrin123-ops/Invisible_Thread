@@ -1,0 +1,4167 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>INVISIBLE THREAD | Disruption Simulator</title>
+<link href="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.css" rel="stylesheet"/>
+<script src="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.js"></script>
+<style>
+:root {
+  color-scheme: dark;
+  --bg:#080d17; --panel:#101827; --line:#26364b;
+  --muted:#8fa3bd; --text:#edf5ff; --cyan:#51d9f5;
+}
+* { box-sizing:border-box }
+body {
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+}
+header {
+  height:72px; display:flex; align-items:center;
+  justify-content:space-between; padding:0 24px;
+  border-bottom:1px solid var(--line); background:#0b1220;
+}
+.brand { display:flex; align-items:center; gap:12px }
+.logo {
+  width:38px;height:38px;border:1px solid var(--cyan);
+  border-radius:12px;display:grid;place-items:center;
+  color:var(--cyan);font-weight:800;
+}
+h1 {font-size:16px;letter-spacing:2px;margin:0}
+.subtitle {font-size:11px;color:var(--muted);margin-top:5px}
+.status {font-size:11px;color:#7ee7bc}
+.layout {
+  display:grid;grid-template-columns:320px minmax(0,1fr);
+  min-height:calc(100vh - 72px);
+}
+aside {
+  padding:20px;border-right:1px solid var(--line);
+  background:#0b1220;overflow:auto;
+}
+.eyebrow {
+  color:var(--cyan);font-size:10px;letter-spacing:2px;
+  font-weight:700;text-transform:uppercase;margin-bottom:10px;
+}
+h2 {font-size:19px;margin:0 0 8px}
+.description {font-size:12px;color:var(--muted);line-height:1.7}
+label {display:block;font-size:11px;color:#b9c8db;margin:18px 0 8px}
+input,select,button {
+  width:100%;padding:11px;border-radius:9px;
+  border:1px solid var(--line);background:#111d2d;
+  color:var(--text);font-size:12px;outline:none;
+}
+button {cursor:pointer}
+button:hover {border-color:var(--cyan)}
+.stats {
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:10px;margin:18px 0;
+}
+.stat {
+  padding:14px;border:1px solid var(--line);
+  border-radius:12px;background:#101a2a;
+}
+.stat strong {display:block;font-size:23px;margin-bottom:6px}
+.stat span {font-size:10px;color:var(--muted)}
+.legend {display:grid;gap:10px;margin:15px 0}
+.legend-item {display:flex;gap:9px;align-items:center;font-size:12px}
+.dot {width:9px;height:9px;border-radius:50%}
+.cyan {background:#51d9f5}.pink {background:#ff719b}.amber {background:#ffc66d}
+.note {
+  border:1px solid var(--line);border-radius:10px;
+  padding:12px;font-size:11px;color:var(--muted);line-height:1.7;
+  margin-top:18px;
+}
+.map-area {position:relative;min-width:0;min-height:600px}
+#map {position:absolute;inset:0}
+.map-label {
+  position:absolute;z-index:2;top:16px;left:16px;
+  background:#0b1220eF;border:1px solid var(--line);
+  border-radius:10px;padding:12px 15px;pointer-events:none;
+}
+.map-label strong {font-size:12px}
+.map-label div {font-size:10px;color:var(--muted);margin-top:5px}
+.map-actions {
+  position:absolute;right:16px;top:16px;z-index:3;
+  display:flex;gap:8px;
+}
+.map-actions button {width:auto;background:#0b1220ed}
+.footer {
+  position:absolute;bottom:12px;left:12px;z-index:2;
+  background:#0b1220df;border:1px solid var(--line);
+  border-radius:8px;padding:9px 11px;font-size:10px;color:var(--muted);
+}
+#details {margin-top:14px;font-size:12px;line-height:1.8;color:#d4e2f2}
+.small {font-size:10px;color:var(--muted)}
+@media(max-width:800px) {
+  .layout {grid-template-columns:1fr}
+  aside {border-right:0;border-bottom:1px solid var(--line)}
+  .map-area {min-height:65vh}
+  header {padding:0 14px}
+}
+</style>
+<style id="royal-rich-ux">
+:root {
+  color-scheme: dark;
+  --bg: #0A1020;
+  --panel: #17233A;
+  --line: #344158;
+  --muted: #B2BED0;
+  --text: #F4EFE5;
+  --cyan: #D6B36A;
+  --pink: #7DB7A2;
+  --amber: #E9D8AD;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: #0A1020 !important;
+  color: #F4EFE5 !important;
+  font-family: Inter, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+nav, header {
+  border-color: #344158 !important;
+}
+a { transition: color .2s ease, opacity .2s ease; }
+a:hover { opacity: .88; }
+button, .btn, a.button {
+  transition: transform .2s ease, background .2s ease;
+}
+button:hover, .btn:hover, a.button:hover {
+  transform: translateY(-1px);
+}
+.card, .panel, .stat, .feature-card {
+  border-color: #344158 !important;
+}
+input, select, textarea {
+  background: #17233A !important;
+  color: #F4EFE5 !important;
+  border-color: #45536A !important;
+}
+:focus-visible {
+  outline: 2px solid #D6B36A !important;
+  outline-offset: 3px;
+}
+@media (max-width: 700px) {
+  body { line-height: 1.5; }
+  h1 { line-height: 1.08 !important; }
+}
+</style>
+<style id="black-gold-navigation">
+:root {
+  --bg:#070707; --panel:#141414; --line:#383126;
+  --text:#F7F2E8; --muted:#BDB5A7;
+  --cyan:#D6B36A; --pink:#83B8A0; --amber:#E7D5AA;
+}
+body {
+  background:#070707 !important;
+  color:#F7F2E8 !important;
+  font-family:Inter,"Segoe UI",sans-serif;
+}
+a { transition:color .18s ease, background .18s ease; }
+button:focus-visible, a:focus-visible, input:focus-visible,
+select:focus-visible {
+  outline:2px solid #D6B36A !important;
+  outline-offset:3px;
+}
+.it-nav {
+  position:sticky; top:0; z-index:9999;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:20px; flex-wrap:wrap;
+  padding:14px clamp(16px,4vw,54px);
+  background:rgba(7,7,7,.96);
+  border-bottom:1px solid #493C24;
+  backdrop-filter:blur(16px);
+}
+.it-brand {
+  color:#E4C783 !important; font-size:16px;
+  font-weight:800; letter-spacing:2px; text-decoration:none;
+  white-space:nowrap;
+}
+.it-links { display:flex; align-items:center; gap:7px; flex-wrap:wrap; }
+.it-links a {
+  color:#C9C1B4; text-decoration:none;
+  padding:9px 12px; border-radius:7px; font-size:13px;
+}
+.it-links a:hover, .it-links a[aria-current="page"] {
+  color:#E4C783; background:#211B10;
+}
+.it-links a.it-cta {
+  color:#100D07; background:#D6B36A;
+  font-weight:750; padding:10px 15px;
+}
+@media(max-width:650px) {
+  .it-nav { position:relative; gap:12px; }
+  .it-links { width:100%; gap:4px; }
+  .it-links a { padding:8px 9px; font-size:12px; }
+}
+</style>
+<style id="royal-black-gold-theme">
+:root {
+  color-scheme: dark;
+  --bg: #080808;
+  --panel: #141414;
+  --line: #383126;
+  --text: #F7F2E8;
+  --muted: #BDB5A7;
+  --gold: #D6B36A;
+  --accent: #D6B36A;
+}
+html, body {
+  background: #080808 !important;
+  color: #F7F2E8 !important;
+}
+header, nav, aside, section, .panel, .card, .sidebar,
+.toolbar, .topbar, .controls, .map-panel {
+  border-color: #383126 !important;
+}
+button, .button, .btn, a.button, .primary-button {
+  background: #D6B36A !important;
+  border-color: #D6B36A !important;
+  color: #080808 !important;
+}
+button:hover, .button:hover, .btn:hover, a.button:hover {
+  background: #F0D18A !important;
+  border-color: #F0D18A !important;
+}
+a, .active, .selected, [aria-current="page"] {
+  color: #D6B36A !important;
+}
+input, select, textarea {
+  background: #141414 !important;
+  color: #F7F2E8 !important;
+  border-color: #665333 !important;
+}
+</style>
+<style id="explorer-royal-fix">
+:root {
+  color-scheme: dark;
+  --bg: #080808;
+  --panel: #141414;
+  --line: #383126;
+  --text: #F7F2E8;
+  --muted: #BDB5A7;
+  --gold: #D6B36A;
+}
+html, body {
+  background: #080808 !important;
+  color: #F7F2E8 !important;
+}
+header, nav, aside, .sidebar, .panel, .card, .topbar,
+.toolbar, .controls, .details-panel, #disruption-panel {
+  background-color: #0C0C0C !important;
+  color: #F7F2E8 !important;
+  border-color: #383126 !important;
+}
+h1, h2, h3, label, .eyebrow, .section-label {
+  color: #F7F2E8 !important;
+}
+p, small, .muted, .description {
+  color: #BDB5A7 !important;
+}
+a, .active, [aria-current="page"] {
+  color: #D6B36A !important;
+}
+button, .button, .btn, a.button {
+  background: #D6B36A !important;
+  color: #080808 !important;
+  border: 1px solid #D6B36A !important;
+}
+button:hover, .button:hover, .btn:hover {
+  background: #F0D18A !important;
+  color: #080808 !important;
+}
+.it-cta {
+  color: #080808 !important;
+  min-width: 145px;
+  text-align: center;
+}
+input, select, textarea {
+  background: #141414 !important;
+  color: #F7F2E8 !important;
+  border-color: #665333 !important;
+}
+#disruption-panel, .disruption-panel {
+  background: rgba(12,12,12,.97) !important;
+  border: 1px solid #665333 !important;
+  border-radius: 14px !important;
+}
+.maplibregl-ctrl-group {
+  background: #141414 !important;
+  border: 1px solid #665333 !important;
+}
+.maplibregl-ctrl-group button {
+  background-color: #141414 !important;
+}
+@media (max-width: 850px) {
+  nav { flex-wrap: wrap; }
+}
+</style>
+<style id="simulator-page-focus">
+#disruption-panel, .disruption-panel {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 1000 !important;
+  background: #101010 !important;
+  border: 1px solid #D6B36A !important;
+  color: #F7F2E8 !important;
+}
+</style>
+<style id="it-alignment-fix">
+    :root {
+      color-scheme: dark;
+      --it-bg: #080808;
+      --it-panel: #111111;
+      --it-gold: #D8B56A;
+      --it-border: #3A3020;
+      --it-text: #F5F0E6;
+      --it-muted: #BDB4A3;
+    }
+
+    html, body {
+      background: var(--it-bg) !important;
+      color: var(--it-text) !important;
+    }
+
+    .it-nav {
+      position: relative !important;
+      z-index: 50 !important;
+      width: 100%;
+      box-sizing: border-box;
+      background: #080808 !important;
+      border-bottom: 1px solid var(--it-border) !important;
+    }
+
+    header {
+      position: relative !important;
+      z-index: 2;
+      background: #0B0B0B !important;
+      color: var(--it-text) !important;
+      border-color: var(--it-border) !important;
+    }
+
+    .it-brand, .it-links a {
+      color: var(--it-gold) !important;
+    }
+
+    .it-nav .it-cta {
+      background: var(--it-gold) !important;
+      color: #080808 !important;
+    }
+
+    .it-disruption-section {
+      position: relative !important;
+      inset: auto !important;
+      z-index: 2 !important;
+      box-sizing: border-box;
+      width: auto !important;
+      max-width: none !important;
+      margin: 16px 22px !important;
+      padding: 20px !important;
+      background: var(--it-panel) !important;
+      color: var(--it-text) !important;
+      border: 1px solid var(--it-border) !important;
+      border-radius: 14px !important;
+      box-shadow: none !important;
+      font-family: inherit !important;
+    }
+
+    .it-disruption-section button,
+    .it-disruption-section select,
+    .it-disruption-section input {
+      box-sizing: border-box;
+      max-width: 100%;
+    }
+
+    .it-disruption-section button {
+      border: 1px solid var(--it-gold) !important;
+      border-radius: 8px !important;
+    }
+
+    .maplibregl-ctrl-group {
+      background: #111 !important;
+      border: 1px solid var(--it-border) !important;
+    }
+
+    .maplibregl-ctrl-group button {
+      background-color: #111 !important;
+    }
+
+    @media (max-width: 760px) {
+      .it-nav {
+        padding: 12px !important;
+      }
+      .it-links {
+        gap: 8px !important;
+        flex-wrap: wrap !important;
+      }
+      .it-disruption-section {
+        margin: 12px !important;
+        padding: 14px !important;
+      }
+    }
+    </style>
+<style id="scenario-dashboard-styles">
+#scenario-dashboard {
+  margin: 22px;
+  padding: clamp(16px, 2.5vw, 28px);
+  background: #0d0d0d;
+  color: #f7f2e8;
+  border: 1px solid #493c24;
+  border-radius: 16px;
+  font-family: Inter, "Segoe UI", sans-serif;
+}
+#scenario-dashboard * { box-sizing: border-box; }
+#scenario-dashboard .sd-heading {
+  display:flex; justify-content:space-between; align-items:end;
+  gap:20px; flex-wrap:wrap; margin-bottom:20px;
+}
+#scenario-dashboard .sd-kicker {
+  color:#d6b36a; font-size:10px; letter-spacing:2px; font-weight:800;
+}
+#scenario-dashboard h2 {
+  color:#f7f2e8; margin:8px 0; font-size:clamp(22px, 3vw, 30px);
+}
+#scenario-dashboard p { color:#bdb5a7; font-size:12px; line-height:1.7; }
+#scenario-dashboard .sd-select-label,
+#scenario-dashboard .sd-search-label {
+  display:block; color:#d6b36a; font-size:10px; letter-spacing:1px;
+}
+#scenario-dashboard select,
+#scenario-dashboard input {
+  display:block; width:100%; min-width:210px; margin-top:8px;
+  background:#141414 !important; color:#f7f2e8 !important;
+  border:1px solid #665333 !important; border-radius:8px; padding:12px;
+}
+#scenario-dashboard .sd-metrics {
+  display:grid; grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px; margin:20px 0;
+}
+#scenario-dashboard .sd-card,
+#scenario-dashboard .sd-panel {
+  background:#111; border:1px solid #383126; border-radius:12px;
+}
+#scenario-dashboard .sd-card { padding:17px; min-width:0; }
+#scenario-dashboard .sd-card span {
+  color:#bdb5a7; font-size:11px; display:block; line-height:1.6;
+}
+#scenario-dashboard .sd-card strong {
+  display:block; color:#e4c783; font-size:clamp(23px, 2.4vw, 32px);
+  margin-top:8px; overflow-wrap:anywhere;
+}
+#scenario-dashboard .sd-columns {
+  display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:14px; align-items:start;
+}
+#scenario-dashboard .sd-panel { padding:17px; min-width:0; }
+#scenario-dashboard .sd-panel-title {
+  color:#e4c783; font-size:12px; font-weight:800; letter-spacing:1px;
+}
+#scenario-dashboard .sd-help { color:#bdb5a7; font-size:11px; line-height:1.6; }
+#scenario-dashboard .sd-table-wrap { width:100%; overflow:auto; margin-top:12px; }
+#scenario-dashboard .sd-table {
+  width:100%; border-collapse:collapse; font-size:11px; white-space:nowrap;
+}
+#scenario-dashboard .sd-table th {
+  color:#d6b36a; text-align:left; font-weight:700; background:#17140e;
+}
+#scenario-dashboard .sd-table th,
+#scenario-dashboard .sd-table td {
+  padding:11px 9px; border-bottom:1px solid #30291e;
+}
+#scenario-dashboard .sd-table td { color:#e9e1d2; }
+#scenario-dashboard .sd-table tbody tr:hover { background:#1a1711; }
+#scenario-dashboard .sd-hospital-wrap { max-height:390px; }
+#scenario-dashboard .sd-disclaimer {
+  margin-top:18px; padding:14px; border:1px solid #665333;
+  background:#17130c; border-radius:10px; color:#c9c1b4;
+  font-size:11px; line-height:1.8;
+}
+#scenario-dashboard .sd-disclaimer strong { color:#e4c783; }
+@media(max-width:900px) {
+  #scenario-dashboard .sd-metrics { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  #scenario-dashboard .sd-columns { grid-template-columns:1fr; }
+}
+@media(max-width:520px) {
+  #scenario-dashboard { margin:12px; padding:13px; }
+  #scenario-dashboard .sd-metrics { gap:8px; }
+  #scenario-dashboard .sd-card { padding:12px; }
+}
+</style>
+
+</head>
+<body>
+
+<script id="it-cross-tab-selection-sync">
+(function () {
+  const KEY = "it_selected_facility_v2";
+  function syncSelection() {
+    try {
+      const value = sessionStorage.getItem(KEY);
+      if (value && value !== "null") {
+        localStorage.setItem(KEY, value);
+      }
+    } catch (e) {}
+  }
+  syncSelection();
+  setInterval(syncSelection, 500);
+  window.addEventListener("storage", syncSelection);
+})();
+</script>
+
+<nav aria-label="Main navigation" class="it-nav">
+<a class="it-brand" href="index.html">INVISIBLE THREAD</a>
+<div class="it-links">
+<a data-page="index.html" href="index.html">Home</a>
+<a data-page="explorer.html" href="explorer.html">Explorer</a>
+<a data-page="simulator.html" href="simulator.html">Simulator</a>
+<a data-page="insights.html" href="insights.html">Insights</a>
+<a data-page="about.html" href="about.html">About</a>
+<a class="it-cta" href="explorer.html">Explore Network ↗</a>
+</div>
+</nav>
+<script>
+(() => {
+  const page = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.it-links a[data-page]').forEach(a => {
+    if (a.dataset.page === page) a.setAttribute('aria-current','page');
+  });
+})();
+</script>
+<header>
+<div class="brand">
+<div class="logo">IT</div>
+<div>
+<h1>INVISIBLE THREAD</h1>
+<div class="subtitle">INFRASTRUCTURE DEPENDENCY INTELLIGENCE</div>
+</div>
+</div>
+<div class="status">● MAP INTERFACE</div>
+</header><div class="it-disruption-section" id="disruption-panel" style="">
+<div style="font-size:11px;letter-spacing:1.5px;color:#a78bfa;">
+    NETWORK STRESS TEST
+  </div>
+<h3 style="margin:8px 0;font-size:18px;">Disruption Simulator</h3>
+<p style="font-size:12px;line-height:1.5;opacity:.75;margin:0 0 12px;">
+    Select a facility marker on the map, then simulate a disruption to
+    inspect nearby candidate connections.
+  </p>
+<div id="simulation-selected" style="
+    font-size:12px;padding:10px;border-radius:7px;
+    background:#ffffff0b;margin-bottom:10px;">
+    No facility selected yet
+  </div>
+<button disabled="" id="simulate-disruption" style="
+    width:100%;padding:11px;border:0;border-radius:7px;
+    background:#7c3aed;color:white;font-weight:700;cursor:pointer;
+    opacity:.6;">
+    Simulate Disruption
+  </button>
+<button id="reset-disruption" style="
+    width:100%;padding:9px;margin-top:7px;border-radius:7px;
+    border:1px solid #ffffff30;background:transparent;
+    color:#ddd;cursor:pointer;">
+    Reset Simulation
+  </button>
+<div id="simulation-results" style="
+    margin-top:12px;font-size:12px;line-height:1.7;"></div>
+<div style="font-size:10px;opacity:.55;margin-top:10px;">
+    Estimates are proximity-based, not verified operational dependencies.
+  </div>
+</div>
+
+<section id="scenario-dashboard">
+  <div class="sd-heading">
+    <div>
+      <div class="sd-kicker">NETWORK INTELLIGENCE / SCENARIO LAB</div>
+      <h2>Disruption Impact Analysis</h2>
+      <p>Explore how hypothetical candidate-link removals change the mapped network.</p>
+    </div>
+    <label class="sd-select-label" for="sd-scenario">
+      SCENARIO
+      <select id="sd-scenario">
+        <option value="Baseline">Baseline</option>
+        <option value="One candidate unavailable">One candidate unavailable</option>
+        <option value="Two candidates unavailable">Two candidates unavailable</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="sd-metrics">
+    <article class="sd-card">
+      <span>Hospitals evaluated</span>
+      <strong id="sd-hospitals">—</strong>
+    </article>
+    <article class="sd-card">
+      <span>Candidate options removed</span>
+      <strong id="sd-removed">—</strong>
+    </article>
+    <article class="sd-card">
+      <span>Candidate options remaining</span>
+      <strong id="sd-remaining">—</strong>
+    </article>
+    <article class="sd-card">
+      <span>Hospitals with zero candidates</span>
+      <strong id="sd-zero">—</strong>
+    </article>
+  </div>
+
+  <div class="sd-columns">
+    <article class="sd-panel">
+      <div class="sd-panel-title">CITY-WISE IMPACT</div>
+      <p class="sd-help">Ranked by candidate options removed in the selected scenario.</p>
+      <div class="sd-table-wrap">
+        <table class="sd-table">
+          <thead>
+            <tr>
+              <th>City</th>
+              <th>Hospitals</th>
+              <th>Removed</th>
+              <th>Remaining</th>
+              <th>Zero candidates</th>
+            </tr>
+          </thead>
+          <tbody id="sd-city-rows">
+            <tr><td colspan="5">Loading analysis…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="sd-panel">
+      <div class="sd-panel-title">HOSPITAL SCENARIO LOOKUP</div>
+      <p class="sd-help">Search hospitals included in the exported candidate-link dataset.</p>
+      <label class="sd-search-label" for="sd-search">Search name, city, or facility ID</label>
+      <input id="sd-search" type="search" placeholder="e.g. Vijayawada or hospital name">
+      <div class="sd-table-wrap sd-hospital-wrap">
+        <table class="sd-table">
+          <thead>
+            <tr>
+              <th>Hospital</th>
+              <th>City</th>
+              <th>Before</th>
+              <th>Removed</th>
+              <th>Remaining</th>
+            </tr>
+          </thead>
+          <tbody id="sd-hospital-rows">
+            <tr><td colspan="5">Loading analysis…</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="sd-hospital-count" class="sd-help"></div>
+    </article>
+  </div>
+
+  <div class="sd-disclaimer">
+    <strong>Interpretation note</strong>
+    These are hypothetical removals of the nearest candidate links in a
+    proximity-based dataset. They do not establish verified suppliers,
+    actual service disruption, road travel distances, or patient impact.
+    Coverage is limited to selected approximate city-centred search areas.
+  </div>
+  <div id="sd-status" class="sd-help" role="status">Loading scenario data…</div>
+</section>
+
+<div class="layout">
+<aside>
+<div class="eyebrow">Operations / Geographic view</div>
+<h2>Infrastructure Explorer</h2>
+<div class="description">
+    Explore mapped healthcare facilities across selected Andhra Pradesh
+    city regions. Select a marker to inspect its available map data.
+  </div>
+<div class="stats">
+<div class="stat"><strong id="total">—</strong><span>MAPPED FACILITIES</span></div>
+<div class="stat"><strong id="citycount">5</strong><span>REGIONS IN DATASET</span></div>
+<div class="stat"><strong id="hospitalcount">—</strong><span>HOSPITAL-TAGGED</span></div>
+<div class="stat"><strong id="pharmacycount">—</strong><span>PHARMACY-TAGGED</span></div>
+</div>
+<label for="city">SELECT REGION</label>
+<select id="city">
+<option value="All">All available regions</option>
+<option value="Adoni">Adoni</option>
+<option value="Amalapuram">Amalapuram</option>
+<option value="Anakapalli">Anakapalli</option>
+<option value="Anantapur">Anantapur</option>
+<option value="Bhimavaram">Bhimavaram</option>
+<option value="Chittoor">Chittoor</option>
+<option value="Eluru">Eluru</option>
+<option value="Guntur">Guntur</option>
+<option value="Hindupur">Hindupur</option>
+<option value="Kadapa">Kadapa</option>
+<option value="Kakinada">Kakinada</option>
+<option value="Kurnool">Kurnool</option>
+<option value="Machilipatnam">Machilipatnam</option>
+<option value="Madanapalle">Madanapalle</option>
+<option value="Nandyal">Nandyal</option>
+<option value="Nellore">Nellore</option>
+<option value="Ongole">Ongole</option>
+<option value="Proddatur">Proddatur</option>
+<option value="Rajahmundry">Rajahmundry</option>
+<option value="Srikakulam">Srikakulam</option>
+<option value="Tadepalligudem">Tadepalligudem</option>
+<option value="Tenali">Tenali</option>
+<option value="Tirupati">Tirupati</option>
+<option value="Vijayawada">Vijayawada</option>
+<option value="Visakhapatnam">Visakhapatnam</option>
+<option value="Vizianagaram">Vizianagaram</option>
+</select>
+<label for="category">FACILITY CATEGORY</label>
+<select id="category">
+<option value="all">All categories</option>
+<option value="hospital">Hospitals</option>
+<option value="pharmacy">Pharmacies</option>
+<option value="mixed">Mixed tags</option>
+</select>
+<label for="search">SEARCH FACILITIES</label>
+<input id="search" placeholder="Search name or facility ID..."/>
+<div id="facility-suggestions" style="display:none;max-height:220px;overflow:auto;background:#101a2c;border:1px solid #33415f;border-radius:8px;margin-top:5px;">2978</div>
+<div class="eyebrow" style="margin-top:24px">Map legend</div>
+<div class="legend">
+<div class="legend-item"><span class="dot pink"></span> Hospital-tagged</div>
+<div class="legend-item"><span class="dot cyan"></span> Pharmacy-tagged</div>
+<div class="legend-item"><span class="dot amber"></span> Mixed OSM tags</div>
+</div>
+<button id="reset">Reset map view</button>
+<div class="note" id="details">
+    Select a point on the map to inspect facility details.
+  </div>
+<div class="note">
+<strong>Data integrity</strong><br/>
+    Locations come from OpenStreetMap and may be incomplete or incorrectly
+    tagged. A mapped facility does not establish its operational status,
+    road access, or dependency relationships.
+  </div>
+</aside>
+<main class="map-area">
+<div id="map"></div>
+<div class="map-label">
+<strong>ANDHRA PRADESH / 3D MAP</strong>
+<div id="mapstatus">Loading map and facility records...</div>
+</div>
+<div class="map-actions">
+<button id="tilt">Enable 3D buildings</button>
+</div>
+<div class="footer">Map tiles: OpenFreeMap · Facility data: OpenStreetMap</div>
+</main>
+</div>
+<script>
+const cityCenters = {
+  "All":[80.5,16.5,6.1],
+  "Visakhapatnam":[83.2185,17.6868,11.2],
+  "Vijayawada":[80.648,16.506,11.2],
+  "Kakinada":[82.238,16.989,11.2],
+  "Rajahmundry":[81.784,17.000,11.2],
+  "Tirupati":[79.419,13.628,11.2]
+};
+
+// AUTO_REGION_CENTERS_FROM_GEOJSON
+// Centers will be calculated from the actual mapped facilities.
+let allRegionCenters = { All: [-80, 25, 2] };
+
+function rebuildRegionCenters(features) {
+  const grouped = {};
+
+  features.forEach(f => {
+    const city = f.properties?.city;
+    const coords = f.geometry?.coordinates;
+    if (!city || !coords || coords.length < 2) return;
+
+    if (!grouped[city]) grouped[city] = [0, 0, 0];
+    grouped[city][0] += Number(coords[0]);
+    grouped[city][1] += Number(coords[1]);
+    grouped[city][2] += 1;
+  });
+
+  Object.entries(grouped).forEach(([city, v]) => {
+    allRegionCenters[city] = [v[0] / v[2], v[1] / v[2], 10];
+  });
+
+  // Preserve the original statewide/default camera
+  allRegionCenters.All = [-80, 25, 2];
+}
+
+
+const map = new maplibregl.Map({
+  container:"map",
+  style:"https://tiles.openfreemap.org/styles/liberty",
+  center:cityCenters.All.slice(0,2),
+  zoom:cityCenters.All[2],
+  pitch:0,
+  bearing:-10,
+  antialias:true
+});
+window.__itMapForLocation = map;
+
+map.addControl(new maplibregl.NavigationControl({visualizePitch:true}),"bottom-right");
+map.addControl(new maplibregl.ScaleControl(),"bottom-right");
+
+let facilities = [];
+let threeD = false;
+
+function categoryColor(category) {
+  if(category==="pharmacy") return "#51d9f5";
+  if(category==="mixed") return "#ffc66d";
+  return "#ff719b";
+}
+
+function updateStats(items) {
+  document.getElementById("total").textContent=items.length.toLocaleString();
+  document.getElementById("hospitalcount").textContent=
+    items.filter(f=>String(f.properties.amenity).includes("hospital")).length.toLocaleString();
+  document.getElementById("pharmacycount").textContent=
+    items.filter(f=>String(f.properties.amenity).includes("pharmacy")).length.toLocaleString();
+}
+
+function applyFilters() {
+  const city = document.getElementById("city").value;
+  const category = document.getElementById("category").value.toLowerCase();
+  const query = document.getElementById("search").value.trim().toLowerCase();
+
+  const filtered = facilities.filter(f => {
+    const p = f.properties || {};
+    const tags = String(p.amenity || "")
+      .toLowerCase().split(/[;,]/).map(x => x.trim());
+
+    const hasHospital = tags.includes("hospital");
+    const hasPharmacy = tags.includes("pharmacy");
+
+    const categoryMatch =
+      category === "all" ||
+      (category === "hospital" && hasHospital && !hasPharmacy) ||
+      (category === "pharmacy" && hasPharmacy && !hasHospital) ||
+      (category === "mixed" && hasHospital && hasPharmacy);
+
+    const name = String(p.name || "").toLowerCase();
+    const id = String(p.facility_id || "").toLowerCase();
+
+    return (city === "All" || p.city === city) &&
+      categoryMatch &&
+      (!query || name.includes(query) || id.includes(query));
+  });
+
+  if (map.getSource("facilities")) {
+    map.getSource("facilities").setData({
+      type: "FeatureCollection",
+      features: filtered
+    });
+  }
+
+  updateStats(filtered);
+  document.getElementById("mapstatus").textContent =
+    `${filtered.length.toLocaleString()} matching facilities · ${
+      city === "All" ? "All regions" : city
+    }`;
+}
+
+map.on("load",async()=>{
+  try {
+    const response=await fetch("./data/ap_city_facilities.geojson?ts=" + Date.now());
+    if(!response.ok) throw new Error("HTTP "+response.status);
+    const geojson=await response.json();
+    facilities=geojson.features.map(f=>{
+      const p=f.properties||{};
+      const tags=String(p.amenity||"").toLowerCase().split(/[;,]/).map(x=>x.trim());
+      const hasHospital=tags.some(x=>x.includes("hospital"));
+      const hasPharmacy=tags.some(x=>x.includes("pharmacy"));
+      const category=hasHospital&&hasPharmacy?"mixed":
+        hasPharmacy?"pharmacy":hasHospital?"hospital":"other";
+      return {...f,properties:{...p,category}};
+    });
+    rebuildRegionCenters(geojson.features);
+    map.addSource("facilities",{type:"geojson",data:geojson});
+
+    map.addLayer({
+      id:"facility-points",
+      type:"circle",
+      source:"facilities",
+      paint:{
+        "circle-radius":["interpolate",["linear"],["zoom"],5,3,12,7,16,10],
+        "circle-color":["match",["get","category"],
+          "pharmacy","#51d9f5","mixed","#ffc66d","#ff719b"],
+        "circle-stroke-color":"#f1f7ff",
+        "circle-stroke-width":1,
+        "circle-opacity":0.92
+      }
+    });
+
+    map.on("click","facility-points",e=>{
+      const p=e.features[0].properties;
+      const coords=e.features[0].geometry.coordinates.slice();
+
+      window.selectedDisruptionFacility = {
+        properties: p,
+        coordinates: coords
+      };
+
+      const selectedBox = document.getElementById("simulation-selected");
+      const simulateButton = document.getElementById("simulate-disruption");
+
+      if (selectedBox) {
+        selectedBox.textContent =
+          (p.name || "Unnamed facility") + " · " +
+          (p.amenity || "facility") + " · " + (p.city || "Unknown region");
+      }
+      if (simulateButton) {
+        simulateButton.disabled = false;
+        simulateButton.style.opacity = "1";
+      }
+
+      new maplibregl.Popup({closeButton:true,maxWidth:"280px"})
+        .setLngLat(coords)
+        .setHTML(`<div style="color:#132033;font:13px Arial">
+          <strong>${escapeHTML(p.name)}</strong>
+          <hr>
+          <b>Region:</b> ${escapeHTML(p.city)}<br>
+          <b>OSM tags:</b> ${escapeHTML(p.amenity)}<br>
+          <b>OSM ID:</b> ${escapeHTML(p.facility_id)}<br>
+          <b>Source:</b> OpenStreetMap
+        </div>`)
+        .addTo(map);
+
+      document.getElementById("details").innerHTML=
+        `<strong>${escapeHTML(p.name)}</strong><br>`+
+        `Region: ${escapeHTML(p.city)}<br>`+
+        `Category: ${escapeHTML(p.category)}<br>`+
+        `OSM ID: ${escapeHTML(p.facility_id)}<br>`+
+        `<span class="small">Mapped location only; operating status not verified.</span>`;
+    });
+
+    map.on("mouseenter","facility-points",()=>map.getCanvas().style.cursor="pointer");
+    map.on("mouseleave","facility-points",()=>map.getCanvas().style.cursor="");
+
+    updateStats(facilities);
+    document.getElementById("mapstatus").textContent=
+      `${facilities.length.toLocaleString()} mapped facilities loaded`;
+    applyFilters();
+  } catch(error) {
+    document.getElementById("mapstatus").textContent="Data load failed";
+    document.getElementById("details").textContent=
+      "Could not load facility GeoJSON. Check that the website is served from the project folder. "+error.message;
+  }
+});
+
+function escapeHTML(value) {
+  return String(value??"").replace(/[&<>"']/g,ch=>({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  })[ch]);
+}
+
+document.getElementById("city").addEventListener("change",()=>{
+  const selectedCity=document.getElementById("city").value;
+  const c=allRegionCenters[selectedCity]||cityCenters[selectedCity]||cityCenters.All;
+  map.flyTo({center:c.slice(0,2),zoom:c[2],pitch:threeD?55:0,duration:1300});
+  applyFilters();
+});
+document.getElementById("category").addEventListener("change",applyFilters);
+document.getElementById("search").addEventListener("input",applyFilters);
+
+document.getElementById("reset").addEventListener("click",()=>{
+  document.getElementById("city").value="All";
+  document.getElementById("category").value="all";
+  document.getElementById("search").value="";
+  map.flyTo({center:cityCenters.All.slice(0,2),zoom:cityCenters.All[2],pitch:threeD?55:0});
+  applyFilters();
+});
+
+document.getElementById("tilt").addEventListener("click",()=>{
+  threeD=!threeD;
+  map.easeTo({pitch:threeD?55:0,bearing:threeD?-15:0,duration:1000});
+  document.getElementById("tilt").textContent=
+    threeD?"Return to 2D view":"Enable 3D buildings";
+
+  if(threeD && map.getSource("openmaptiles") &&
+     !map.getLayer("it-3d-buildings")) {
+    try {
+      const layers=map.getStyle().layers||[];
+      const labelLayer=layers.find(l=>l.type==="symbol");
+      map.addLayer({
+        id:"it-3d-buildings",
+        source:"openmaptiles",
+        "source-layer":"building",
+        type:"fill-extrusion",
+        minzoom:13,
+        paint:{
+          "fill-extrusion-color":"#344d68",
+          "fill-extrusion-height":["coalesce",["get","render_height"],["get","height"],8],
+          "fill-extrusion-base":["coalesce",["get","render_min_height"],0],
+          "fill-extrusion-opacity":0.82
+        }
+      },labelLayer?labelLayer.id:undefined);
+    } catch(e) {
+      console.warn("3D building layer unavailable in this style:",e);
+    }
+  }
+});
+</script>
+<script id="dependency-candidates-overlay">
+(async function () {
+  try {
+    const response = await fetch("./data/dependency_candidates.geojson");
+    if (!response.ok) throw new Error("HTTP " + response.status);
+    const data = await response.json();
+
+    function setup() {
+      if (typeof map === "undefined" || !map.isStyleLoaded()) return false;
+
+      if (map.getLayer("dependency-candidate-lines")) {
+        map.removeLayer("dependency-candidate-lines");
+      }
+      if (map.getSource("dependency-candidates")) {
+        map.removeSource("dependency-candidates");
+      }
+
+      map.addSource("dependency-candidates", {
+        type: "geojson",
+        data: {type: "FeatureCollection", features: []}
+      });
+
+      const firstSymbol = map.getStyle().layers.find(
+        layer => layer.type === "symbol"
+      );
+
+      map.addLayer({
+        id: "dependency-candidate-lines",
+        type: "line",
+        source: "dependency-candidates",
+        paint: {
+          "line-color": "#a78bfa",
+          "line-width": 1.2,
+          "line-opacity": 0.4
+        },
+        layout: {"line-cap": "round", "line-join": "round"}
+      }, firstSymbol ? firstSymbol.id : undefined);
+
+      function updateLines() {
+        const selected = document.getElementById("city")?.value || "All";
+        const features = selected === "All"
+          ? data.features
+          : data.features.filter(f => f.properties?.city === selected);
+
+        map.getSource("dependency-candidates").setData({
+          type: "FeatureCollection",
+          features
+        });
+
+        console.log("Candidate lines:", selected, features.length);
+      }
+
+      const selector = document.getElementById("city");
+      if (selector && !selector.dataset.connectionListener) {
+        selector.addEventListener("change", updateLines);
+        selector.dataset.connectionListener = "true";
+      }
+      updateLines();
+
+      if (!document.getElementById("dependency-legend")) {
+        const legend = document.createElement("div");
+        legend.id = "dependency-legend";
+        legend.innerHTML =
+          '<div style="display:flex;gap:8px;align-items:center">' +
+          '<span style="width:24px;border-top:2px solid #a78bfa"></span>' +
+          '<span>Potential nearby connection</span></div>' +
+          '<div style="margin-top:4px;font-size:11px;opacity:.75">' +
+          'Proximity-based; not a verified dependency</div>';
+
+        Object.assign(legend.style, {
+          position: "absolute", bottom: "18px", left: "18px",
+          zIndex: "5", background: "rgba(10,15,30,.92)",
+          color: "white", padding: "10px 12px",
+          border: "1px solid rgba(167,139,250,.45)",
+          borderRadius: "8px", fontSize: "12px",
+          pointerEvents: "none"
+        });
+        map.getContainer().appendChild(legend);
+      }
+      return true;
+    }
+
+    let attempts = 0;
+    const timer = setInterval(() => {
+      attempts++;
+      if (setup() || attempts >= 60) clearInterval(timer);
+    }, 500);
+  } catch (error) {
+    console.error("Dependency overlay error:", error);
+  }
+})();
+</script>
+
+<script id="disruption-simulator-logic">
+(async function () {
+  const resultBox = document.getElementById("simulation-results");
+  const button = document.getElementById("simulate-disruption");
+  const reset = document.getElementById("reset-disruption");
+
+  function safeText(value) {
+    const el = document.createElement("span");
+    el.textContent = String(value ?? "");
+    return el.innerHTML;
+  }
+
+  function distanceMeters(a, b) {
+    const lat = (a[1] + b[1]) * Math.PI / 360;
+    const dx = (b[0] - a[0]) * Math.PI / 180 * Math.cos(lat);
+    const dy = (b[1] - a[1]) * Math.PI / 180;
+    return 6371000 * Math.sqrt(dx * dx + dy * dy);
+  }
+
+  try {
+    const response = await fetch("./data/dependency_candidates.geojson");
+    if (!response.ok) throw new Error("HTTP " + response.status);
+
+    const geo = await response.json();
+    const allLinks = geo.features || [];
+
+    function currentRegionLinks() {
+      const city = document.getElementById("city")?.value || "All";
+      return city === "All"
+        ? allLinks
+        : allLinks.filter(f => f.properties?.city === city);
+    }
+
+    function restoreLines() {
+      const source = map.getSource("dependency-candidates");
+      if (source) {
+        source.setData({
+          type: "FeatureCollection",
+          features: currentRegionLinks()
+        });
+      }
+    }
+
+    button?.addEventListener("click", function () {
+      const selected = window.selectedDisruptionFacility || (() => {
+        for (const store of [sessionStorage, localStorage]) {
+          for (const key of ["it_selected_facility_v2", "it_explorer_selection_backup"]) {
+            try {
+              const raw = store.getItem(key);
+              if (raw) {
+                const saved = JSON.parse(raw);
+                if (saved) return saved;
+              }
+            } catch (_) {}
+          }
+        }
+        return null;
+      })();
+
+      if (!selected) {
+        resultBox.textContent = "Click a facility marker on the map first.";
+        return;
+      }
+
+      const point = selected.coordinates;
+      const props = selected.properties || {};
+      const selectedId = String(props.facility_id || props.osm_id || "");
+      const selectedName = String(props.name || "").trim().toLowerCase();
+
+      const regionLinks = currentRegionLinks();
+
+      // First match the selected facility by its OSM identifier.
+      let affected = regionLinks.filter(f => {
+        const lp = f.properties || {};
+        return selectedId && (
+          String(lp.hospital_id || "") === selectedId ||
+          String(lp.pharmacy_id || "") === selectedId
+        );
+      });
+
+      // If no ID match exists, find candidate links geographically nearby.
+      // This is a proximity fallback, not proof of a real dependency.
+      if (affected.length === 0) {
+        affected = regionLinks.filter(f => {
+          const lp = f.properties || {};
+          const coords = f.geometry?.coordinates || [];
+          const nameMatch = selectedName && (
+            String(lp.hospital_name || "").trim().toLowerCase() === selectedName ||
+            String(lp.pharmacy_name || "").trim().toLowerCase() === selectedName
+          );
+          const nearby = coords.some(pt =>
+            Array.isArray(pt) && distanceMeters(point, pt) <= 1000
+          );
+          return nameMatch || nearby;
+        });
+      }
+
+      const source = map.getSource("dependency-candidates");
+      if (source) {
+        source.setData({
+          type: "FeatureCollection",
+          features: affected
+        });
+      }
+
+      const otherEnds = new Set();
+      affected.forEach(f => {
+        (f.geometry?.coordinates || []).forEach(pt => {
+          if (Array.isArray(pt) && distanceMeters(point, pt) > 100) {
+            otherEnds.add(pt[0].toFixed(5) + "," + pt[1].toFixed(5));
+          }
+        });
+      });
+
+      const level = affected.length >= 10 ? "High candidate-link count"
+        : affected.length >= 4 ? "Moderate candidate-link count"
+        : "Low candidate-link count";
+
+      // Publish the latest simulator result for the Insights page.
+      try {
+        const liveResult = {
+          updated_at: new Date().toISOString(),
+          selected_facility: {
+            facility_id: String(selectedId || ""),
+            name: String(selected.properties.name || "Unnamed facility"),
+            amenity: String(selected.properties.amenity || ""),
+            city: String(selected.properties.city || ""),
+            longitude: Number(point[0]),
+            latitude: Number(point[1])
+          },
+          results: {
+            candidate_links: affected.length,
+            other_endpoint_locations: otherEnds.size,
+            scenario_indicator: level,
+            basis: "Proximity-based candidate links; not verified dependencies."
+          }
+        };
+        localStorage.setItem("it_live_insights_v1", JSON.stringify(liveResult));
+        window.dispatchEvent(new CustomEvent('it:live-simulation-result', {
+          detail: JSON.parse(localStorage.getItem('it_live_insights_v1') || 'null')
+        }));
+
+        console.log("Latest simulation published for Insights:", liveResult);
+      } catch (e) {
+        console.warn("Could not save live Insights result:", e);
+      }
+
+      resultBox.innerHTML =
+        "<div style='border-top:1px solid #ffffff20;padding-top:10px'>" +
+        "<div><b>Selected:</b> " +
+        safeText(selected.properties.name || "Unnamed facility") + "</div>" +
+        "<div><b>Potential candidate links:</b> " + affected.length + "</div>" +
+        "<div><b>Other endpoint locations:</b> " + otherEnds.size + "</div>" +
+        "<div><b>Scenario indicator:</b> " + level + "</div>" +
+        "<p style='opacity:.7;margin-bottom:0'>Proximity-based estimate only; not a verified dependency or measured real-world impact.</p>" +
+        "</div>";
+
+      // Reliable live Insights publish after result rendering.
+      try {
+        const payload = {
+          updated_at: new Date().toISOString(),
+          selected_facility: {
+            facility_id: String(selectedId || ""),
+            name: String(selected.properties.name || "Unnamed facility"),
+            amenity: String(selected.properties.amenity || ""),
+            city: String(selected.properties.city || ""),
+            longitude: Number(point[0]),
+            latitude: Number(point[1])
+          },
+          results: {
+            candidate_links: affected.length,
+            other_endpoint_locations: otherEnds.size,
+            scenario_indicator: level,
+            basis: "Proximity-based candidate links only; not verified dependencies."
+          }
+        };
+        const encoded = JSON.stringify(payload);
+        localStorage.setItem("it_live_insights_v1", encoded);
+        sessionStorage.setItem("it_live_insights_v1", encoded);
+        console.log("LIVE INSIGHTS SAVED", payload);
+      } catch (err) {
+        console.error("LIVE INSIGHTS SAVE FAILED", err);
+      }
+
+    });
+
+    reset?.addEventListener("click", function () {
+      restoreLines();
+      if (resultBox) resultBox.textContent = "";
+      window.selectedDisruptionFacility = null;
+
+      const selectedBox = document.getElementById("simulation-selected");
+      if (selectedBox) selectedBox.textContent = "No facility selected yet";
+
+      if (button) {
+        button.disabled = true;
+        button.style.opacity = ".6";
+      }
+    });
+
+    document.getElementById("city")?.addEventListener("change", () => {
+      setTimeout(restoreLines, 300);
+    });
+
+    console.log("Simulator ready. Candidate links loaded:", allLinks.length);
+  } catch (error) {
+    console.error("Simulator setup failed:", error);
+    if (resultBox) resultBox.textContent =
+      "Could not load candidate connections. Check the data file.";
+  }
+})();
+</script>
+<script id="smart-facility-search">
+(async function () {
+  "use strict";
+
+  const input = document.getElementById("search");
+  const list = document.getElementById("facility-suggestions");
+
+  if (!input || !list) {
+    console.error("Facility search elements not found.");
+    return;
+  }
+
+  const KEY = "it_selected_facility_v2";
+  let facilities = [];
+
+  const escapeText = value =>
+    String(value ?? "").replace(/[&<>"']/g, ch => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;",
+      '"': "&quot;", "'": "&#39;"
+    })[ch]);
+
+  function selectFacility(feature) {
+    const p = feature.properties || {};
+    const coords = feature.geometry?.coordinates;
+
+    if (!Array.isArray(coords) || coords.length < 2) {
+      console.error("Selected facility has no coordinates.", feature);
+      return;
+    }
+
+    const selected = {
+      facility_id: String(p.facility_id || p.osm_id || feature.id || ""),
+      name: String(p.name || "Unnamed facility"),
+      amenity: String(p.amenity || "facility"),
+      city: String(p.city || "Unknown region"),
+      longitude: Number(coords[0]),
+      latitude: Number(coords[1])
+    };
+
+    sessionStorage.setItem(KEY, JSON.stringify(selected));
+
+    window.selectedDisruptionFacility = {
+      properties: { ...p, ...selected },
+      coordinates: [selected.longitude, selected.latitude]
+    };
+
+    const box = document.getElementById("simulation-selected");
+    if (box) {
+      box.textContent =
+        `${selected.name} · ${selected.amenity} · ${selected.city}`;
+    }
+
+    const button = document.getElementById("simulate-disruption");
+    if (button) {
+      button.disabled = false;
+      button.style.opacity = "1";
+    }
+
+    input.value = selected.name;
+    list.style.display = "none";
+    list.replaceChildren();
+
+    console.log("Facility selected:", selected);
+  }
+
+  function renderMatches() {
+    list.replaceChildren();
+
+    const query = input.value.trim().toLowerCase();
+    if (!query) {
+      list.style.display = "none";
+      return;
+    }
+
+    const city = document.getElementById("city")?.value || "All";
+    const category = document.getElementById("category")?.value || "all";
+
+    const matches = facilities.filter(feature => {
+      const p = feature.properties || {};
+      const text = [
+        p.name, p.city, p.amenity, p.facility_id, p.osm_id
+      ].join(" ").toLowerCase();
+
+      const cityOK = city === "All" || !p.city || p.city === city;
+      const amenity = String(p.amenity || "").toLowerCase();
+      const categoryOK = category === "all" ||
+        (category === "mixed"
+          ? amenity.includes("hospital") && amenity.includes("pharmacy")
+          : amenity.includes(category));
+
+      return text.includes(query) && cityOK && categoryOK;
+    }).slice(0, 25);
+
+    if (!matches.length) {
+      list.innerHTML =
+        '<div style="padding:10px;color:#cbd5e1;font-size:12px">' +
+        'No matching facilities in the loaded dataset.</div>';
+      list.style.display = "block";
+      return;
+    }
+
+    matches.forEach(feature => {
+      const p = feature.properties || {};
+      const item = document.createElement("button");
+      item.type = "button";
+      item.style.cssText =
+        "display:block;width:100%;text-align:left;padding:9px 11px;" +
+        "border:0;border-bottom:1px solid #ffffff12;background:transparent;" +
+        "color:#fff;cursor:pointer;font-size:12px;";
+
+      item.innerHTML =
+        "<strong>" + escapeText(p.name || "Unnamed facility") + "</strong>" +
+        "<div style='opacity:.7;margin-top:3px'>" +
+        escapeText(p.city || "Unknown region") + " · " +
+        escapeText(p.amenity || "facility") + "</div>";
+
+      item.addEventListener("click", () => selectFacility(feature));
+      list.appendChild(item);
+    });
+
+    list.style.display = "block";
+  }
+
+  input.addEventListener("input", renderMatches);
+  document.getElementById("city")?.addEventListener("change", renderMatches);
+  document.getElementById("category")?.addEventListener("change", renderMatches);
+
+  document.addEventListener("click", event => {
+    if (!list.contains(event.target) && event.target !== input) {
+      list.style.display = "none";
+    }
+  });
+
+  try {
+    const response = await fetch("./data/ap_city_facilities.geojson");
+    if (!response.ok) throw Error("HTTP " + response.status);
+
+    const data = await response.json();
+    facilities = Array.isArray(data.features) ? data.features : [];
+
+    console.log("Facility search loaded:", facilities.length);
+  } catch (error) {
+    console.error("Facility search data loading failed:", error);
+    list.textContent =
+      "Could not load facilities. Check the data file and local server.";
+  }
+})();
+</script>
+<script id="invisible-thread-page-bridge">
+(() => {
+  const KEY = "it_selected_facility_v2";
+
+  function restoreSelection() {
+    let f;
+    try {
+      f = JSON.parse(sessionStorage.getItem(KEY) || "null");
+    } catch (_) {
+      f = null;
+    }
+
+    // Never add a new panel at the top of the page.
+    const oldPanel = document.getElementById("selected-facility-info");
+    if (oldPanel) oldPanel.remove();
+
+    if (!f || !f.name) return;
+
+    // Reuse the existing selection area.
+    const box = document.getElementById("simulation-selected");
+    if (box) {
+      box.textContent = `${f.name} · ${f.amenity || "facility"} · ${f.city || "Unknown region"}`;
+    }
+
+    // Restore the selected facility for the existing simulator logic.
+    window.selectedDisruptionFacility = {
+      properties: {
+        name: f.name,
+        amenity: f.amenity || "facility",
+        city: f.city || "Unknown region",
+        facility_id: f.facility_id || ""
+      },
+      coordinates:
+        f.longitude != null && f.latitude != null
+          ? [Number(f.longitude), Number(f.latitude)]
+          : []
+    };
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", restoreSelection, { once: true });
+  } else {
+    restoreSelection();
+  }
+})();
+</script>
+
+<script id="scenario-dashboard-logic">
+(async function () {
+  const root = document.getElementById("scenario-dashboard");
+  if (!root) return;
+
+  const $ = id => document.getElementById(id);
+  const number = value => Number(value || 0).toLocaleString();
+  const escapeHTML = value => String(value ?? "").replace(/[&<>"']/g, c => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;"
+  })[c]);
+
+  try {
+    const response = await fetch("data/simulation_results.json");
+    if (!response.ok) throw new Error("HTTP " + response.status);
+    const data = await response.json();
+
+    const scenarios = data.scenarios || [];
+    const cities = data.city_scenarios || [];
+    const hospitals = data.hospital_scenarios || [];
+
+    function render() {
+      const selected = $("sd-scenario").value;
+      const overall = scenarios.find(row => row.scenario === selected);
+
+      if (!overall) throw new Error("Scenario not found: " + selected);
+
+      $("sd-hospitals").textContent = number(overall.hospitals_evaluated);
+      $("sd-removed").textContent = number(overall.candidate_options_removed);
+      $("sd-remaining").textContent = number(overall.candidate_options_remaining);
+      $("sd-zero").textContent = number(overall.hospitals_with_zero_candidates);
+
+      const cityRows = cities
+        .filter(row => row.scenario === selected)
+        .sort((a, b) =>
+          Number(b.candidate_options_removed) - Number(a.candidate_options_removed)
+        );
+
+      $("sd-city-rows").innerHTML = cityRows.length
+        ? cityRows.map(row => `<tr>
+            <td>${escapeHTML(row.city)}</td>
+            <td>${number(row.hospitals_evaluated)}</td>
+            <td>${number(row.candidate_options_removed)}</td>
+            <td>${number(row.candidate_options_remaining)}</td>
+            <td>${number(row.hospitals_with_zero_candidates)}</td>
+          </tr>`).join("")
+        : '<tr><td colspan="5">No city records for this scenario.</td></tr>';
+
+      const query = $("sd-search").value.trim().toLowerCase();
+      const matches = hospitals.filter(row =>
+        row.scenario === selected &&
+        (!query ||
+          String(row.hospital_name || "").toLowerCase().includes(query) ||
+          String(row.city || "").toLowerCase().includes(query) ||
+          String(row.hospital_id || "").toLowerCase().includes(query))
+      );
+
+      const visible = matches.slice(0, 100);
+      $("sd-hospital-rows").innerHTML = visible.length
+        ? visible.map(row => `<tr>
+            <td title="${escapeHTML(row.hospital_id)}">${escapeHTML(row.hospital_name || "Unnamed hospital")}</td>
+            <td>${escapeHTML(row.city)}</td>
+            <td>${number(row.candidate_options_before)}</td>
+            <td>${number(row.candidate_options_removed)}</td>
+            <td>${number(row.candidate_options_remaining)}</td>
+          </tr>`).join("")
+        : '<tr><td colspan="5">No matching hospitals.</td></tr>';
+
+      $("sd-hospital-count").textContent =
+        `Showing ${number(visible.length)} of ${number(matches.length)} matching records` +
+        (matches.length > visible.length ? " (limit 100; refine search)." : "");
+
+      $("sd-status").textContent =
+        `Loaded ${number(cities.length)} city-scenario records and ` +
+        `${number(hospitals.length)} hospital-scenario records.`;
+    }
+
+    $("sd-scenario").addEventListener("change", render);
+    $("sd-search").addEventListener("input", render);
+    render();
+  } catch (error) {
+    console.error("Scenario dashboard failed:", error);
+    $("sd-status").textContent =
+      "Scenario data could not load. Check the JSON file and serve the website using the local HTTP server.";
+    $("sd-city-rows").innerHTML =
+      '<tr><td colspan="5">Data unavailable</td></tr>';
+    $("sd-hospital-rows").innerHTML =
+      '<tr><td colspan="5">Data unavailable</td></tr>';
+  }
+})();
+</script>
+
+
+<script id="it-real-alternative-solution">
+(() => {
+  const distanceKm = (a, b) => {
+    const rad = d => d * Math.PI / 180;
+    const dLat = rad(b[1] - a[1]);
+    const dLon = rad(b[0] - a[0]);
+    const x = Math.sin(dLat/2)**2 +
+      Math.cos(rad(a[1])) * Math.cos(rad(b[1])) *
+      Math.sin(dLon/2)**2;
+    return 6371 * 2 * Math.atan2(Math.sqrt(x), Math.sqrt(1-x));
+  };
+
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;"
+  })[c]);
+
+  document.addEventListener("click", event => {
+    const button = event.target.closest("#simulate-disruption");
+    if (!button) return;
+
+    const selected = window.selectedDisruptionFacility;
+    const resultBox = document.getElementById("simulation-results");
+    if (!selected || !selected.properties || !resultBox) return;
+
+    const point = selected.coordinates;
+    const p = selected.properties;
+    if (!point || point.length < 2) return;
+
+    const rows = (typeof facilities !== "undefined" ? facilities : [])
+      .map(f => {
+        const props = f.properties || {};
+        const coords = f.geometry && f.geometry.coordinates;
+        if (!coords || coords.length < 2) return null;
+
+        const sameId = String(props.facility_id || props.osm_id || "") ===
+          String(p.facility_id || p.osm_id || "");
+        const sameName = String(props.name || "").trim().toLowerCase() ===
+          String(p.name || "").trim().toLowerCase();
+
+        if (sameId || (sameName && coords[0] === point[0] && coords[1] === point[1])) return null;
+
+        const type = String(props.amenity || "").toLowerCase();
+        const selectedType = String(p.amenity || "").toLowerCase();
+        if (!selectedType || type !== selectedType) return null;
+
+        return {
+          name: props.name || "Unnamed facility",
+          city: props.city || "Unknown region",
+          type,
+          coordinates: coords.slice(),
+          km: distanceKm(point, coords)
+        };
+      })
+      .filter(Boolean)
+      .sort((a, b) => a.km - b.km)
+      .slice(0, 5);
+
+
+    // LIVE_INSIGHTS_FALLBACK_PUBLISH
+    try {
+      const otherEndpoints = new Set(
+        rows.map(r => r.coordinates.map(n => Number(n).toFixed(5)).join(","))
+      );
+      const liveResult = {
+        updated_at: new Date().toISOString(),
+        selected_facility: {
+          facility_id: String(p.facility_id || p.osm_id || ""),
+          name: String(p.name || "Unnamed facility"),
+          amenity: String(p.amenity || ""),
+          city: String(p.city || ""),
+          longitude: Number(point[0]),
+          latitude: Number(point[1])
+        },
+        results: {
+          candidate_links: rows.length,
+          other_endpoint_locations: otherEndpoints.size,
+          scenario_indicator: rows.length >= 10
+            ? "High candidate-link count"
+            : rows.length >= 4
+              ? "Moderate candidate-link count"
+              : "Low candidate-link count",
+          basis: "Nearby facilities are alternatives based on straight-line distance; not verified dependencies."
+        }
+      };
+      const encoded = JSON.stringify(liveResult);
+      localStorage.setItem("it_live_insights_v1", encoded);
+      sessionStorage.setItem("it_live_insights_v1", encoded);
+      window.dispatchEvent(new CustomEvent("it:live-simulation-result", {
+        detail: liveResult
+      }));
+      console.log("Insights fallback result saved:", liveResult);
+    } catch (err) {
+      console.error("Insights fallback save failed:", err);
+    }
+
+    event.preventDefault();
+    event.stopImmediatePropagation();
+
+
+    // Highlight the disrupted facility and possible alternatives.
+    if (typeof map !== "undefined" && map && map.isStyleLoaded()) {
+      const sourceId = "it-disruption-highlights";
+      const features = [{
+        type: "Feature",
+        geometry: { type: "Point", coordinates: point },
+        properties: { role: "disrupted" }
+      }, ...rows.map(r => ({
+        type: "Feature",
+        geometry: { type: "Point", coordinates: r.coordinates },
+        properties: { role: "alternative", name: r.name }
+      }))];
+
+      const data = { type: "FeatureCollection", features };
+
+      if (map.getSource(sourceId)) {
+        map.getSource(sourceId).setData(data);
+      } else {
+        map.addSource(sourceId, { type: "geojson", data });
+        map.addLayer({
+          id: sourceId + "-circles",
+          type: "circle",
+          source: sourceId,
+          paint: {
+            "circle-radius": 9,
+            "circle-color": [
+              "match", ["get", "role"],
+              "disrupted", "#ef4444",
+              "alternative", "#22c55e",
+              "#eab308"
+            ],
+            "circle-stroke-width": 2,
+            "circle-stroke-color": "#ffffff"
+          }
+        });
+      }
+
+      const bounds = new maplibregl.LngLatBounds();
+      features.forEach(f => bounds.extend(f.geometry.coordinates));
+      if (features.length > 1) {
+        map.fitBounds(bounds, { padding: 70, maxZoom: 14, duration: 700 });
+      } else {
+        map.flyTo({ center: point, zoom: 13 });
+      }
+    }
+
+    resultBox.style.display = "block";
+    resultBox.innerHTML = `
+      <h3 style="margin:8px 0;color:#f4c66a">Possible Alternatives</h3>
+      <p style="opacity:.8">Unavailable facility: <b>${esc(p.name || "Unnamed facility")}</b></p>
+      ${
+        rows.length
+          ? `<p>Nearest mapped facilities of the same type:</p>
+             <ol style="padding-left:20px">
+               ${rows.map(r => `<li style="margin:8px 0">
+                 <b>${esc(r.name)}</b><br>
+                 <span>${esc(r.city)} · ${r.km.toFixed(2)} km straight-line distance</span>
+               </li>`).join("")}
+             </ol>
+             <p style="font-size:11px;opacity:.7">Distances are straight-line estimates, not road travel distances. These are possible alternatives, not verified service capacity or availability.</p>`
+          : `<p>No other same-type facilities were found in the currently loaded dataset.</p>`
+      }
+    `;
+  }, true);
+})();
+</script>
+
+
+<script id="it-auto-restore-explorer-selection">
+(function () {
+  const KEY = "it_selected_facility_v2";
+
+  function restoreExplorerSelection() {
+    let saved;
+    try {
+      saved = sessionStorage.getItem(KEY);
+      if (!saved) return;
+      saved = JSON.parse(saved);
+    } catch (e) {
+      console.warn("Explorer selection could not be read:", e);
+      return;
+    }
+
+    // Show the saved selection in the Simulator UI if its display exists.
+    const display = document.querySelector("#simulation-selected");
+    if (display) {
+      const name =
+        (saved && (saved.name || saved.facility_name || saved.title)) ||
+        "Facility selected in Explorer";
+      display.textContent = name;
+      display.dataset.explorerSelectionRestored = "true";
+    }
+
+    // Keep the saved record available to the existing simulator scripts.
+    window.itExplorerSelectedFacility = saved;
+    window.dispatchEvent(new CustomEvent(
+      "it:explorer-facility-restored",
+      { detail: saved }
+    ));
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", restoreExplorerSelection);
+  } else {
+    restoreExplorerSelection();
+  }
+})();
+</script>
+
+
+<script id="it-run-navigation-selection-v1">
+(function () {
+  const KEY = "it_selected_facility_v2";
+
+  function restore() {
+    let saved;
+    try {
+      const raw = sessionStorage.getItem(KEY);
+      if (!raw) return;
+      saved = JSON.parse(raw);
+    } catch (e) {
+      console.error("Could not restore Explorer selection", e);
+      return;
+    }
+
+    window.selectedDisruptionFacility = saved;
+    window.itExplorerSelectedFacility = saved;
+
+    const box = document.getElementById("simulation-selected");
+    const btn = document.getElementById("simulate-disruption");
+    const p = saved.properties || saved;
+    const name = p.name || p["name"] || p.facility_name || "Selected facility";
+
+    if (box) box.textContent = "Selected from Explorer: " + name;
+    if (btn) {
+      btn.disabled = false;
+      btn.style.opacity = "1";
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", restore);
+  } else {
+    restore();
+  }
+})();
+</script>
+
+
+<script id="it-final-restore-selected-facility">
+(function () {
+  const KEY = "it_selected_facility_v2";
+
+  function restore() {
+    let f;
+    try {
+      const raw = sessionStorage.getItem(KEY);
+      if (!raw) return;
+      f = JSON.parse(raw);
+    } catch (err) {
+      console.error("Saved facility could not be read:", err);
+      return;
+    }
+
+    if (!f || !f.properties || !Array.isArray(f.coordinates)) return;
+
+    // The existing disruption logic reads this global variable.
+    window.selectedDisruptionFacility = f;
+    window.itExplorerSelectedFacility = f;
+
+    const box = document.getElementById("simulation-selected");
+    const button = document.getElementById("simulate-disruption");
+    const name = f.properties.name || "Selected facility";
+
+    if (box) {
+      box.textContent = "Selected from Explorer: " + name;
+    }
+    if (button) {
+      button.disabled = false;
+      button.style.opacity = "1";
+    }
+
+    // Move the map to the facility when the existing MapLibre map is available.
+    try {
+      if (typeof map !== "undefined" && map &&
+          typeof map.flyTo === "function") {
+        map.flyTo({
+          center: f.coordinates,
+          zoom: Math.max(map.getZoom(), 13),
+          essential: true
+        });
+      }
+    } catch (err) {
+      console.warn("Map focus could not be updated:", err);
+    }
+  }
+
+  function retryRestore() {
+    restore();
+    // Restore again after the page's own map/data initialization.
+    setTimeout(restore, 500);
+    setTimeout(restore, 1500);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", retryRestore, { once: true });
+  } else {
+    retryRestore();
+  }
+})();
+</script>
+
+
+
+
+
+
+<script id="it-road-route-highlight-v1">
+(() => {
+  "use strict";
+
+  const DATA_URL = "data/ap_city_facilities.geojson";
+  const STORAGE_KEY = "it_selected_facility_v2";
+  const OSRM_URL = "https://router.project-osrm.org/route/v1/driving/";
+  const MAX_ALTERNATIVES = 5;
+
+  let facilities = [];
+  let selected = null;
+  let routeFeatures = [];
+  let alternativeFeatures = [];
+  let busy = false;
+  let mapLayersReady = false;
+
+  const $ = (id) => document.getElementById(id);
+
+  function getMap() {
+    if (window.map && typeof window.map.getSource === "function") {
+      return window.map;
+    }
+    try {
+      if (typeof map !== "undefined" &&
+          map && typeof map.getSource === "function") return map;
+    } catch (_) {}
+    return null;
+  }
+
+  function propertiesOf(f) {
+    return f && (f.properties || f);
+  }
+
+  function pointOf(f) {
+    if (f && f.geometry && f.geometry.type === "Point") {
+      return f.geometry.coordinates;
+    }
+    const p = propertiesOf(f) || {};
+    if (Array.isArray(f && f.coordinates)) return f.coordinates;
+    const lon = Number(p.longitude ?? p.lon);
+    const lat = Number(p.latitude ?? p.lat);
+    return Number.isFinite(lon) && Number.isFinite(lat) ? [lon, lat] : null;
+  }
+
+  function selectedFeature() {
+    let saved = null;
+    try {
+      saved = JSON.parse(sessionStorage.getItem(STORAGE_KEY) || "null");
+    } catch (_) {}
+
+    const chosen = window.selectedDisruptionFacility || saved;
+    if (!chosen) return null;
+
+    const p = propertiesOf(chosen) || {};
+    const coords = pointOf(chosen);
+    if (!coords) return null;
+
+    return {
+      type: "Feature",
+      geometry: { type: "Point", coordinates: coords },
+      properties: p
+    };
+  }
+
+  function distanceKm(a, b) {
+    const rad = d => d * Math.PI / 180;
+    const [lon1, lat1] = a, [lon2, lat2] = b;
+    const dLat = rad(lat2 - lat1);
+    const dLon = rad(lon2 - lon1);
+    const h = Math.sin(dLat / 2) ** 2 +
+      Math.cos(rad(lat1)) * Math.cos(rad(lat2)) *
+      Math.sin(dLon / 2) ** 2;
+    return 6371 * 2 * Math.asin(Math.min(1, Math.sqrt(h)));
+  }
+
+  function esc(value) {
+    return String(value ?? "").replace(/[&<>"']/g, c => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;",
+      '"': "&quot;", "'": "&#39;"
+    })[c]);
+  }
+
+  function ensureLayers() {
+    const m = getMap();
+    if (!m || !m.isStyleLoaded()) return false;
+
+    const source = (id, data) => {
+      if (m.getSource(id)) m.getSource(id).setData(data);
+      else m.addSource(id, { type: "geojson", data });
+    };
+
+    source("it-road-routes", {
+      type: "FeatureCollection", features: routeFeatures
+    });
+    source("it-road-alternatives", {
+      type: "FeatureCollection", features: alternativeFeatures
+    });
+    source("it-road-selected", {
+      type: "FeatureCollection",
+      features: selected ? [selected] : []
+    });
+
+    if (!m.getLayer("it-road-routes-casing")) {
+      m.addLayer({
+        id: "it-road-routes-casing",
+        type: "line",
+        source: "it-road-routes",
+        layout: { "line-cap": "round", "line-join": "round" },
+        paint: {
+          "line-color": "#102a43",
+          "line-width": 9,
+          "line-opacity": 0.9
+        }
+      });
+    }
+
+    if (!m.getLayer("it-road-routes-line")) {
+      m.addLayer({
+        id: "it-road-routes-line",
+        type: "line",
+        source: "it-road-routes",
+        layout: { "line-cap": "round", "line-join": "round" },
+        paint: {
+          "line-color": "#00e5ff",
+          "line-width": 5,
+          "line-opacity": 1
+        }
+      });
+    }
+
+    if (!m.getLayer("it-road-alternatives-points")) {
+      m.addLayer({
+        id: "it-road-alternatives-points",
+        type: "circle",
+        source: "it-road-alternatives",
+        paint: {
+          "circle-radius": 7,
+          "circle-color": "#37e58c",
+          "circle-stroke-color": "#ffffff",
+          "circle-stroke-width": 2
+        }
+      });
+    }
+
+    if (!m.getLayer("it-road-selected-point")) {
+      m.addLayer({
+        id: "it-road-selected-point",
+        type: "circle",
+        source: "it-road-selected",
+        paint: {
+          "circle-radius": 9,
+          "circle-color": "#ff354d",
+          "circle-stroke-color": "#ffffff",
+          "circle-stroke-width": 3
+        }
+      });
+    }
+
+    mapLayersReady = true;
+    return true;
+  }
+
+  function updateSources() {
+    const m = getMap();
+    if (!m) return;
+    if (!ensureLayers()) {
+      m.once("idle", updateSources);
+      return;
+    }
+    m.getSource("it-road-routes").setData({
+      type: "FeatureCollection", features: routeFeatures
+    });
+    m.getSource("it-road-alternatives").setData({
+      type: "FeatureCollection", features: alternativeFeatures
+    });
+    m.getSource("it-road-selected").setData({
+      type: "FeatureCollection", features: selected ? [selected] : []
+    });
+  }
+
+  async function getRoadRoute(from, to) {
+    const coords = `${from[0]},${from[1]};${to[0]},${to[1]}`;
+    const url = OSRM_URL + coords +
+      "?overview=full&geometries=geojson&steps=false";
+
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Routing service HTTP " + response.status);
+
+    const data = await response.json();
+    if (data.code !== "Ok" || !data.routes || !data.routes.length) {
+      throw new Error(data.message || "No driving route returned");
+    }
+
+    const route = data.routes[0];
+    return {
+      geometry: route.geometry,
+      distanceKm: route.distance / 1000,
+      durationMin: route.duration / 60
+    };
+  }
+
+  function renderStatus(message) {
+    const panel = $("simulation-results");
+    if (panel) {
+      panel.style.display = "block";
+      panel.innerHTML = `<p>${esc(message)}</p>`;
+    }
+  }
+
+  function renderResults(origin, results, failures) {
+    const panel = $("simulation-results");
+    if (!panel) return;
+
+    const p = propertiesOf(origin);
+    const originName = p.name || "Selected facility";
+    const items = results.map((r, i) => `
+      <div style="padding:12px;margin:10px 0;border:1px solid #d8e2ec;border-radius:10px">
+        <b>${i + 1}. ${esc(r.name)}</b>
+        <div>${esc(r.city)} · ${esc(r.amenity)}</div>
+        <div><b>Road distance:</b> ${r.distanceKm.toFixed(2)} km</div>
+        <div><b>Estimated drive:</b> ${Math.round(r.durationMin)} min</div>
+      </div>
+    `).join("");
+
+    panel.style.display = "block";
+    panel.innerHTML = `
+      <div style="padding:10px">
+        <h3 style="margin-top:0">Road Route Alternatives</h3>
+        <div><b>Selected facility:</b> ${esc(originName)}</div>
+        <div style="margin:8px 0">Cyan lines follow road geometry. Red marker = selected facility; green markers = alternatives.</div>
+        ${items || "<p>No road routes could be found for the alternatives.</p>"}
+        ${failures ? `<p style="color:#a15c00">${failures} route request(s) could not be calculated.</p>` : ""}
+        <small>Road distances and travel times are estimates from the routing service, not live traffic predictions.</small>
+      </div>`;
+  }
+
+  async function calculateRoadRoutes() {
+    if (busy) return;
+    busy = true;
+    try {
+      selected = selectedFeature();
+      if (!selected) {
+        renderStatus("Select a facility in Explorer, then click Run Simulator again.");
+        return;
+      }
+
+      renderStatus("Calculating real road routes…");
+      routeFeatures = [];
+      alternativeFeatures = [];
+      updateSources();
+
+      const originProps = propertiesOf(selected);
+      const originCoords = pointOf(selected);
+      const originCity = String(originProps.city || "").toLowerCase();
+      const originAmenity = String(originProps.amenity || "").toLowerCase();
+      const originId = String(originProps.facility_id || "");
+
+      const candidates = facilities
+        .filter(f => {
+          const p = propertiesOf(f);
+          const c = pointOf(f);
+          return c && String(p.facility_id || "") !== originId &&
+            !(c[0] === originCoords[0] && c[1] === originCoords[1]);
+        })
+        .map(f => {
+          const p = propertiesOf(f);
+          const c = pointOf(f);
+          return {
+            feature: f,
+            coords: c,
+            name: p.name || "Unnamed facility",
+            city: p.city || "Unknown city",
+            amenity: p.amenity || "facility",
+            airKm: distanceKm(originCoords, c),
+            sameCity: String(p.city || "").toLowerCase() === originCity,
+            sameAmenity: String(p.amenity || "").toLowerCase() === originAmenity
+          };
+        })
+        .filter(x => x.airKm > 0.03 && x.airKm <= 25)
+        .sort((a, b) =>
+          Number(b.sameCity) - Number(a.sameCity) ||
+          Number(b.sameAmenity) - Number(a.sameAmenity) ||
+          a.airKm - b.airKm
+        )
+        .slice(0, MAX_ALTERNATIVES);
+
+      if (!candidates.length) {
+        renderStatus("No nearby alternatives found in the loaded GeoJSON.");
+        return;
+      }
+
+      const successful = [];
+      let failures = 0;
+
+      // Sequential requests are gentler on the public routing service.
+      for (const candidate of candidates) {
+        try {
+          const route = await getRoadRoute(originCoords, candidate.coords);
+          const routeFeature = {
+            type: "Feature",
+            geometry: route.geometry,
+            properties: {
+              name: candidate.name,
+              road_distance_km: route.distanceKm
+            }
+          };
+          routeFeatures.push(routeFeature);
+          successful.push({
+            ...candidate,
+            distanceKm: route.distanceKm,
+            durationMin: route.durationMin
+          });
+          alternativeFeatures.push({
+            type: "Feature",
+            geometry: { type: "Point", coordinates: candidate.coords },
+            properties: {
+              name: candidate.name,
+              city: candidate.city,
+              amenity: candidate.amenity
+            }
+          });
+          updateSources();
+        } catch (err) {
+          failures += 1;
+          console.warn("Road route failed:", candidate.name, err);
+        }
+      }
+
+      renderResults(selected, successful, failures);
+      updateSources();
+
+      const m = getMap();
+      if (m && successful.length) {
+        const allCoords = [];
+        routeFeatures.forEach(f => (f.geometry.coordinates || []).forEach(c => allCoords.push(c)));
+        if (allCoords.length && window.maplibregl) {
+          const bounds = new maplibregl.LngLatBounds(allCoords[0], allCoords[0]);
+          allCoords.forEach(c => bounds.extend(c));
+          m.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 900 });
+        }
+      }
+    } catch (err) {
+      console.error("Road routing error:", err);
+      renderStatus("Road routes could not be loaded. Check internet connection and browser console.");
+    } finally {
+      busy = false;
+    }
+  }
+
+  async function initRoadRoutes() {
+    try {
+      const response = await fetch(DATA_URL);
+      if (!response.ok) throw new Error("GeoJSON HTTP " + response.status);
+      const data = await response.json();
+      facilities = (data.features || []).filter(f => pointOf(f));
+
+      const m = getMap();
+      if (m) {
+        if (m.isStyleLoaded()) ensureLayers();
+        else m.once("load", () => ensureLayers());
+        m.on("style.load", () => {
+          mapLayersReady = false;
+          ensureLayers();
+          updateSources();
+        });
+      }
+
+      const button = $("simulate-disruption");
+      if (button) {
+        // Capture the click before older handlers can overwrite the result panel.
+        button.addEventListener("click", () => {
+          setTimeout(calculateRoadRoutes, 900);
+        }, true);
+      }
+
+      window.itRunRoadRoutes = calculateRoadRoutes;
+
+      // Restore map highlights after the saved Explorer selection is available.
+      setTimeout(() => {
+        selected = selectedFeature();
+        updateSources();
+      }, 500);
+
+      console.log("Road-routing patch ready; facilities:", facilities.length);
+    } catch (err) {
+      console.error("Road-routing initialization failed:", err);
+      renderStatus("Could not load facility data. Open Simulator through your local web server.");
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initRoadRoutes, { once: true });
+  } else {
+    initRoadRoutes();
+  }
+})();
+</script>
+
+
+<script id="it-disruption-scenario-v2">
+(() => {
+  if (window.__itScenarioV2Installed) return;
+  
+  window.__itScenarioV2Installed = true;
+  window.addEventListener("error", function(e) {
+    console.error("[Scenario V2]", e.message);
+  });
+
+
+  const panel = document.createElement("section");
+  panel.id = "it-scenario-v2-panel";
+  panel.style.cssText =
+    "margin:18px 0;padding:18px;border:1px solid #38bdf8;" +
+    "border-radius:12px;background:#0b1220;color:#e5eefb;" +
+    "font:14px/1.5 system-ui,sans-serif";
+
+  panel.innerHTML = `
+    <h2 style="margin:0 0 8px">Disruption Scenario · v2</h2>
+    <p style="margin:0 0 12px;color:#aabbd0">
+      Hypothetical facility closure. Nearby facilities are proximity
+      candidates, not verified operational replacements.
+    </p>
+    <label for="it-scenario-radius">Search radius</label>
+    <select id="it-scenario-radius" style="margin:0 8px 12px;padding:7px">
+      <option value="2">2 km</option>
+      <option value="5" selected>5 km</option>
+      <option value="10">10 km</option>
+      <option value="25">25 km</option>
+    </select>
+    <button id="it-scenario-run" style="padding:9px 14px;cursor:pointer">
+      Simulate selected facility disruption
+    </button>
+    <div id="it-scenario-output" style="margin-top:14px">
+      Select a facility in Explorer, then run the scenario.
+    </div>`;
+
+  // Keep the scenario panel OUTSIDE the results container,
+  // because the basic disruption simulator replaces that container's content.
+  const host = document.querySelector("#disruption-panel")
+    || document.querySelector("main")
+    || document.body;
+  host.insertAdjacentElement("afterend", panel);
+
+  const output = panel.querySelector("#it-scenario-output");
+  const runButton = panel.querySelector("#it-scenario-run");
+
+  const getSelected = () => {
+    let selected = window.selectedDisruptionFacility || null;
+
+    // Try the current tab first, then the shared cross-tab copy.
+    for (const store of [sessionStorage, localStorage]) {
+      if (selected) break;
+      for (const key of [
+        "it_selected_facility_v2",
+        "it_explorer_selection_backup",
+        "it_selected_facility",
+        "selectedFacility"
+      ]) {
+        try {
+          const raw = store.getItem(key);
+          if (raw && raw !== "null") {
+            selected = JSON.parse(raw);
+            if (selected) break;
+          }
+        } catch (_) {}
+      }
+    }
+    return selected;
+  };
+
+  const coords = f => {
+    if (f?.geometry?.type === "Point") return f.geometry.coordinates;
+    const p = f?.properties || f || {};
+    const lon = p.longitude ?? p.lon;
+    const lat = p.latitude ?? p.lat;
+    if (lon != null && lat != null) return [Number(lon), Number(lat)];
+    if (Array.isArray(f?.coordinates)) return f.coordinates;
+    return null;
+  };
+
+  const props = f => f?.properties || f || {};
+  const distanceKm = (a, b) => {
+    const rad = x => x * Math.PI / 180;
+    const [lon1, lat1] = a, [lon2, lat2] = b;
+    const dLat = rad(lat2 - lat1), dLon = rad(lon2 - lon1);
+    const q = Math.sin(dLat / 2) ** 2 +
+      Math.cos(rad(lat1)) * Math.cos(rad(lat2)) *
+      Math.sin(dLon / 2) ** 2;
+    return 6371 * 2 * Math.atan2(Math.sqrt(q), Math.sqrt(1 - q));
+  };
+
+  async function simulate() {
+    runButton.disabled = true;
+    output.textContent = "Loading facility data…";
+
+    try {
+      const selected = getSelected();
+      if (!selected) {
+        throw new Error("First select a facility in Explorer and click Run Simulator.");
+      }
+
+      const selectedCoords = coords(selected);
+      if (!selectedCoords || !selectedCoords.every(Number.isFinite)) {
+        throw new Error("Selected facility has no valid coordinates.");
+      }
+
+      const response = await fetch("data/ap_city_facilities.geojson");
+      if (!response.ok) throw new Error("Could not load the facilities GeoJSON.");
+      const geo = await response.json();
+
+      const sp = props(selected);
+      const selectedId = String(sp.facility_id ?? selected.id ?? "");
+      const radius = Number(panel.querySelector("#it-scenario-radius").value);
+
+      const candidates = (geo.features || [])
+        .filter(f => {
+          const p = props(f);
+          const c = coords(f);
+          if (!c || !c.every(Number.isFinite)) return false;
+          if (String(p.facility_id ?? f.id ?? "") === selectedId) return false;
+          if (!/hospital|pharmacy/i.test(String(p.amenity || ""))) return false;
+          return distanceKm(selectedCoords, c) <= radius;
+        })
+        .map(f => ({
+          feature: f,
+          km: distanceKm(selectedCoords, coords(f))
+        }))
+        .sort((a, b) => a.km - b.km);
+
+
+      // IT_V2_PUBLISH_TO_INSIGHTS
+      const livePayload = {
+        updated_at: new Date().toISOString(),
+        selected_facility: {
+          facility_id: selectedId,
+          name: String(sp.name || "Selected facility"),
+          amenity: String(sp.amenity || ""),
+          city: String(sp.city || ""),
+          longitude: Number(selectedCoords[0]),
+          latitude: Number(selectedCoords[1])
+        },
+        results: {
+          candidate_links: candidates.length,
+          other_endpoint_locations: candidates.length,
+          scenario_indicator: candidates.length >= 10
+            ? "High candidate count"
+            : candidates.length >= 4
+              ? "Moderate candidate count"
+              : "Low candidate count",
+          radius_km: radius,
+          basis: "Mapped facilities within the selected straight-line radius; not verified operational dependencies."
+        }
+      };
+      try {
+        const encoded = JSON.stringify(livePayload);
+        localStorage.setItem("it_live_insights_v1", encoded);
+        sessionStorage.setItem("it_live_insights_v1", encoded);
+        window.dispatchEvent(new CustomEvent("it:live-simulation-result", {
+          detail: livePayload
+        }));
+        console.log("V2 result published to Insights:", livePayload);
+      } catch (e) {
+        console.error("V2 Insights publish failed:", e);
+      }
+
+      const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({
+        "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;"
+      })[c]);
+
+      const name = sp.name || "Selected facility";
+      const city = sp.city || "";
+      output.innerHTML = `
+        <h3>Scenario: ${esc(name)} unavailable</h3>
+        <p>Area: ${esc(city || "Selected facility area")} · Radius: ${radius} km</p>
+        <div style="display:flex;gap:18px;flex-wrap:wrap">
+          <div><b>${candidates.length}</b><br>Nearby candidate facilities</div>
+          <div><b>${candidates.filter(x => props(x.feature).amenity === "hospital").length}</b><br>Hospital-tagged</div>
+          <div><b>${candidates.filter(x => props(x.feature).amenity === "pharmacy").length}</b><br>Pharmacy-tagged</div>
+        </div>
+        <h4>Potential alternatives</h4>
+        ${candidates.length ? `
+          <ol>${candidates.slice(0, 20).map(x => {
+            const p = props(x.feature);
+            return `<li style="margin:8px 0">
+              <b>${esc(p.name || "Unnamed facility")}</b> —
+              ${esc(p.amenity || "facility")}, ${x.km.toFixed(2)} km
+              ${esc(p.city || "")}
+            </li>`;
+          }).join("")}</ol>
+        ` : "<p>No mapped candidate facilities found in this radius.</p>"}
+        <p style="color:#fbbf24;font-size:12px">
+          Limitation: distances above are straight-line estimates, not road
+          distances. This scenario does not verify facility operating status,
+          capacity, patient dependencies, or actual healthcare impact.
+        </p>`;
+    } catch (err) {
+      output.textContent = "Scenario could not run: " + err.message;
+    } finally {
+      runButton.disabled = false;
+    }
+  }
+
+  runButton.addEventListener("click", simulate);
+})();
+</script>
+
+
+<script id="it-user-location-route-v1">
+(() => {
+  if (window.__itUserLocationRouteV1) return;
+  window.__itUserLocationRouteV1 = true;
+
+  function start() {
+    const map = window.__itMapForLocation;
+    if (!map || !map.on || !map.getSource) {
+      console.error("[User route] Map instance is unavailable.");
+      return;
+    }
+
+    const panel = document.createElement("section");
+    panel.id = "it-user-route-panel";
+    panel.style.cssText =
+      "position:fixed;right:20px;top:100px;z-index:99999;" +
+      "width:min(350px,calc(100vw - 40px));max-height:70vh;" +
+      "overflow:auto;padding:16px;border:1px solid #38bdf8;" +
+      "border-radius:14px;background:#101827;color:#eef6ff;" +
+      "box-shadow:0 8px 32px #0008;font:14px/1.5 system-ui,sans-serif";
+
+    panel.innerHTML = `
+      <h3 style="margin:0 0 8px">Your location → Next stop</h3>
+      <p style="color:#b8c7d9;margin:0 0 12px">
+        Use GPS or click your position on the map.
+      </p>
+      <button id="it-loc-gps" style="padding:9px;margin:0 6px 8px 0">
+        Use my GPS
+      </button>
+      <button id="it-loc-pick" style="padding:9px;margin-bottom:8px">
+        Pick on map
+      </button>
+      <div id="it-loc-status" role="status" style="margin:8px 0">
+        Choose your location to find the nearest mapped facility.
+      </div>
+      <div id="it-loc-result"></div>
+      <button id="it-loc-close" style="padding:6px;margin-top:10px">
+        Hide panel
+      </button>`;
+
+    document.body.appendChild(panel);
+
+    const status = panel.querySelector("#it-loc-status");
+    const result = panel.querySelector("#it-loc-result");
+    let userMarker = null;
+    let destinationMarker = null;
+    let rankedMarkers = [];
+    let picking = false;
+    let facilities = [];
+
+    const setStatus = text => { status.textContent = text; };
+
+    function addRouteLayers() {
+      if (!map.getSource("it-user-next-route")) {
+        map.addSource("it-user-next-route", {
+          type: "geojson",
+          data: {type:"FeatureCollection",features:[]}
+        });
+      }
+      if (!map.getLayer("it-user-next-route-casing")) {
+        map.addLayer({
+          id:"it-user-next-route-casing",
+          type:"line",
+          source:"it-user-next-route",
+          paint:{"line-color":"#ffffff","line-width":8}
+        });
+      }
+      if (!map.getLayer("it-user-next-route-line")) {
+        map.addLayer({
+          id:"it-user-next-route-line",
+          type:"line",
+          source:"it-user-next-route",
+          paint:{"line-color":"#00d9ff","line-width":5}
+        });
+      }
+    }
+
+    function clearRoute() {
+      const source = map.getSource("it-user-next-route");
+      if (source) source.setData({
+        type:"FeatureCollection",features:[]
+      });
+    }
+
+    function haversine(a, b) {
+      const rad = d => d * Math.PI / 180;
+      const dLat = rad(b[1]-a[1]), dLon = rad(b[0]-a[0]);
+      const x = Math.sin(dLat/2)**2 +
+        Math.cos(rad(a[1]))*Math.cos(rad(b[1]))*
+        Math.sin(dLon/2)**2;
+      return 6371 * 2 * Math.atan2(Math.sqrt(x), Math.sqrt(1-x));
+    }
+
+    function selectedFacility() {
+      try {
+        return JSON.parse(
+          sessionStorage.getItem("it_selected_facility_v2") || "null"
+        );
+      } catch (_) { return null; }
+    }
+
+    function facilityId(f) {
+      return String(f.properties?.facility_id ?? f.id ?? "");
+    }
+
+    function facilityName(f) {
+      return f.properties?.name || "Unnamed facility";
+    }
+
+    function coords(f) {
+      return f.geometry.coordinates;
+    }
+
+    async function loadFacilities() {
+      if (facilities.length) return facilities;
+      const response = await fetch("data/ap_city_facilities.geojson");
+      if (!response.ok) throw Error("Could not load facility GeoJSON.");
+      const data = await response.json();
+      facilities = (data.features || []).filter(f =>
+        f.geometry?.type === "Point" &&
+        Array.isArray(f.geometry.coordinates) &&
+        Number.isFinite(f.geometry.coordinates[0]) &&
+        Number.isFinite(f.geometry.coordinates[1])
+      );
+      return facilities;
+    }
+
+    async function findNextStop(userCoords) {
+      setStatus("Finding nearby facilities...");
+      result.innerHTML = "";
+      clearRoute();
+
+      try {
+        const all = await loadFacilities();
+        const selected = selectedFacility();
+        const excludedId = selected?.facility_id != null
+          ? String(selected.facility_id)
+          : selected?.id != null ? String(selected.id) : "";
+
+        // Exclude the disrupted facility when its ID matches.
+        const candidates = all
+          .filter(f => {
+            const amenity = String(f.properties?.amenity || "").toLowerCase();
+            return (!excludedId || facilityId(f) !== excludedId) &&
+              ["hospital", "pharmacy"].includes(amenity);
+          })
+          .map(f => ({f, km:haversine(userCoords, coords(f))}))
+          .sort((a,b) => a.km-b.km);
+
+        if (!candidates.length) {
+          setStatus("No alternative hospitals or pharmacies found.");
+          return;
+        }
+
+        // Remove numbered markers from the previous location search.
+        rankedMarkers.forEach(marker => marker.remove());
+        rankedMarkers = [];
+
+        // Route a shortlist, then rank by actual returned road distance.
+        setStatus("Comparing road routes to nearby facilities...");
+        const routed = [];
+        for (const candidate of candidates.slice(0, 8)) {
+          try {
+            const point = coords(candidate.f);
+            const routeUrl =
+              "https://router.project-osrm.org/route/v1/driving/" +
+              userCoords.join(",") + ";" + point.join(",") +
+              "?overview=full&geometries=geojson&steps=false";
+            const rr = await fetch(routeUrl);
+            if (!rr.ok) continue;
+            const rd = await rr.json();
+            const route = rd.routes?.[0];
+            if (route?.geometry) {
+              routed.push({
+                candidate,
+                route,
+                roadKm: route.distance / 1000,
+                minutes: Math.max(1, Math.round(route.duration / 60))
+              });
+            }
+          } catch (_) {
+            // Skip candidates whose road route could not be obtained.
+          }
+        }
+
+        routed.sort((a,b) => a.roadKm - b.roadKm);
+
+        if (!routed.length) {
+          setStatus("No road routes returned. Check internet and retry.");
+          return;
+        }
+
+        const best = routed[0].candidate.f;
+        const destination = coords(best);
+
+        // Number 1 is the shortest returned road route, then 2 and 3.
+        routed.slice(0, 3).forEach((item, index) => {
+          const el = document.createElement("div");
+          el.textContent = String(index + 1);
+          el.style.cssText =
+            "width:30px;height:30px;border-radius:50%;" +
+            "display:flex;align-items:center;justify-content:center;" +
+            "font:bold 16px system-ui;color:white;" +
+            "background:" + (index === 0 ? "#16a34a" : "#64748b") +
+            ";border:2px solid white;box-shadow:0 2px 8px #0008";
+          const marker = new maplibregl.Marker({element:el})
+            .setLngLat(coords(item.candidate.f))
+            .setPopup(new maplibregl.Popup().setText(
+              (index + 1) + ". " + facilityName(item.candidate.f) +
+              " — " + item.roadKm.toFixed(2) + " km"
+            ))
+            .addTo(map);
+          rankedMarkers.push(marker);
+        });
+        const name = facilityName(best);
+        const props = best.properties || {};
+
+        if (destinationMarker) destinationMarker.remove();
+        destinationMarker = new maplibregl.Marker({color:"#22c55e"})
+          .setLngLat(destination)
+          .setPopup(new maplibregl.Popup().setText("Next stop: " + name))
+          .addTo(map);
+
+        map.flyTo({
+          center:userCoords,
+          zoom:Math.max(map.getZoom(), 14),
+          essential:true
+        });
+
+        setStatus("Nearest mapped candidate selected. Requesting road route...");
+
+        // OSRM coordinates are longitude,latitude.
+        const url =
+          "https://router.project-osrm.org/route/v1/driving/" +
+          userCoords.join(",") + ";" + destination.join(",") +
+          "?overview=full&geometries=geojson&steps=false";
+
+        const response = await fetch(url);
+        if (!response.ok) throw Error("Road routing service unavailable.");
+        const routeData = await response.json();
+        const route = routeData.routes?.[0];
+
+        if (!route || !route.geometry) {
+          setStatus("No road route returned. Try another location.");
+          return;
+        }
+
+        addRouteLayers();
+        map.getSource("it-user-next-route").setData({
+          type:"FeatureCollection",
+          features:[{
+            type:"Feature",
+            properties:{},
+            geometry:route.geometry
+          }]
+        });
+
+        const bounds = route.geometry.coordinates.reduce(
+          (b, c) => b.extend(c),
+          new maplibregl.LngLatBounds(userCoords, userCoords)
+        );
+        map.fitBounds(bounds, {padding:90,maxZoom:16});
+
+        const km = route.distance / 1000;
+        const mins = Math.max(1, Math.round(route.duration / 60));
+        const kind = props.amenity || "facility";
+        const city = props.city ? " · " + props.city : "";
+
+        setStatus("Route found. Cyan line shows the road route.");
+        result.innerHTML = `
+          <div style="border-top:1px solid #334155;padding-top:10px">
+            <strong>Next stop: </strong>
+            <span></span>
+            <div style="margin-top:6px">
+              Road distance: <strong>${km.toFixed(2)} km</strong><br>
+              Estimated drive: <strong>${mins} min</strong><br>
+              Type: ${kind}${city}
+            </div>
+            <small style="display:block;color:#b8c7d9;margin-top:8px">
+              Nearest by straight-line distance among mapped records;
+              the road route may differ. Opening status, capacity and
+              clinical suitability are not verified. Travel time is
+              an estimate, not live traffic.
+            </small>
+          </div>`;
+        result.querySelector("span").textContent = name;
+
+        const heading = document.createElement("h4");
+        heading.textContent = "Nearest road-route alternatives";
+        heading.style.margin = "12px 0 6px";
+        result.appendChild(heading);
+
+        const list = document.createElement("ol");
+        list.style.paddingLeft = "24px";
+        routed.slice(0, 3).forEach((item, index) => {
+          const li = document.createElement("li");
+          li.style.marginBottom = "7px";
+          li.textContent =
+            facilityName(item.candidate.f) + " — " +
+            item.roadKm.toFixed(2) + " km · " +
+            item.minutes + " min" +
+            (index === 0 ? " · Shortest road distance" : "");
+          list.appendChild(li);
+        });
+        result.appendChild(list);
+
+      } catch (error) {
+        console.error("[User route]", error);
+        setStatus(
+          "Could not calculate the route. Check internet access and try again."
+        );
+      }
+    }
+
+    function setUserLocation(lngLat) {
+      const point = [lngLat.lng, lngLat.lat];
+      picking = false;
+      panel.querySelector("#it-loc-pick").textContent = "Pick on map";
+
+      if (userMarker) userMarker.remove();
+      userMarker = new maplibregl.Marker({color:"#2563eb"})
+        .setLngLat(point)
+        .setPopup(new maplibregl.Popup().setText("You are here"))
+        .addTo(map);
+
+      findNextStop(point);
+    }
+
+    panel.querySelector("#it-loc-gps").addEventListener("click", () => {
+      if (!navigator.geolocation) {
+        setStatus("GPS is unavailable in this browser. Use Pick on map.");
+        return;
+      }
+      setStatus("Requesting browser location permission...");
+      navigator.geolocation.getCurrentPosition(
+        pos => setUserLocation({
+          lng:pos.coords.longitude,
+          lat:pos.coords.latitude
+        }),
+        err => setStatus(
+          "Location not available (" + err.message +
+          "). Allow location permission or use Pick on map."
+        ),
+        {enableHighAccuracy:true,timeout:15000,maximumAge:60000}
+      );
+    });
+
+    panel.querySelector("#it-loc-pick").addEventListener("click", () => {
+      picking = !picking;
+      panel.querySelector("#it-loc-pick").textContent =
+        picking ? "Click your position on map…" : "Pick on map";
+      setStatus(picking
+        ? "Click the map where the user is located."
+        : "Map picking cancelled.");
+    });
+
+    map.on("click", e => {
+      if (picking) setUserLocation(e.lngLat);
+    });
+
+    panel.querySelector("#it-loc-close").addEventListener("click", () => {
+      panel.style.display = "none";
+    });
+
+    // Keep route layer creation safe if map style is still loading.
+    if (map.isStyleLoaded()) addRouteLayers();
+    else map.once("load", addRouteLayers);
+
+    // Restore a prior selected facility only as a hint, not user location.
+    const selected = selectedFacility();
+    if (selected?.name) {
+      setStatus(
+        "Selected facility: " + selected.name +
+        ". Choose GPS or Pick on map to route from the user."
+      );
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", start, {once:true});
+  } else {
+    start();
+  }
+})();
+</script>
+
+
+<script id="it-full-repair-v1">
+(function () {
+  "use strict";
+  if (window.__itFullRepairV1) return;
+  window.__itFullRepairV1 = true;
+
+  const PANEL_ID = "it-full-repair-panel";
+  let map = null, geo = null, selected = null, userPoint = null;
+  let userMarker = null, disruptedMarker = null, altMarkers = [];
+  let routeLayerReady = false, busy = false, mapClickEnabled = false;
+
+  const css = `
+  #${PANEL_ID}{position:fixed;z-index:99999;right:14px;top:90px;
+    width:min(370px,calc(100vw - 28px));max-height:78vh;overflow:auto;
+    background:#101827;color:#eef5ff;border:1px solid #3b4a62;
+    border-radius:14px;padding:15px;font:14px/1.45 Arial,sans-serif;
+    box-shadow:0 10px 35px #0008}
+  #${PANEL_ID} h3{margin:0 0 8px;font-size:18px}
+  #${PANEL_ID} button{cursor:pointer;border:0;border-radius:8px;
+    padding:9px 10px;margin:4px 3px 4px 0;background:#2563eb;
+    color:white;font-weight:600}
+  #${PANEL_ID} button.secondary{background:#334155}
+  #${PANEL_ID} .it-status{margin:8px 0;padding:9px;background:#1e293b;
+    border-radius:8px;overflow-wrap:anywhere}
+  #${PANEL_ID} .it-legend{display:flex;flex-wrap:wrap;gap:8px;
+    font-size:12px;margin:10px 0}
+  #${PANEL_ID} .it-dot{display:inline-block;width:10px;height:10px;
+    border-radius:50%;margin-right:4px}
+  #${PANEL_ID} .it-item{padding:10px;margin:8px 0;background:#1e293b;
+    border-radius:9px;border:1px solid #334155}
+  #${PANEL_ID} .it-item button{margin-top:6px}
+  #${PANEL_ID} .it-muted{color:#b8c5d8;font-size:12px}
+  @media(max-width:600px){#${PANEL_ID}{top:auto;bottom:12px;right:8px;
+    width:calc(100vw - 46px);max-height:48vh}}
+  `;
+
+  const style = document.createElement("style");
+  style.textContent = css;
+  document.head.appendChild(style);
+
+  const panel = document.createElement("section");
+  panel.id = PANEL_ID;
+  panel.innerHTML = `
+    <h3>Disruption & Alternative Routes</h3>
+    <div id="itfr-selected" class="it-status">Reading selected facility from Explorer…</div>
+    <div class="it-legend">
+      <span><i class="it-dot" style="background:#ef4444"></i>Disrupted</span>
+      <span><i class="it-dot" style="background:#3b82f6"></i>Your start</span>
+      <span><i class="it-dot" style="background:#22c55e"></i>Alternative 1–3</span>
+      <span><i class="it-dot" style="background:#22d3ee"></i>Road route</span>
+    </div>
+    <button id="itfr-gps">Use my GPS</button>
+    <button id="itfr-pick" class="secondary">Pick start on map</button>
+    <button id="itfr-refresh" class="secondary">Refresh alternatives</button>
+    <div id="itfr-status" class="it-status">Loading map and facility data…</div>
+    <div id="itfr-list"></div>
+    <div class="it-muted">Routes and times depend on public OpenStreetMap/OSRM coverage.
+    Verify real-world availability before making decisions.</div>
+  `;
+  document.body.appendChild(panel);
+
+  const $ = id => document.getElementById(id);
+  const status = msg => { $("itfr-status").textContent = msg; };
+  const selectedText = msg => { $("itfr-selected").textContent = msg; };
+
+  function parseObject(raw) {
+    if (!raw) return null;
+    try {
+      let obj = JSON.parse(raw);
+      if (typeof obj === "string") obj = JSON.parse(obj);
+      return obj;
+    } catch (_) { return null; }
+  }
+
+  function findMap() {
+    if (window.__itMapForLocation &&
+        typeof window.__itMapForLocation.getCenter === "function") {
+      return window.__itMapForLocation;
+    }
+    for (const k of Object.keys(window)) {
+      try {
+        const v = window[k];
+        if (v && typeof v.getCenter === "function" &&
+            typeof v.addLayer === "function" &&
+            typeof v.getStyle === "function") return v;
+      } catch (_) {}
+    }
+    return null;
+  }
+
+  function facilityFromStorage() {
+    const keys = [
+      "it_selected_facility_v2",
+      "it_selected_facility",
+      "selectedFacility"
+    ];
+    for (const key of keys) {
+      const obj = parseObject(sessionStorage.getItem(key));
+      if (!obj) continue;
+      const f = obj.facility || obj.selectedFacility || obj.selected || obj;
+      const lat = Number(f.latitude ?? f.lat ?? f.center?.lat);
+      const lon = Number(f.longitude ?? f.lon ?? f.lng ?? f.center?.lon);
+      if (Number.isFinite(lat) && Number.isFinite(lon) &&
+          Math.abs(lat) <= 90 && Math.abs(lon) <= 180) return f;
+    }
+    return null;
+  }
+
+  function coords(f) {
+    const lat = Number(f.latitude ?? f.lat ?? f.center?.lat);
+    const lon = Number(f.longitude ?? f.lon ?? f.lng ?? f.center?.lon);
+    return Number.isFinite(lat) && Number.isFinite(lon)
+      ? [lon, lat] : null;
+  }
+
+  function idOf(f) {
+    return String(f.facility_id ?? f.id ?? f.osm_id ?? "");
+  }
+
+  function nameOf(f) {
+    return String(f.name || f.tags?.name || "Unnamed facility");
+  }
+
+  function amenityOf(f) {
+    return String(f.amenity || f.tags?.amenity || "").toLowerCase();
+  }
+
+  function markerElement(label, color) {
+    const el = document.createElement("div");
+    el.textContent = label;
+    Object.assign(el.style, {
+      width: label.length > 1 ? "32px" : "28px",
+      height: "28px",
+      borderRadius: "50%",
+      background: color,
+      color: "#fff",
+      border: "2px solid white",
+      boxShadow: "0 2px 8px #0008",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      font: "bold 13px Arial",
+      cursor: "pointer"
+    });
+    return el;
+  }
+
+  function addMarker(point, label, color, popupText) {
+    const marker = new maplibregl.Marker({
+      element: markerElement(label, color),
+      anchor: "bottom"
+    }).setLngLat(point);
+
+    if (popupText && maplibregl.Popup) {
+      marker.setPopup(new maplibregl.Popup({offset: 20}).setText(popupText));
+    }
+    marker.addTo(map);
+    return marker;
+  }
+
+  function clearAlternatives() {
+    altMarkers.forEach(m => m.remove());
+    altMarkers = [];
+    $("itfr-list").innerHTML = "";
+    if (map && map.getLayer("itfr-route-line")) map.removeLayer("itfr-route-line");
+    if (map && map.getLayer("itfr-route-casing")) map.removeLayer("itfr-route-casing");
+    if (map && map.getSource("itfr-route")) map.removeSource("itfr-route");
+    routeLayerReady = false;
+  }
+
+  function ensureSelectedMarker() {
+    if (!selected || !coords(selected)) return;
+    if (disruptedMarker) disruptedMarker.remove();
+    disruptedMarker = addMarker(
+      coords(selected), "!", "#ef4444",
+      "Disrupted facility: " + nameOf(selected)
+    );
+  }
+
+  function haversine(a, b) {
+    const rad = x => x * Math.PI / 180;
+    const dLat = rad(b[1] - a[1]), dLon = rad(b[0] - a[0]);
+    const x = Math.sin(dLat/2)**2 +
+      Math.cos(rad(a[1])) * Math.cos(rad(b[1])) * Math.sin(dLon/2)**2;
+    return 6371 * 2 * Math.asin(Math.sqrt(x));
+  }
+
+  async function roadRoute(from, to) {
+    const url = "https://router.project-osrm.org/route/v1/driving/" +
+      from[0] + "," + from[1] + ";" + to[0] + "," + to[1] +
+      "?overview=full&geometries=geojson&steps=false";
+    const response = await fetch(url);
+    if (!response.ok) throw Error("Routing service HTTP " + response.status);
+    const data = await response.json();
+    if (data.code !== "Ok" || !data.routes?.length) {
+      throw Error("No driving route returned");
+    }
+    return data.routes[0];
+  }
+
+  function drawRoute(route) {
+    if (!map || !route?.geometry) return;
+    const feature = {
+      type: "Feature",
+      properties: {},
+      geometry: route.geometry
+    };
+
+    const applyLayer = () => {
+      try {
+        if (map.getLayer("itfr-route-line")) map.removeLayer("itfr-route-line");
+        if (map.getLayer("itfr-route-casing")) map.removeLayer("itfr-route-casing");
+        if (map.getSource("itfr-route")) map.removeSource("itfr-route");
+
+        map.addSource("itfr-route", {
+          type: "geojson",
+          data: {type:"FeatureCollection",features:[feature]}
+        });
+        map.addLayer({
+          id:"itfr-route-casing", type:"line", source:"itfr-route",
+          layout:{"line-cap":"round","line-join":"round"},
+          paint:{"line-color":"#082f49","line-width":8,"line-opacity":0.85}
+        });
+        map.addLayer({
+          id:"itfr-route-line", type:"line", source:"itfr-route",
+          layout:{"line-cap":"round","line-join":"round"},
+          paint:{"line-color":"#22d3ee","line-width":5}
+        });
+        routeLayerReady = true;
+      } catch (e) {
+        status("Route received, but map could not draw it: " + e.message);
+      }
+    };
+
+    if (map.isStyleLoaded()) applyLayer();
+    else map.once("load", applyLayer);
+  }
+
+  async function runAlternatives() {
+    if (busy) return;
+
+    if (!map) map = findMap();
+    if (!map) {
+      status("Map not found. Open Simulator through Explorer.");
+      return;
+    }
+
+    if (!geo || !geo.features) {
+      status("Facility data is loading. Try Refresh alternatives.");
+      return;
+    }
+
+    if (!selected || !coords(selected)) {
+      status("Explorer-selected facility not found. Return to Explorer and use Run Simulator.");
+      return;
+    }
+
+    // IMPORTANT: use the disrupted facility as the search/route origin,
+    // NOT the user's GPS location.
+    const origin = coords(selected);
+
+    busy = true;
+    clearAlternatives();
+    status("Finding alternatives near the selected disrupted facility…");
+
+    try {
+      ensureSelectedMarker();
+
+      const selectedId = idOf(selected);
+
+      const candidates = geo.features
+        .map(feature => feature.properties || {})
+        .filter(f => ["hospital", "pharmacy"].includes(amenityOf(f)))
+        .filter(f => idOf(f) !== selectedId)
+        .map(f => ({f, point: coords(f)}))
+        .filter(x => x.point && nameOf(x.f))
+        .filter(x => haversine(origin, x.point) <= 25)
+        .sort((a, b) =>
+          haversine(origin, a.point) - haversine(origin, b.point)
+        )
+        .slice(0, 10);
+
+      if (!candidates.length) {
+        status("No mapped hospital/pharmacy alternatives found within 25 km of the selected facility.");
+        return;
+      }
+
+      const results = [];
+
+      // Calculate real road routes from the selected disrupted facility.
+      for (const candidate of candidates) {
+        try {
+          const route = await roadRoute(origin, candidate.point);
+          results.push({
+            ...candidate,
+            route,
+            km: route.distance / 1000,
+            minutes: route.duration / 60
+          });
+        } catch (err) {
+          console.warn("Road route unavailable:", nameOf(candidate.f), err);
+        }
+      }
+
+      results.sort((a, b) => a.km - b.km);
+
+      if (!results.length) {
+        status("Nearby facilities were found, but road routes failed. Check internet and retry.");
+        return;
+      }
+
+      results.slice(0, 3).forEach((r, i) => {
+        const rank = i + 1;
+
+        altMarkers.push(
+          addMarker(
+            r.point,
+            String(rank),
+            "#22c55e",
+            rank + ". " + nameOf(r.f) +
+              " — " + r.km.toFixed(1) + " km by road"
+          )
+        );
+
+        const item = document.createElement("div");
+        item.className = "it-item";
+
+        const title = document.createElement("strong");
+        title.textContent = rank + ". " + nameOf(r.f);
+
+        const detail = document.createElement("div");
+        detail.className = "it-muted";
+        detail.textContent =
+          r.km.toFixed(1) + " km by road · " +
+          Math.max(1, Math.round(r.minutes)) + " min estimated";
+
+        const button = document.createElement("button");
+        button.textContent = "Show route";
+        button.addEventListener("click", () => {
+          drawRoute(r.route);
+          map.fitBounds([
+            [Math.min(origin[0], r.point[0]), Math.min(origin[1], r.point[1])],
+            [Math.max(origin[0], r.point[0]), Math.max(origin[1], r.point[1])]
+          ], {padding: 70, maxZoom: 14});
+        });
+
+        item.append(title, detail, button);
+        $("itfr-list").appendChild(item);
+      });
+
+      // Default display: route from disrupted facility to nearest alternative.
+      drawRoute(results[0].route);
+      map.fitBounds([
+        [
+          Math.min(origin[0], results[0].point[0]),
+          Math.min(origin[1], results[0].point[1])
+        ],
+        [
+          Math.max(origin[0], results[0].point[0]),
+          Math.max(origin[1], results[0].point[1])
+        ]
+      ], {padding: 75, maxZoom: 14});
+
+      status(
+        "Showing " + Math.min(3, results.length) +
+        " alternatives near the disrupted facility, ranked by road distance. " +
+        "User GPS and its radius are shown separately."
+      );
+
+    } catch (err) {
+      console.error("[Invisible Thread alternatives]", err);
+      status("Alternative search failed: " + err.message);
+    } finally {
+      busy = false;
+    }
+  }
+
+  function setUserPoint(point, label) {
+    userPoint = point;
+    drawUserRadius(point, 5); // 5 km nearby search circle
+    if (userMarker) userMarker.remove();
+    userMarker = addMarker(point, "You", "#3b82f6", label || "Starting location");
+    status("Starting location set. Calculating alternatives…");
+    runAlternatives();
+  }
+
+  $("itfr-gps").addEventListener("click", () => {
+    if (!navigator.geolocation) {
+      status("GPS is not supported by this browser. Use Pick start on map.");
+      return;
+    }
+    status("Waiting for GPS permission…");
+    navigator.geolocation.getCurrentPosition(
+      pos => setUserPoint(
+        [pos.coords.longitude, pos.coords.latitude],
+        "Your GPS starting location"
+      ),
+      err => status("GPS failed: " + err.message +
+        ". Allow location permission or use Pick start on map."),
+      {enableHighAccuracy:true, timeout:15000, maximumAge:60000}
+    );
+  });
+
+  $("itfr-pick").addEventListener("click", () => {
+    if (!map) map = findMap();
+    if (!map) {
+      status("Map not ready yet. Try again after the map appears.");
+      return;
+    }
+    mapClickEnabled = true;
+    status("Click your starting point on the map.");
+  });
+
+  $("itfr-refresh").addEventListener("click", runAlternatives);
+
+  function initialize() {
+    map = findMap();
+    selected = facilityFromStorage();
+
+    if (selected) {
+      selectedText("Selected: " + nameOf(selected));
+      ensureSelectedMarker();
+    } else {
+      selectedText("No facility coordinates found in Explorer session storage.");
+    }
+
+    fetch("./data/ap_city_facilities.geojson")
+      .then(r => {
+        if (!r.ok) throw Error("GeoJSON HTTP " + r.status);
+        return r.json();
+      })
+      .then(data => {
+        geo = data;
+        status("Facility data loaded (" + geo.features.length +
+          " mapped records). Choose GPS or a start point on the map.");
+      })
+      .catch(e => status("Could not load facility data: " + e.message));
+
+    if (map && !map.__itfrClickHandler) {
+      map.__itfrClickHandler = true;
+      map.on("click", e => {
+        if (!mapClickEnabled) return;
+        mapClickEnabled = false;
+        setUserPoint([e.lngLat.lng, e.lngLat.lat], "Map-selected starting location");
+      });
+    }
+  }
+
+  let tries = 0;
+  const timer = setInterval(() => {
+    tries++;
+    map = findMap();
+    if (map) {
+      clearInterval(timer);
+      initialize();
+      map.on("load", () => {
+        if (selected) ensureSelectedMarker();
+      });
+    } else if (tries >= 40) {
+      clearInterval(timer);
+      status("Map not detected. Open this Simulator through Explorer on the same local server.");
+    }
+  }, 500);
+})();
+</script><!-- /it-full-repair-v1 -->
+
+
+<script id="itfr-auto-gps-v1">
+(function () {
+  function startAutoGPS() {
+    const panel = document.getElementById("it-full-repair-panel");
+    const gpsButton = document.getElementById("itfr-gps");
+    const statusBox = document.getElementById("itfr-status");
+
+    if (!panel || !gpsButton) {
+      setTimeout(startAutoGPS, 700);
+      return;
+    }
+
+    if (panel.dataset.autoGpsStarted === "yes") return;
+    panel.dataset.autoGpsStarted = "yes";
+
+    if (!navigator.geolocation) {
+      if (statusBox) {
+        statusBox.textContent =
+          "GPS unavailable. Click 'Pick start on map' to set your location.";
+      }
+      return;
+    }
+
+    if (statusBox) {
+      statusBox.textContent =
+        "Requesting your location… Allow location access in your browser.";
+    }
+
+    // Use the existing GPS handler; no facility re-selection needed.
+    gpsButton.click();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", startAutoGPS);
+  } else {
+    startAutoGPS();
+  }
+})();
+</script>
+
+
+<script id="it-selected-facility-radius-v1">
+(() => {
+  let radiusCircle = null;
+  let lastKey = "";
+
+  function getMap() {
+    return window.__itMapForLocation ||
+      Object.values(window).find(x =>
+        x && typeof x.getZoom === "function" &&
+        typeof x.addLayer === "function" &&
+        typeof x.getCenter === "function"
+      );
+  }
+
+  function getSelectedFacility() {
+    const keys = [
+      "it_selected_facility_v2",
+      "it_explorer_selection_backup",
+      "it_selected_facility",
+      "selectedFacility"
+    ];
+
+    for (const key of keys) {
+      try {
+        const raw = sessionStorage.getItem(key);
+        if (!raw) continue;
+        const obj = JSON.parse(raw);
+        const candidates = [
+          obj, obj?.properties, obj?.geometry,
+          obj?.feature, obj?.feature?.properties,
+          obj?.selected, obj?.facility
+        ];
+
+        for (const x of candidates) {
+          if (!x) continue;
+          let lat = x.latitude ?? x.lat ?? x.latitude_deg;
+          let lon = x.longitude ?? x.lon ?? x.lng ?? x.longitude_deg;
+
+          if (Array.isArray(x.coordinates)) {
+            lon = x.coordinates[0];
+            lat = x.coordinates[1];
+          }
+          if (x.geometry?.type === "Point" &&
+              Array.isArray(x.geometry.coordinates)) {
+            lon = x.geometry.coordinates[0];
+            lat = x.geometry.coordinates[1];
+          }
+
+          lat = Number(lat);
+          lon = Number(lon);
+          if (Number.isFinite(lat) && Number.isFinite(lon) &&
+              Math.abs(lat) <= 90 && Math.abs(lon) <= 180) {
+            return {lat, lon};
+          }
+        }
+      } catch (_) {}
+    }
+    return null;
+  }
+
+  function drawRadius() {
+    const map = getMap();
+    const point = getSelectedFacility();
+    if (!map || !point || !window.L) return false;
+
+    const key = point.lat + "," + point.lon;
+    if (key === lastKey && radiusCircle) return true;
+
+    if (radiusCircle) map.removeLayer(radiusCircle);
+
+    radiusCircle = window.L.circle([point.lat, point.lon], {
+      radius: 5000,
+      color: "#1687ff",
+      weight: 2,
+      fillColor: "#1687ff",
+      fillOpacity: 0.10,
+      dashArray: "6 6"
+    }).addTo(map);
+
+    lastKey = key;
+    console.log("5 km radius drawn around selected facility:", point);
+    return true;
+  }
+
+  // Retry while the map and selected facility are loading.
+  let attempts = 0;
+  const timer = setInterval(() => {
+    attempts++;
+    if (drawRadius() || attempts >= 40) clearInterval(timer);
+  }, 500);
+
+  // Allow other Simulator controls to redraw the radius if needed.
+  window.__itDrawSelectedFacilityRadius = drawRadius;
+})();
+</script>
+
+
+<script id="it-alternative-search-v1">
+(() => {
+  if (window.__itAlternativeSearchV1) return;
+  window.__itAlternativeSearchV1 = true;
+
+  const DATA_URLS = [
+    "./data/ap_city_facilities.geojson",
+    "./web/data/ap_city_facilities.geojson",
+    "./data/facilities.geojson"
+  ];
+
+  function selectedPoint() {
+    for (const k of [
+      "it_selected_facility_v2",
+      "it_explorer_selection_backup",
+      "it_selected_facility",
+      "selectedFacility"
+    ]) {
+      try {
+        const o = JSON.parse(sessionStorage.getItem(k) || "null");
+        for (const x of [o, o?.properties, o?.feature, o?.feature?.properties]) {
+          if (!x) continue;
+          let lat = x.latitude ?? x.lat;
+          let lon = x.longitude ?? x.lon ?? x.lng;
+          if (x.geometry?.type === "Point") {
+            lon = x.geometry.coordinates?.[0];
+            lat = x.geometry.coordinates?.[1];
+          }
+          if (Array.isArray(x.coordinates)) {
+            lon = x.coordinates[0]; lat = x.coordinates[1];
+          }
+          lat = Number(lat); lon = Number(lon);
+          if (Number.isFinite(lat) && Number.isFinite(lon) &&
+              Math.abs(lat) <= 90 && Math.abs(lon) <= 180) {
+            return {lat, lon, id: String(x.facility_id ?? x.id ?? "")};
+          }
+        }
+      } catch (_) {}
+    }
+    return null;
+  }
+
+  function distanceKm(a, b) {
+    const rad = d => d * Math.PI / 180;
+    const dLat = rad(b.lat - a.lat);
+    const dLon = rad(b.lon - a.lon);
+    const q = Math.sin(dLat/2)**2 +
+      Math.cos(rad(a.lat))*Math.cos(rad(b.lat))*Math.sin(dLon/2)**2;
+    return 6371 * 2 * Math.asin(Math.sqrt(q));
+  }
+
+  async function fetchFacilities() {
+    for (const url of DATA_URLS) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) continue;
+        const data = await res.json();
+        if (Array.isArray(data.features)) return data.features;
+      } catch (_) {}
+    }
+    throw Error("Facilities GeoJSON could not be loaded.");
+  }
+
+  async function findAlternatives() {
+    const origin = selectedPoint();
+    if (!origin) {
+      alert("Explorer selected facility coordinates were not found. Select a facility in Explorer first.");
+      return;
+    }
+
+    const btn = document.querySelector(
+      "#it-full-repair-panel button"
+    );
+    if (btn) btn.disabled = true;
+
+    try {
+      const features = await fetchFacilities();
+      const candidates = features.map(f => {
+        const c = f.geometry?.coordinates;
+        const p = f.properties || {};
+        if (!Array.isArray(c)) return null;
+        const item = {
+          lat: Number(c[1]), lon: Number(c[0]),
+          name: p.name || "Unnamed facility",
+          amenity: p.amenity || "facility",
+          id: String(p.facility_id || f.id || ""),
+          feature: f
+        };
+        if (!Number.isFinite(item.lat) || !Number.isFinite(item.lon)) return null;
+        item.airKm = distanceKm(origin, item);
+        return item;
+      }).filter(x => x && x.id !== origin.id && x.airKm > 0.05 &&
+        /hospital|pharmacy|clinic|doctors/i.test(x.amenity + " " + x.name));
+
+      // Respect the chosen disruption radius; never silently expand it.
+      const radiusControl = document.querySelector("#it-scenario-radius");
+      const radiusUsed = radiusControl ? Number(radiusControl.value) : 2;
+      let nearby = candidates.filter(x => x.airKm <= radiusUsed);
+      nearby.sort((a,b) => a.airKm - b.airKm);
+      nearby = nearby.slice(0, 12);
+
+      if (!nearby.length) {
+        alert("No mapped alternatives found within 25 km of the selected facility.");
+        return;
+      }
+
+      // Road distance is calculated through OSRM; straight-line distance is fallback.
+      const ranked = await Promise.all(nearby.map(async x => {
+        try {
+          const url = `https://router.project-osrm.org/route/v1/driving/${origin.lon},${origin.lat};${x.lon},${x.lat}?overview=false`;
+          const res = await fetch(url);
+          const data = await res.json();
+          const r = data.routes?.[0];
+          if (r) {
+            x.roadKm = r.distance / 1000;
+            x.minutes = r.duration / 60;
+          }
+        } catch (_) {}
+        if (!Number.isFinite(x.roadKm)) x.roadKm = x.airKm;
+        return x;
+      }));
+
+      ranked.sort((a,b) => a.roadKm - b.roadKm);
+      window.__itRankedAlternatives = ranked;
+
+      // Draw numbered green markers on the existing Leaflet map.
+      const map = window.__itMapForLocation ||
+        Object.values(window).find(x =>
+          x && typeof x.getZoom === "function" &&
+          typeof x.addLayer === "function"
+        );
+      if (map && window.L) {
+        window.__itAlternativeMarkers = window.__itAlternativeMarkers || [];
+        window.__itAlternativeMarkers.forEach(m => map.removeLayer(m));
+        window.__itAlternativeMarkers = [];
+
+        ranked.slice(0,3).forEach((x, i) => {
+          const marker = L.marker([x.lat, x.lon], {
+            icon: L.divIcon({
+              className: "",
+              html: `<div style="background:#15803d;color:white;border:2px solid white;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-weight:800;box-shadow:0 2px 8px #0006">${i+1}</div>`,
+              iconSize: [30,30], iconAnchor: [15,15]
+            })
+          }).addTo(map);
+          marker.bindPopup(
+            `<b>${i+1}. ${x.name.replace(/[<>&"]/g, "")}</b><br>` +
+            `${x.amenity}<br>Road distance: ${x.roadKm.toFixed(1)} km` +
+            (x.minutes ? `<br>Approx. ${Math.round(x.minutes)} min` : "")
+          );
+          window.__itAlternativeMarkers.push(marker);
+        });
+      }
+
+      const panel = document.querySelector("#it-full-repair-panel");
+      if (panel) {
+        let result = panel.querySelector("#it-alt-results-v1");
+        if (!result) {
+          result = document.createElement("div");
+          result.id = "it-alt-results-v1";
+          result.style.cssText = "margin-top:10px;font-size:13px;line-height:1.6";
+          panel.appendChild(result);
+        }
+        result.innerHTML =
+          `<b>Alternatives (${radiusUsed} km search)</b><br>` +
+          ranked.slice(0,3).map((x,i) =>
+            `<div style="padding:6px 0;border-bottom:1px solid #ddd">` +
+            `<b style="color:#15803d">${i+1}. ${x.name.replace(/[<>&"]/g,"")}</b><br>` +
+            `${x.amenity} · ${x.roadKm.toFixed(1)} km by road` +
+            (x.minutes ? ` · ~${Math.round(x.minutes)} min` : "") +
+            `</div>`
+          ).join("");
+      }
+
+      console.log("Ranked alternatives:", ranked);
+    } catch (err) {
+      console.error(err);
+      alert("Alternative search failed: " + err.message);
+    } finally {
+      if (btn) btn.disabled = false;
+    }
+  }
+
+  window.__itFindAlternatives = findAlternatives;
+
+  // Attach to the existing panel's refresh button.
+  document.addEventListener("click", event => {
+    const b = event.target.closest("button");
+    if (!b) return;
+    if (/refresh alternatives/i.test(b.innerText || "")) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      findAlternatives();
+    }
+  }, true);
+})();
+</script>
+
+
+<script id="it-alternative-route-click-v1">
+(() => {
+  async function showRoute(destination) {
+    const origin = (() => {
+      for (const k of [
+        "it_selected_facility_v2",
+        "it_explorer_selection_backup",
+        "it_selected_facility",
+        "selectedFacility"
+      ]) {
+        try {
+          const o = JSON.parse(sessionStorage.getItem(k) || "null");
+          for (const x of [o, o?.properties, o?.feature, o?.feature?.properties]) {
+            if (!x) continue;
+            let lat = x.latitude ?? x.lat;
+            let lon = x.longitude ?? x.lon ?? x.lng;
+            if (x.geometry?.type === "Point") {
+              lon = x.geometry.coordinates?.[0];
+              lat = x.geometry.coordinates?.[1];
+            }
+            if (Array.isArray(x.coordinates)) {
+              lon = x.coordinates[0]; lat = x.coordinates[1];
+            }
+            lat = Number(lat); lon = Number(lon);
+            if (Number.isFinite(lat) && Number.isFinite(lon) &&
+                Math.abs(lat) <= 90 && Math.abs(lon) <= 180) {
+              return {lat, lon};
+            }
+          }
+        } catch (_) {}
+      }
+      return null;
+    })();
+
+    if (!origin) {
+      alert("Selected facility coordinates were not found.");
+      return;
+    }
+
+    const map = window.__itMapForLocation ||
+      Object.values(window).find(x =>
+        x && typeof x.getZoom === "function" &&
+        typeof x.addLayer === "function"
+      );
+    if (!map || !window.L) {
+      alert("Map is not ready yet. Please wait and try again.");
+      return;
+    }
+
+    try {
+      const url = `https://router.project-osrm.org/route/v1/driving/${origin.lon},${origin.lat};${destination.lon},${destination.lat}?overview=full&geometries=geojson`;
+      const response = await fetch(url);
+      const data = await response.json();
+      const route = data.routes?.[0];
+
+      if (!route) throw Error("No road route returned.");
+
+      if (window.__itChosenAlternativeRoute) {
+        map.removeLayer(window.__itChosenAlternativeRoute);
+      }
+
+      window.__itChosenAlternativeRoute = L.geoJSON(route.geometry, {
+        style: {color: "#06b6d4", weight: 5, opacity: 0.9}
+      }).addTo(map);
+
+      map.fitBounds(window.__itChosenAlternativeRoute.getBounds(), {
+        padding: [35, 35]
+      });
+
+      const msg = `${(route.distance / 1000).toFixed(1)} km by road · approximately ${Math.round(route.duration / 60)} min`;
+      console.log("Selected alternative route:", msg);
+    } catch (err) {
+      console.error(err);
+      alert("Could not load road route. Check internet and try again.");
+    }
+  }
+
+  document.addEventListener("click", event => {
+    const marker = event.target.closest(".leaflet-marker-icon");
+    if (!marker || !window.__itRankedAlternatives) return;
+
+    const text = marker.innerText?.trim();
+    if (!["1", "2", "3"].includes(text)) return;
+
+    const alternative = window.__itRankedAlternatives[Number(text) - 1];
+    if (alternative) showRoute(alternative);
+  });
+})();
+</script>
+
+
+<script id="it-final-diagnostics-v1">
+(() => {
+  function runCheck() {
+    const checks = [
+      ["Map library", !!window.L],
+      ["Simulator map", !!(window.__itMapForLocation ||
+        Object.values(window).find(x => x &&
+          typeof x.getZoom === "function" &&
+          typeof x.addLayer === "function"))],
+      ["Selected facility saved", !!(
+        sessionStorage.getItem("it_selected_facility_v2") ||
+        sessionStorage.getItem("it_explorer_selection_backup") ||
+        sessionStorage.getItem("it_selected_facility") ||
+        sessionStorage.getItem("selectedFacility"))],
+      ["Alternative search installed", typeof window.__itFindAlternatives === "function"],
+      ["Ranked alternatives loaded", Array.isArray(window.__itRankedAlternatives)],
+      ["Radius patch installed", typeof window.__itDrawSelectedFacilityRadius === "function"],
+      ["Route-click patch installed", !!document.getElementById("it-alternative-route-click-v1")]
+    ];
+
+    let panel = document.getElementById("it-final-diagnostics-panel");
+    if (!panel) {
+      panel = document.createElement("div");
+      panel.id = "it-final-diagnostics-panel";
+      panel.style.cssText = [
+        "position:fixed", "right:12px", "bottom:12px",
+        "z-index:999999", "max-width:310px", "max-height:45vh",
+        "overflow:auto", "background:white", "color:#172033",
+        "border:1px solid #cbd5e1", "border-radius:12px",
+        "padding:12px", "font:13px/1.5 Arial,sans-serif",
+        "box-shadow:0 4px 20px #0003"
+      ].join(";");
+      document.body.appendChild(panel);
+    }
+
+    panel.innerHTML =
+      '<b style="font-size:15px">INVISIBLE THREAD · System Check</b>' +
+      '<div style="margin:5px 0 8px;color:#64748b">Status at page load</div>' +
+      checks.map(([label, ok]) =>
+        `<div style="padding:3px 0">${ok ? "✅" : "⚠️"} ${label}</div>`
+      ).join("") +
+      '<button id="it-diag-refresh" style="margin-top:8px;padding:7px 10px;border:0;border-radius:7px;background:#0f766e;color:white;cursor:pointer">Recheck</button>' +
+      '<button id="it-diag-close" style="margin:8px 0 0 6px;padding:7px 10px;border:1px solid #cbd5e1;border-radius:7px;background:white;cursor:pointer">Close</button>';
+
+    panel.querySelector("#it-diag-refresh").onclick = runCheck;
+    panel.querySelector("#it-diag-close").onclick = () => panel.remove();
+    console.table(checks.map(([feature, status]) => ({feature, status})));
+  }
+
+  window.addEventListener("load", () => setTimeout(runCheck, 1500));
+})();
+</script>
+
+<script id="it-nextstop-alternative-sync-v1">
+(() => {
+  function safeText(value) {
+    return String(value ?? "").replace(/[&<>"']/g, char => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;"
+    }[char]));
+  }
+
+  function updatePanel(facility, rank) {
+    const candidates = [
+      ...document.querySelectorAll("div,section,aside,article")
+    ];
+
+    const panel = candidates
+      .filter(el =>
+        /Next stop:/i.test(el.innerText || "") &&
+        /Road distance:/i.test(el.innerText || "") &&
+        el.querySelectorAll("*").length < 100
+      )
+      .sort((a, b) => a.innerText.length - b.innerText.length)[0];
+
+    if (!panel) {
+      console.warn("Next stop panel was not found.");
+      return false;
+    }
+
+    const leaves = [...panel.querySelectorAll("*")]
+      .filter(el => el.children.length === 0);
+
+    const nextStop = leaves.find(el =>
+      /^Next stop:/i.test((el.innerText || "").trim())
+    );
+
+    const roadDistance = leaves.find(el =>
+      /^Road distance:/i.test((el.innerText || "").trim())
+    );
+
+    const driveTime = leaves.find(el =>
+      /^Estimated drive:/i.test((el.innerText || "").trim())
+    );
+
+    const facilityType = leaves.find(el =>
+      /^Type:/i.test((el.innerText || "").trim())
+    );
+
+    const roadKm = Number(facility.roadKm);
+    const airKm = Number(facility.airKm);
+    const minutes = Number(facility.minutes);
+
+    if (nextStop) {
+      nextStop.innerHTML =
+        "<b>Next stop:</b> " + safeText(facility.name);
+    }
+
+    if (roadDistance) {
+      const distance = Number.isFinite(roadKm)
+        ? roadKm.toFixed(2) + " km"
+        : Number.isFinite(airKm)
+          ? airKm.toFixed(2) + " km straight-line (road distance unavailable)"
+          : "Unavailable";
+
+      roadDistance.innerHTML =
+        "<b>Road distance:</b> " + safeText(distance);
+    }
+
+    if (driveTime) {
+      const time = Number.isFinite(minutes)
+        ? Math.round(minutes) + " min"
+        : "Unavailable";
+
+      driveTime.innerHTML =
+        "<b>Estimated drive:</b> " + safeText(time);
+    }
+
+    if (facilityType) {
+      facilityType.innerHTML =
+        "<b>Type:</b> " +
+        safeText(facility.amenity || "facility") +
+        " · " + safeText(facility.name);
+    }
+
+    const routeStatus = leaves.find(el =>
+      /Route found\./i.test(el.innerText || "")
+    );
+
+    if (routeStatus) {
+      routeStatus.textContent =
+        "Alternative #" + rank +
+        " selected. Route display depends on successful road routing.";
+    }
+
+    return true;
+  }
+
+  function syncNextStop() {
+    const ranked = window.__itRankedAlternatives;
+
+    if (!Array.isArray(ranked) || ranked.length === 0) {
+      console.warn(
+        "No ranked alternatives yet. Run Refresh alternatives first."
+      );
+      return false;
+    }
+
+    // First item is the shortest-road-distance result after ranking.
+    return updatePanel(ranked[0], 1);
+  }
+
+  window.__itSyncNextStopToAlternative = syncNextStop;
+
+  // Run after page content and existing scripts have loaded.
+  window.addEventListener("load", () => {
+    setTimeout(syncNextStop, 2000);
+  });
+
+  // Re-sync after the alternatives array is replaced.
+  let previous = window.__itRankedAlternatives;
+
+  setInterval(() => {
+    if (window.__itRankedAlternatives &&
+        window.__itRankedAlternatives !== previous) {
+      previous = window.__itRankedAlternatives;
+      syncNextStop();
+    }
+  }, 1000);
+})();
+</script>
+
+
+<script id="it-alternative-select-v1">
+(() => {
+  function updateSelectedStop(item, rank) {
+    window.__itChosenAlternative = item;
+
+    // Reuse the existing panel-sync function when available.
+    if (typeof window.__itSyncNextStopToAlternative === "function") {
+      // Temporarily put the chosen facility first for the existing sync logic.
+      const old = window.__itRankedAlternatives;
+      if (Array.isArray(old)) {
+        window.__itRankedAlternatives = [
+          item, ...old.filter(x => x !== item)
+        ];
+        window.__itSyncNextStopToAlternative();
+        window.__itRankedAlternatives = old;
+      }
+    }
+
+    // Route helper from the earlier route-click patch.
+    if (typeof window.__itShowAlternativeRoute === "function") {
+      window.__itShowAlternativeRoute(item);
+    }
+
+    console.log("Chosen alternative:", rank, item.name);
+  }
+
+  document.addEventListener("click", event => {
+    const marker = event.target.closest(".leaflet-marker-icon");
+    if (!marker) return;
+
+    const label = (marker.innerText || "").trim();
+    if (!/^[123]$/.test(label)) return;
+
+    const list = window.__itRankedAlternatives;
+    if (!Array.isArray(list)) return;
+
+    const item = list[Number(label) - 1];
+    if (item) updateSelectedStop(item, Number(label));
+  }, true);
+})();
+</script>
+
+
+<script id="it-final-integration-v1">
+(() => {
+  function status() {
+    const map = window.__itMapForLocation ||
+      Object.values(window).find(x =>
+        x && typeof x.getZoom === "function" &&
+        typeof x.addLayer === "function"
+      );
+
+    return {
+      mapReady: !!map,
+      selectedFacility: !!(
+        sessionStorage.getItem("it_selected_facility_v2") ||
+        sessionStorage.getItem("it_explorer_selection_backup")
+      ),
+      radiusFunction: typeof window.__itDrawSelectedFacilityRadius === "function",
+      alternativesFunction: typeof window.__itFindAlternatives === "function",
+      alternativesLoaded: Array.isArray(window.__itRankedAlternatives)
+        ? window.__itRankedAlternatives.length : 0
+    };
+  }
+
+  window.__itFinalStatus = status;
+
+  // Expose a single safe action for the demo controls.
+  window.__itRunFinalDemo = async function() {
+    const s = status();
+    console.table(s);
+
+    if (!s.mapReady) {
+      alert("Map is still loading. Wait a moment and try again.");
+      return;
+    }
+    if (!s.selectedFacility) {
+      alert("Select a facility in Explorer and use Run Simulator first.");
+      return;
+    }
+
+    if (typeof window.__itDrawSelectedFacilityRadius === "function") {
+      window.__itDrawSelectedFacilityRadius();
+    }
+
+    if (typeof window.__itFindAlternatives === "function") {
+      await window.__itFindAlternatives();
+    } else {
+      alert("Alternative-search function is not available.");
+    }
+  };
+
+  console.log("INVISIBLE THREAD integration helper installed.");
+})();
+</script>
+
+
+
+<script>
+/* INVISIBLE_THREAD_BACKEND_CONNECT_V1 */
+(() => {
+  document.addEventListener("click", async (event) => {
+    const button = event.target.closest("#simulate-disruption");
+    if (!button) return;
+
+    event.preventDefault();
+
+    const panel = document.getElementById("backend-scenario-results");
+    if (!panel) return;
+
+    const content = panel.querySelector("#backend-results-content");
+    if (!content) return;
+
+    const selected = window.selectedDisruptionFacility;
+
+    if (!selected || !selected.coordinates) {
+      content.textContent = "Select a facility marker on the map first.";
+      return;
+    }
+
+    const props = selected.properties || {};
+    const coords = selected.coordinates;
+    const radiusInput = document.getElementById("it-scenario-radius");
+    const radiusValue = radiusInput ? Number(radiusInput.value) : 5;
+    const radius = Number.isFinite(radiusValue) && radiusValue > 0
+      ? Math.min(radiusValue, 25) : 5;
+
+    content.textContent = "Loading live backend results...";
+
+    try {
+      const response = await fetch("http://127.0.0.1:8001/api/scenario", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+          facility_id: String(props.facility_id || props.id || ""),
+          latitude: Number(coords[1]),
+          longitude: Number(coords[0]),
+          radius_km: radius,
+          amenity: String(props.amenity || "")
+        })
+      });
+
+      if (!response.ok) throw new Error("HTTP " + response.status);
+
+      const data = await response.json();
+      content.replaceChildren();
+
+      const summary = document.createElement("p");
+      summary.textContent =
+        `${data.count} mapped facilities within ${data.radius_km} km`;
+      summary.style.fontWeight = "700";
+      content.appendChild(summary);
+
+      const note = document.createElement("p");
+      note.textContent =
+        "Straight-line distance only; these are not verified operational dependencies.";
+      content.appendChild(note);
+
+      const list = document.createElement("ol");
+      for (const item of (data.results || []).slice(0, 15)) {
+        const li = document.createElement("li");
+        li.textContent =
+          `${item.name} — ${item.city} — ${item.distance_km} km`;
+        list.appendChild(li);
+      }
+
+      if (data.results && data.results.length) {
+        content.appendChild(list);
+      } else {
+        const empty = document.createElement("p");
+        empty.textContent = "No matching facilities in this radius.";
+        content.appendChild(empty);
+      }
+    } catch (error) {
+      content.textContent =
+        "Backend error: " + error.message +
+        ". Confirm the backend is running on port 8001.";
+      console.error(error);
+    }
+  }, true);
+})();
+</script>
+
+
+</body>
+</html>
